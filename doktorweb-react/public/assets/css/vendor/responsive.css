@@ -277,8 +277,8 @@
 	.site-navigation ul.menu > li > a:hover { color: var(--base-skin); }
 	nav.main-menu ul.menu li ul.mega-submenu li a:hover { color: var(--base-skin); }
 
-	.site-branding { margin: 25px 0; }
-	.site-header-menu-inner { padding: 0 !important; }
+	.site-branding { margin: 15px 0; }
+	.site-header-menu-inner { padding: 8px 0 !important; }
 
 	.cmt-header-style-01 #site-header-menu{ background-color: transparent; }
 	.cmt-header-style-01 .site-header-menu-inner.cmt-stickable-header { background-color: var(--base-white); }
@@ -293,7 +293,11 @@
 	.cmt-header-style-02 .site-navigation ul.menu > li > a { color: var(--base-dark); }
 	.cmt-header-style-02 .site-navigation nav.main-menu { padding-left: 0; }
 
-	.cmt-header-style-03 .site-branding { height: 50px;}
+	.cmt-header-style-03 .site-branding { height: 35px;}
+	.cmt-header-style-03 .site-branding img { max-height: 30px !important; }
+	.cmt-header-style-03 .widget_content a { font-size: 13px !important; }
+	.cmt-header-style-03 .widget_desc { font-size: 10px !important; }
+	.cmt-header-style-03 .cmt-btn { padding: 6px 10px !important; font-size: 12px !important; }
 	.cmt-header-style-03  nav.main-menu { /*top: 100px;*/ }
 	.cmt-header-style-03 .site-navigation nav.main-menu ul.menu > li.active > a:before { display: none; }
 	.cmt-header-style-03 .site-navigation nav.main-menu ul.menu > li > a:before { display: none; }

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doktor Web</title>
+    <!-- Global vendor CSS -->
+    <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/font-awesome.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/fontello.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/themify-icons.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/animate.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/prettyPhoto.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/slick.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/megamenu.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/shortcodes.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/main.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/style-in.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/responsive.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/twentytwenty.css" />
+    <link rel="stylesheet" href="/assets/css/vendor/whatsapp.css" />
+    <!-- Project styles -->
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- jQuery (required for RevSlider) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- RevSlider Scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/revslider@6.5.19/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/revslider@6.5.19/js/jquery.themepunch.revolution.min.js"></script>
+    
+    <!-- Initialize RevSlider -->
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof jQuery !== 'undefined' && jQuery.fn.revolution) {
+          jQuery('#rev_slider_3_1').show().revolution({
+            sliderType: 'standard',
+            jsFileLocation: 'https://cdn.jsdelivr.net/npm/revslider@6.5.19/js/',
+            sliderLayout: 'fullwidth',
+            dottedOverlay: 'none',
+            delay: 9000,
+            navigation: {
+              keyboardNavigation: 'off',
+              keyboard_direction: 'horizontal',
+              mouseScrollNavigation: 'off',
+              mouseScrollReverse: 'default',
+              onHoverStop: 'off',
+              touch: {
+                touchenabled: 'on',
+                swipe_threshold: 75,
+                swipe_min_touches: 1,
+                swipe_direction: 'horizontal',
+                drag_block_vertical: false
+              },
+              arrows: {
+                style: 'zeus',
+                enable: true,
+                hide_onmobile: false,
+                hide_onleave: false,
+                tmp: '<div class="tp-arr-allwrapper">	<div class="tp-arr-imgholder"></div>	<div class="tp-arr-titleholder">{{title}}</div>	</div>',
+                left: {
+                  h_align: 'left',
+                  v_align: 'center',
+                  h_offset: 20,
+                  v_offset: 0
+                },
+                right: {
+                  h_align: 'right',
+                  v_align: 'center',
+                  h_offset: 20,
+                  v_offset: 0
+                }
+              },
+              bullets: {
+                enable: true,
+                hide_onmobile: false,
+                style: 'zeus',
+                hide_onleave: false,
+                direction: 'horizontal',
+                h_align: 'center',
+                v_align: 'bottom',
+                h_offset: 0,
+                v_offset: 20,
+                space: 5,
+                tmp: '<span class="tp-bullet-image"></span><span class="tp-bullet-imageoverlay"></span><span class="tp-bullet-title">{{title}}</span>'
+              }
+            },
+            responsiveLevels: [1240, 1024, 778, 480],
+            visibilityLevels: [1240, 1024, 778, 480],
+            gridwidth: [1240, 1024, 778, 480],
+            gridheight: [600, 500, 400, 300],
+            lazyType: 'none',
+            parallax: {
+              type: 'mouse',
+              origo: 'slidercenter',
+              speed: 2000,
+              levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50, 46, 47, 48, 49, 50, 55],
+              type: 'mouse',
+            },
+            shadow: 0,
+            spinner: 'off',
+            stopLoop: 'off',
+            stopAfterLoops: -1,
+            stopAtSlide: -1,
+            shuffle: 'off',
+            autoHeight: 'off',
+            hideThumbsOnMobile: 'off',
+            hideSliderAtLimit: 0,
+            hideCaptionAtLimit: 0,
+            hideAllCaptionAtLilmit: 0,
+            debugMode: false,
+            fallbacks: {
+              simplifyAll: 'off',
+              nextSlideOnWindowFocus: 'off',
+              disableFocusListener: false,
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
