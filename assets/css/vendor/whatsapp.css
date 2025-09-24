@@ -1,0 +1,89 @@
+.wws-popup__open-btn i{font-size:22px;margin:0 5px 0 0;float:left}
+
+.wws-popup-container *{margin:0;padding:0;box-sizing:border-box}
+
+.wws-popup-container{width:auto;position:fixed;z-index:9999999}
+
+.wws-popup{display:none}
+
+.wws-popup__close-btn{width:28px;height:28px;border-radius:50%;float:right;text-align:center;vertical-align:middle;line-height:28px;cursor:pointer}
+
+.wws-popup__support-wrapper{margin-top:8px}
+
+.wws-popup__support-img-wrapper{width:50px;height:50px;border-radius:50%;overflow:hidden;display:inline-block;vertical-align:bottom;margin-right:3px;background-color:#fff}
+
+.wws-popup__support-img{max-width:100%;height:auto;display:block}
+
+.wws-popup__support{display:inline-block;vertical-align:bottom;border-radius:8px;overflow:hidden;width:232px}
+
+.wws-popup__support-about{font-size:12px;text-align:center;padding:18px 12px;line-height:16px;user-select:none;font-family:Arial,Helvetica,sans-serif}
+
+.wws-popup__support-welcome{background-color:#fff;font-size:14px;padding:16px 12px;color:#888FBB;line-height:16px;user-select:none;text-align:left;font-family:Arial,Helvetica,sans-serif}
+
+.wws-popup__input-wrapper{width:232px;margin-top:14px;float:right;background-color:#fff;padding:8px 12px;border-radius:8px;position:relative}
+
+.wws-popup__input{border:none!important;background-color:transparent!important;outline:none!important;padding:6px 0!important;margin:0!important;font-family:Arial,Helvetica,sans-serif!important;font-size:14px!important;box-shadow:none!important;color:#000!important;vertical-align:middle!important;display:inline-block!important;width:166px!important;height:auto!important}
+
+.wws-popup__input::-webkit-input-placeholder{color:#888FBB!important}
+
+.wws-popup__send-btn{cursor:pointer;padding:6px;width:34px;display:inline-block;vertical-align:middle;user-select:none}
+
+.wws--bg-color{background-color:#22C15E}
+
+.wws--text-color{color:#fff}
+
+.wws-popup__open-btn{line-height:22px;padding:8px 15px;font-size:24px;border-radius:20px;display:inline-block;margin-top:14px;cursor:pointer;font-family:Arial,Helvetica,sans-serif}
+
+.wws-popup-container--position{right:12px;bottom:50px}
+
+.wws-popup__open-btn{float:right}
+
+.wws-gradient--position{bottom:0;right:0;background:radial-gradient(ellipse at bottom right,rgba(29,39,54,0.2) 0,rgba(29,39,54,0) 72%)}
+
+.wws-clearfix{clear:both}
+
+.wws-shadow{box-shadow:0 0 50px rgba(0,0,0,0.2)}
+
+.wws-icon{font-family:"wwsFonts"!important;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+
+.wws-icon-close:before{content:'\e800'}
+
+.wws-icon-whatsapp:before{content:'\f232'}
+
+.wws-shortcode-btn{padding:4px 10px;margin:2px;border-radius:5px;text-align:center}
+
+.wws-shortcode-btn:hover{box-shadow:0 3px 8px rgba(0,0,0,0.16)}
+
+.wws-gradient{z-index:-1;position:fixed;width:500px;height:500px;content:"";pointer-events:none;display:none}
+
+@-webkit-keyframes wws-shake {
+
+0%{-webkit-transform:translateX(0px);transform:translateX(0px)}
+
+25%{-webkit-transform:translateX(-8px);transform:translateX(-8px)}
+
+50%{-webkit-transform:translateX(8px);transform:translateX(8px)}
+
+100%{-webkit-transform:translateX(0);transform:translateX(0)}
+
+}
+
+@keyframes wws-shake {
+
+0%{-webkit-transform:translateX(0px);transform:translateX(0px)}
+
+25%{-webkit-transform:translateX(-8px);transform:translateX(-8px)}
+
+50%{-webkit-transform:translateX(8px);transform:translateX(8px)}
+
+100%{-webkit-transform:translateX(0);transform:translateX(0)}
+
+}
+
+.wws-shake-animation{animation:wws-shake .3s}
+
+.wws-popup .wws-gdpr{padding:8px 12px 6px;background:#fff;font-size:12px;color:#888FBB;user-select:none}
+
+.wws-popup .wws-gdpr label{color:#888FBB;display:block;font-weight:400;margin:0;padding:0;font-size:12px;font-family:Arial,Helvetica,sans-serif}
+
+.wws-popup .wws-gdpr label input[type="checkbox"]{vertical-align:middle;margin-right:4px;padding:0}
