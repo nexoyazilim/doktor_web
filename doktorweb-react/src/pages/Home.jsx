@@ -6,30 +6,6 @@ export default function Home() {
   return (
     <div className="site-main">
       <main id="main">
-        <section id="hero" className="hero hero-section">
-          {/* RevSlider */}
-          <rs-fullwidth-wrap id="rev_slider_3_1_forcefullwidth" style={{}}>
-            <rs-module-wrap id="rev_slider_3_1_wrapper" data-alias="mainslider-03" data-source="gallery" style={{width: '885px', height: '502px', visibility: 'visible', marginTop: '0px', marginBottom: '0px', position: 'absolute', overflow: 'visible', left: '0px'}}>
-              <rs-module id="rev_slider_3_1" style={{width: '885px', height: '502px'}} data-version="6.5.19" data-idcheck="true" className="revslider-initialised rev_redraw_on_blurfocus" data-slideactive="rs-5">
-                {/* Slider content will be loaded here */}
-              </rs-module>
-            </rs-module-wrap>
-          </rs-fullwidth-wrap>
-          <div className="container hero-container">
-            <div className="grid hero-grid">
-              <div className="hero-content">
-                <p className="badge hero-badge">Beyin, Sinir ve Omurga Cerrahisi</p>
-                <h1 className="hero-title">Dr. Doğan ŞENTÜRK</h1>
-                <p className="hero-subtitle">Omurga cerrahisi, deformite cerrahisi ve endoskopik omurga cerrahisinde deneyimli yaklaşım.</p>
-                <div className="cta-group">
-                  <a className="btn btn-gradient" href="/iletisim#hiza">Randevu Al</a>
-                  <Link className="btn btn-outline btn-outline-white" to="/hakkimda">Hakkımda</Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section className="cmt-row about-section-2 clearfix">
           <div className="container">
             <div className="row">
@@ -71,7 +47,7 @@ export default function Home() {
                   <div className="title-header">
                     <h3 className="d-none">Dr. Doğan ŞENTÜRK</h3>
                     <span></span>
-                    <h2 className="title">Uzmanlık Alanlarım</h2>
+                    <h2 className="title" style={{ textAlign: 'center' }}>Uzmanlık Alanlarım</h2>
                   </div>
                 </div>
               </div>
@@ -134,8 +110,8 @@ export default function Home() {
 
         <section id="tani-tedavi" className="section section-alt reveal revealed">
           <div className="container">
-            <h2>Tanı / Tedavi</h2>
-            <p className="section-subtitle">Sık başvurulan tanı ve tedavi başlıklarım.</p>
+            <h2 style={{ textAlign: 'center' }}>Tanı / Tedavi</h2>
+            <p className="section-subtitle" style={{ textAlign: 'center' }}>Sık başvurulan tanı ve tedavi başlıklarım.</p>
             <div className="grid cols-3 cards">
               <article className="card">
                 <img loading="lazy" src="https://picsum.photos/seed/belfitigi/744/420" alt="Bel Fıtığı" className="treatment-img" />
@@ -161,8 +137,8 @@ export default function Home() {
 
         <section id="blog" className="section section-alt reveal" ref={blogRef}>
           <div className="container">
-            <h2>Blog</h2>
-            <p className="section-subtitle">Güncel bilgilendirme yazılarımdan öne çıkanlar.</p>
+            <h2 style={{ textAlign: 'center' }}>Blog</h2>
+            <p className="section-subtitle" style={{ textAlign: 'center' }}>Güncel bilgilendirme yazılarımdan öne çıkanlar.</p>
             <div className="grid cols-3 cards">
               <article className="card">
                 <img src="https://picsum.photos/seed/blog1/744/420" alt="Blog görseli 1" />
@@ -182,9 +158,6 @@ export default function Home() {
                 <p>Ergen ve erişkin skolyozunda cerrahi-dışı ve cerrahi yöntemler.</p>
                 <a className="btn btn-outline" href="/blog.html">Devamını oku</a>
               </article>
-            </div>
-            <div className="blog-cta">
-              <a className="btn btn-gradient" href="/blog.html">Tüm Yazılar</a>
             </div>
           </div>
         </section>

@@ -26,6 +26,7 @@ export default function FotoGaleri() {
                   <a href="#" aria-label="Galeri 1">
                     <img loading="lazy" src="https://picsum.photos/seed/photo1/400/300" alt="Klinikten bir kare" />
                   </a>
+                  <figcaption className="gallery-caption">Klinikten bir kare</figcaption>
                 </figure>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
@@ -33,6 +34,7 @@ export default function FotoGaleri() {
                   <a href="#" aria-label="Galeri 2">
                     <img loading="lazy" src="https://picsum.photos/seed/photo2/400/300" alt="Ekip çalışması" />
                   </a>
+                  <figcaption className="gallery-caption">Ekip çalışması</figcaption>
                 </figure>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
@@ -40,6 +42,7 @@ export default function FotoGaleri() {
                   <a href="#" aria-label="Galeri 3">
                     <img loading="lazy" src="https://picsum.photos/seed/photo3/400/300" alt="Etkinlik anı" />
                   </a>
+                  <figcaption className="gallery-caption">Etkinlik anı</figcaption>
                 </figure>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
@@ -47,6 +50,7 @@ export default function FotoGaleri() {
                   <a href="#" aria-label="Galeri 4">
                     <img loading="lazy" src="https://picsum.photos/seed/photo4/400/300" alt="Kongre katılımı" />
                   </a>
+                  <figcaption className="gallery-caption">Kongre katılımı</figcaption>
                 </figure>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
@@ -54,6 +58,7 @@ export default function FotoGaleri() {
                   <a href="#" aria-label="Galeri 5">
                     <img loading="lazy" src="https://picsum.photos/seed/photo5/400/300" alt="Ameliyat öncesi hazırlık" />
                   </a>
+                  <figcaption className="gallery-caption">Ameliyat öncesi hazırlık</figcaption>
                 </figure>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
@@ -61,6 +66,7 @@ export default function FotoGaleri() {
                   <a href="#" aria-label="Galeri 6">
                     <img loading="lazy" src="https://picsum.photos/seed/photo6/400/300" alt="Hasta konsültasyonu" />
                   </a>
+                  <figcaption className="gallery-caption">Hasta konsültasyonu</figcaption>
                 </figure>
               </div>
             </div>

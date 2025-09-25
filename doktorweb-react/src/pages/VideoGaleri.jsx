@@ -18,31 +18,31 @@ export default function VideoGaleri() {
         
         <section className="section">
           <div className="container">
-            {/* Video Grid - 3 Columns */}
-            <div className="row">
+            {/* Video Grid - 3 Columns (FotoGaleri ile aynı yapı) */}
+            <div className="gallery row">
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div className="video-wrapper">
+                <figure className="gallery-item">
                   <div className="video-container">
                     <iframe loading="lazy" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Bel Fıtığı: Tedavi Yaklaşımları" allowFullScreen></iframe>
                   </div>
-                  <h4 className="video-title">Bel Fıtığı: Tedavi Yaklaşımları</h4>
-                </div>
+                  <figcaption className="gallery-caption">Bel Fıtığı: Tedavi Yaklaşımları</figcaption>
+                </figure>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div className="video-wrapper">
+                <figure className="gallery-item">
                   <div className="video-container">
                     <iframe loading="lazy" src="https://www.youtube.com/embed/ysz5S6PUM-U" title="Boyun Fıtığında Mikrocerrahi" allowFullScreen></iframe>
                   </div>
-                  <h4 className="video-title">Boyun Fıtığında Mikrocerrahi</h4>
-                </div>
+                  <figcaption className="gallery-caption">Boyun Fıtığında Mikrocerrahi</figcaption>
+                </figure>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
-                <div className="video-wrapper">
+                <figure className="gallery-item">
                   <div className="video-container">
                     <iframe loading="lazy" src="https://www.youtube.com/embed/oHg5SJYRHA0" title="Skolyozda Tedavi Planlama" allowFullScreen></iframe>
                   </div>
-                  <h4 className="video-title">Skolyozda Tedavi Planlama</h4>
-                </div>
+                  <figcaption className="gallery-caption">Skolyozda Tedavi Planlama</figcaption>
+                </figure>
               </div>
             </div>
           </div>
