@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Blog() {
   return (
     <div className="site-main">
@@ -32,13 +34,13 @@ export default function Blog() {
                     <div className="featured-content">
                       <div className="ser_category">Omurga Cerrahisi</div>
                       <div className="featured-title">
-                        <h3><a href="#">Endoskopik Omurga Ameliyatı Kimler İçin Uygundur?</a></h3>
+                        <h3><Link to="/blog/endoskopik-omurga-ameliyati">Endoskopik Omurga Ameliyatı Kimler İçin Uygundur?</Link></h3>
                       </div>
                       <div className="featured-desc">
                         <p>Endoskopik omurga cerrahisi, minimal invaziv bir yöntem olarak bel ve boyun fıtığı tedavisinde giderek daha yaygın kullanılmaktadır.</p>
                       </div>
                       <div className="featured-bottom">
-                        <a href="#">Devamını Oku</a>
+                        <Link to="/blog/endoskopik-omurga-ameliyati">Devamını Oku</Link>
                       </div>
                     </div>
                   </div>
@@ -52,13 +54,13 @@ export default function Blog() {
                     <div className="featured-content">
                       <div className="ser_category">Bel Hastalıkları</div>
                       <div className="featured-title">
-                        <h3><a href="#">Bel Kayması Nasıl Anlaşılır? Belirtileri ve Tedavi Seçenekleri</a></h3>
+                        <h3><Link to="/blog/bel-kaymasi-belirtileri">Bel Kayması Nasıl Anlaşılır? Belirtileri ve Tedavi Seçenekleri</Link></h3>
                       </div>
                       <div className="featured-desc">
                         <p>Bel kayması (spondilolistezis) bel ağrısının önemli nedenlerinden biridir. Erken teşhis ve uygun tedavi seçenekleri ile hastaların yaşam kalitesi artırılabilir.</p>
                       </div>
                       <div className="featured-bottom">
-                        <a href="#">Devamını Oku</a>
+                        <Link to="/blog/bel-kaymasi-belirtileri">Devamını Oku</Link>
                       </div>
                     </div>
                   </div>
@@ -72,13 +74,13 @@ export default function Blog() {
                     <div className="featured-content">
                       <div className="ser_category">Ameliyat Bilgileri</div>
                       <div className="featured-title">
-                        <h3><a href="#">Omurga Ameliyatı Riskleri ve Korunma Yolları</a></h3>
+                        <h3><Link to="/blog/omurga-ameliyati-riskleri">Omurga Ameliyatı Riskleri ve Korunma Yolları</Link></h3>
                       </div>
                       <div className="featured-desc">
                         <p>Omurga ameliyatları günümüzde güvenli yöntemlerle gerçekleştirilmektedir. Ameliyat öncesi ve sonrası dikkat edilmesi gereken noktalar.</p>
                       </div>
                       <div className="featured-bottom">
-                        <a href="#">Devamını Oku</a>
+                        <Link to="/blog/omurga-ameliyati-riskleri">Devamını Oku</Link>
                       </div>
                     </div>
                   </div>
@@ -92,13 +94,13 @@ export default function Blog() {
                     <div className="featured-content">
                       <div className="ser_category">Skolyoz</div>
                       <div className="featured-title">
-                        <h3><a href="#">Çocuklarda Skolyoz: Erken Teşhis ve Tedavi</a></h3>
+                        <h3><Link to="/blog/cocuklarda-skolyoz">Çocuklarda Skolyoz: Erken Teşhis ve Tedavi</Link></h3>
                       </div>
                       <div className="featured-desc">
                         <p>Çocukluk çağında görülen skolyoz, erken dönemde fark edildiğinde cerrahi olmayan yöntemlerle başarılı şekilde tedavi edilebilir.</p>
                       </div>
                       <div className="featured-bottom">
-                        <a href="#">Devamını Oku</a>
+                        <Link to="/blog/cocuklarda-skolyoz">Devamını Oku</Link>
                       </div>
                     </div>
                   </div>
@@ -112,13 +114,13 @@ export default function Blog() {
                     <div className="featured-content">
                       <div className="ser_category">Beyin Cerrahisi</div>
                       <div className="featured-title">
-                        <h3><a href="#">Beyin Tümörü Ameliyatlarında Yeni Teknolojiler</a></h3>
+                        <h3><Link to="/blog/beyin-tumoru-teknolojileri">Beyin Tümörü Ameliyatlarında Yeni Teknolojiler</Link></h3>
                       </div>
                       <div className="featured-desc">
                         <p>Beyin tümörü cerrahisinde kullanılan son teknolojiler, hasta güvenliğini artırırken ameliyat başarısını da önemli ölçüde yükseltmektedir.</p>
                       </div>
                       <div className="featured-bottom">
-                        <a href="#">Devamını Oku</a>
+                        <Link to="/blog/beyin-tumoru-teknolojileri">Devamını Oku</Link>
                       </div>
                     </div>
                   </div>
@@ -132,13 +134,13 @@ export default function Blog() {
                     <div className="featured-content">
                       <div className="ser_category">Rehabilitasyon</div>
                       <div className="featured-title">
-                        <h3><a href="#">Omurga Ameliyatı Sonrası Rehabilitasyon Süreci</a></h3>
+                        <h3><Link to="/blog/omurga-ameliyati-rehabilitasyon">Omurga Ameliyatı Sonrası Rehabilitasyon Süreci</Link></h3>
                       </div>
                       <div className="featured-desc">
                         <p>Ameliyat sonrası rehabilitasyon, başarılı bir iyileşme süreci için kritik öneme sahiptir. Fizik tedavi programları ve egzersiz önerileri.</p>
                       </div>
                       <div className="featured-bottom">
-                        <a href="#">Devamını Oku</a>
+                        <Link to="/blog/omurga-ameliyati-rehabilitasyon">Devamını Oku</Link>
                       </div>
                     </div>
                   </div>

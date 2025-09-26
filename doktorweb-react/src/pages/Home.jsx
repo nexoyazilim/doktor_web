@@ -57,7 +57,7 @@ export default function Home() {
                 <div className="featured-imagebox featured-imagebox-portfolio style1">
                   <div className="featured-thumbnail">
                     <div className="featured-thumbnail-inner">
-                      <img width="744" height="544" className="img-fluid" src="https://www.salimsenturk.com/uploads/_blogkCrop/doctor-points-to-model-spine.jpg" alt="Omurga Cerrahisi" />
+                      <img width="744" height="544" className="img-fluid" src="/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Omurga Cerrahisi" />
                     </div>
                   </div>
                   <div className="featured-content">
@@ -74,7 +74,7 @@ export default function Home() {
                 <div className="featured-imagebox featured-imagebox-portfolio style1">
                   <div className="featured-thumbnail">
                     <div className="featured-thumbnail-inner">
-                      <img width="744" height="544" className="img-fluid" src="https://www.salimsenturk.com/uploads/_blogkCrop/patient-in-evaluation-for-idiopathic-scoliosis.jpg" alt="Deformite Cerrahisi" />
+                      <img width="744" height="544" className="img-fluid" src="/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="Deformite Cerrahisi" />
                     </div>
                   </div>
                   <div className="featured-content">
@@ -91,7 +91,7 @@ export default function Home() {
                 <div className="featured-imagebox featured-imagebox-portfolio style1">
                   <div className="featured-thumbnail">
                     <div className="featured-thumbnail-inner">
-                      <img width="744" height="544" className="img-fluid" src="https://www.salimsenturk.com/uploads/_blogkCrop/1635969070-endoscopic-spine.jpg" alt="Endoskopik Omurga Cerrahisi" />
+                      <img width="744" height="544" className="img-fluid" src="/assets/images/hizmetlerimiz_image/frksynellazer.jpg" alt="Endoskopik Omurga Cerrahisi" />
                     </div>
                   </div>
                   <div className="featured-content">
@@ -108,32 +108,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="tani-tedavi" className="section section-alt reveal revealed">
-          <div className="container">
-            <h2 style={{ textAlign: 'center' }}>Tanı / Tedavi</h2>
-            <p className="section-subtitle" style={{ textAlign: 'center' }}>Sık başvurulan tanı ve tedavi başlıklarım.</p>
-            <div className="grid cols-3 cards">
-              <article className="card">
-                <img loading="lazy" src="https://picsum.photos/seed/belfitigi/744/420" alt="Bel Fıtığı" className="treatment-img" />
-                <h3>Bel Fıtığı</h3>
-                <p>Bacak ağrısı, uyuşma ve güçsüzlükte modern tedavi yaklaşımları.</p>
-                <Link className="btn btn-outline" to="/tedaviler/bel-fitigi">İncele</Link>
-              </article>
-              <article className="card">
-                <img loading="lazy" src="https://picsum.photos/seed/boyunfitigi/744/420" alt="Boyun Fıtığı" className="treatment-img" />
-                <h3>Boyun Fıtığı</h3>
-                <p>Kol ağrısı ve elde uyuşma için mikrocerrahi ve endoskopik seçenekler.</p>
-                <Link className="btn btn-outline" to="/tedaviler/boyun-fitigi">İncele</Link>
-              </article>
-              <article className="card">
-                <img loading="lazy" src="https://picsum.photos/seed/belkanaldarligi/744/420" alt="Bel Kanal Darlığı" className="treatment-img" />
-                <h3>Bel Kanal Darlığı</h3>
-                <p>Yürüme mesafesini kısaltan dar kanal sorunlarında kişiye özel çözümler.</p>
-                <Link className="btn btn-outline" to="/tedaviler/bel-kanal-darligi">İncele</Link>
-              </article>
-            </div>
-          </div>
-        </section>
+
 
         <section id="blog" className="section section-alt reveal" ref={blogRef}>
           <div className="container">
@@ -141,29 +116,32 @@ export default function Home() {
             <p className="section-subtitle" style={{ textAlign: 'center' }}>Güncel bilgilendirme yazılarımdan öne çıkanlar.</p>
             <div className="grid cols-3 cards">
               <article className="card">
-                <img src="https://picsum.photos/seed/blog1/744/420" alt="Blog görseli 1" />
+                <img src="/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="Blog görseli 1" />
                 <h3>Endoskopik Omurga Cerrahisi 101</h3>
                 <p>Küçük kesilerle hızlı iyileşme: endoskopik yaklaşımın temelleri.</p>
-                <a className="btn btn-outline" href="/blog.html">Devamını oku</a>
+                <Link className="btn btn-outline" to="/blog/endoskopik-omurga-cerrahisi-101">Devamını oku</Link>
               </article>
               <article className="card">
-                <img src="https://picsum.photos/seed/blog2/744/420" alt="Blog görseli 2" />
+                <img src="/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Blog görseli 2" />
                 <h3>Bel Kayması Belirtileri ve Tedavi</h3>
                 <p>Belirtileri tanıma ve kişiye özel tedavi seçeneklerini değerlendirme.</p>
-                <a className="btn btn-outline" href="/blog.html">Devamını oku</a>
+                <Link className="btn btn-outline" to="/blog/endoskopik-omurga-cerrahisi-101">Devamını oku</Link>
               </article>
               <article className="card">
-                <img src="https://picsum.photos/seed/blog3/744/420" alt="Blog görseli 3" />
+                <img src="/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="Blog görseli 3" />
                 <h3>Skolyozda Tedavi Yaklaşımları</h3>
                 <p>Ergen ve erişkin skolyozunda cerrahi-dışı ve cerrahi yöntemler.</p>
-                <a className="btn btn-outline" href="/blog.html">Devamını oku</a>
+                <Link className="btn btn-outline" to="/blog/endoskopik-omurga-cerrahisi-101">Devamını oku</Link>
               </article>
             </div>
           </div>
         </section>
+        <div className="fixed-social">
+          <a onClick={() => window.gtag_report_conversion && window.gtag_report_conversion()} href="https://wa.me/+905330669156" target="_blank" className="whatsapp" rel="noopener noreferrer" aria-label="WhatsApp ile yazın">
+            <i className="fa fa-whatsapp"></i>
+          </a>
+        </div>
       </main>
     </div>
   )
 }
-
-

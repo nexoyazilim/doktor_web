@@ -7,15 +7,19 @@ import routes from './routes'
 export default function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Suspense fallback={null}>
-        <Routes>
-          {routes.map(({ path, element: Component }) => (
-            <Route key={path} path={path} element={<Component />} />
-          ))}
-        </Routes>
-      </Suspense>
-      <Footer />
+      <div className="site-shell">
+        <Header />
+        <main className="site-content">
+          <Suspense fallback={<div className="page-fallback" aria-hidden="true" /> }>
+            <Routes>
+              {routes.map(({ path, element: Component }) => (
+                <Route key={path} path={path} element={<Component />} />
+              ))}
+            </Routes>
+          </Suspense>
+        </main>
+        <Footer />
+      </div>
     </BrowserRouter>
   )
 }

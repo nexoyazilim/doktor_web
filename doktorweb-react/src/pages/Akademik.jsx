@@ -86,11 +86,11 @@ export default function Akademik() {
         {/* Publications Section */}
         <section className="section">
           <div className="container">
-            <div className="title-header">
+            <div className="title-header" style={{ textAlign: 'center' }}>
               <h2>Yayınlar ve Çalışmalar</h2>
             </div>
             
-            <div className="filters">
+            <div className="filters" style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap', margin: '12px 0 20px' }}>
               <button className={`btn ${activeFilter === 'all' ? 'btn-primary' : 'btn-outline'}`} onClick={() => setActiveFilter('all')}>Tümü</button>
               <button className={`btn ${activeFilter === 'makale' ? 'btn-primary' : 'btn-outline'}`} onClick={() => setActiveFilter('makale')}>Hakemli Makale</button>
               <button className={`btn ${activeFilter === 'bildiri' ? 'btn-primary' : 'btn-outline'}`} onClick={() => setActiveFilter('bildiri')}>Bildiri</button>

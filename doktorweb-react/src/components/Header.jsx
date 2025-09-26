@@ -85,7 +85,7 @@ export default function Header() {
                 <div className="site-navigation d-flex flex-row align-items-center justify-content-between">
                   <div className="site-branding">
                     <Link className="home-link" to="/" title="Dr. Doğan ŞENTÜRK" rel="home">
-                      <img id="logo-img" className="img-fluid auto_size" src="/assets/images/doktor_logo.png" alt="Dr. Doğan ŞENTÜRK" />
+                      <span className="brand-name" style={{ fontWeight: 800, fontSize: '20px', color: 'var(--fg)' }}>Dr. Doğan ŞENTÜRK</span>
                     </Link>
                   </div>
                   <div className="site-menubar">
@@ -98,13 +98,13 @@ export default function Header() {
                     <div className="header_extra d-flex flex-row align-items-center justify-content-end">
                       <div className="widget_info">
                         <div className="widget_content">
-                          <a href="tel:+905330669156">0533 066 91 56</a>
+                          <a href="tel:+90555 555 55 55">0555 555 55 55</a>
                           <p className="widget_desc">Bana Ulaşın</p>
                         </div>
                       </div>
                       <div className="widget_info">
                         <div className="widget_content">
-                          <a href="mailto:info@demo.com">info@dmeo.com</a>
+                          <a href="mailto:info@demo.com">info@demo.com</a>
                           <p className="widget_desc">E-Posta Gönderin</p>
                         </div>
                       </div>
@@ -129,27 +129,18 @@ export default function Header() {
                   <li className="mega-menu-item "><Link to="/hakkimda">Hakkımda</Link></li>
                   <li className="mega-menu-item  "><Link to="/tedaviler" className="mega-menu-link">Uzmanlık Alanlarım</Link>
                     <ul className="mega-submenu">
-                      <li><Link to="/tedaviler">Omurga Cerrahisi</Link></li>
-                      <li><Link to="/tedaviler">Deformite Cerrahisi</Link></li>
-                      <li><Link to="/tedaviler">Endoskopik Omurga Cerrahisi</Link></li>
-                      <li><Link to="/tedaviler">Periferik Sinir Cerrahisi</Link></li>
-                      <li><Link to="/tedaviler">Bel Fıtığı Ameliyatı</Link></li>
-                      <li><Link to="/tedaviler">Bel Kayması</Link></li>
-                      <li><Link to="/tedaviler">Bel Kanal Darlığı</Link></li>
-                      <li><Link to="/tedaviler">Boyun Fıtığı Ameliyatı</Link></li>
-                      <li><Link to="/tedaviler">Boyun Kanal Darlığı</Link></li>
-                      <li><Link to="/tedaviler">Sırt Fıtığı (Torakal Disk Hernisi)</Link></li>
-                      <li><Link to="/tedaviler">Omurga Ağrılarında Enjeksiyon Tedavisi</Link></li>
-                      <li><Link to="/tedaviler">Siyatik Ağrısı Tedavisi</Link></li>
-                      <li><Link to="/tedaviler">Omurga Tümörleri</Link></li>
-                      <li><Link to="/tedaviler">Sakrum Tümörü</Link></li>
-                      <li><Link to="/tedaviler">Tarlov Kisti</Link></li>
-                      <li><Link to="/tedaviler">Kifoz</Link></li>
-                      <li><Link to="/tedaviler">Gergin Omurilik Sendromu</Link></li>
-                      <li><Link to="/tedaviler">Çocuklarda Skolyoz</Link></li>
-                      <li><Link to="/tedaviler">Erişkin Skolyoz</Link></li>
-                      <li><Link to="/tedaviler">Beyin Tümörü</Link></li>
-                      <li><Link to="/tedaviler">Beyincik Sarkması</Link></li>
+                      <li><Link to="/tedaviler?sec=boyun-fitigi-ameliyati">Boyun Fıtığı Ameliyatı</Link></li>
+                      <li><Link to="/tedaviler?sec=boyun-kanal-darligi">Boyun Kanal Darlığı</Link></li>
+                      <li><Link to="/tedaviler?sec=sirt-fitigi-torakal-disk-hernisi">Sırt Fıtığı (Torakal Disk Hernisi)</Link></li>
+                      <li><Link to="/tedaviler?sec=omurga-agrilarinda-enjeksiyon-tedavisi">Omurga Ağrılarında Enjeksiyon Tedavisi</Link></li>
+                      <li><Link to="/tedaviler?sec=siyatik-agrisi-tedavisi">Siyatik Ağrısı Tedavisi</Link></li>
+                      <li><Link to="/tedaviler?sec=omurga-tumorleri">Omurga Tümörleri</Link></li>
+                      <li><Link to="/tedaviler?sec=kifoz">Kifoz</Link></li>
+                      <li><Link to="/tedaviler?sec=gergin-omurilik-sendromu">Gergin Omurilik Sendromu</Link></li>
+                      <li><Link to="/tedaviler?sec=cocuklarda-skolyoz">Çocuklarda Skolyoz</Link></li>
+                      <li><Link to="/tedaviler?sec=eriskin-skolyoz">Erişkin Skolyoz</Link></li>
+                      <li><Link to="/tedaviler?sec=beyin-tumoru">Beyin Tümörü</Link></li>
+                      <li><Link to="/tedaviler?sec=beyincik-sarkmasi">Beyincik Sarkması</Link></li>
                     </ul>
                   </li>
                   <li className="mega-menu-item"><Link to="/akademik">Akademik</Link></li>
@@ -157,7 +148,7 @@ export default function Header() {
                   <li className="mega-menu-item  "><a href="#" className="mega-menu-link">Galeri</a>
                     <ul className="mega-submenu">
                       <li><Link to="/foto-galeri">Foto Galeri</Link></li>
-                      <li><Link to="/videol-galeri">Videolar</Link></li>
+                      <li><Link to="/video-galeri">Videolar</Link></li>
                     </ul>
                   </li>
                   <li className="mega-menu-item "><Link to="/iletisim">İletişim</Link></li>
