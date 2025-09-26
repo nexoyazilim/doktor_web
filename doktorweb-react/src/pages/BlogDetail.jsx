@@ -1,4 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
+import WhatsAppButton from '../components/WhatsAppButton'
+import LanguageSwitcher from '../components/LanguageSwitcher'
 
 export default function BlogDetail() {
   const { slug } = useParams()
@@ -292,6 +294,8 @@ export default function BlogDetail() {
               </div>
             </div>
           </article>
+          <WhatsAppButton />
+          <LanguageSwitcher />
         </div>
   )
 }

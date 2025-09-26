@@ -850,7 +850,7 @@
 	.featured-imagebox-contact .featured-content { padding: 26px 50px 30px 15px; }
 	.tm_coverimgbox_wrapper .tm_coverbox_contents .featured-content { margin: 0 15px 0;}
 	.tm_coverimgbox_wrapper .featured-content .featured-title h3 { margin-bottom: 0; }
-	.tm_coverimgbox_wrapper .featured-content .featured-desc p { padding-bottom: 0; -webkit-line-clamp: 2; }
+	.tm_coverimgbox_wrapper .featured-content .featured-desc p { padding-bottom: 0; -webkit-line-clamp: 2; line-clamp: 2; }
 	.cmt-list.style5 li span ,
 	.cmt-list.style5 li p { display: inline-block; }
 	.cmt-list.style5 li p { padding-left: 0; }

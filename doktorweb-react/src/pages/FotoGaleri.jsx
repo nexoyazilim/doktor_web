@@ -1,3 +1,6 @@
+import WhatsAppButton from '../components/WhatsAppButton'
+import LanguageSwitcher from '../components/LanguageSwitcher'
+
 export default function FotoGaleri() {
   return (
     <div className="site-main">
@@ -72,6 +75,8 @@ export default function FotoGaleri() {
             </div>
           </div>
         </section>
+        <WhatsAppButton />
+        <LanguageSwitcher />
       </main>
     </div>
   )

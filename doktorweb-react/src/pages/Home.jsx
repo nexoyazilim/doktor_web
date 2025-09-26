@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import WhatsAppButton from '../components/WhatsAppButton'
+import LanguageSwitcher from '../components/LanguageSwitcher'
 
 export default function Home() {
   const blogRef = useScrollReveal()
@@ -32,7 +34,7 @@ export default function Home() {
               </div>
               <div className="col-lg-6 res-991-pt-30">
                 <div className="cmt_single_image-wrapper">
-                  <img className="img-fluid img-rounded" width="570" height="700" src="/assets/images/doktor_1.png" alt="Dr. Doğan ŞENTÜRK" />
+                  <img className="profile-img" src="/assets/images/doktor_1.png" alt="Dr. Doğan ŞENTÜRK" />
                 </div>
               </div>
             </div>
@@ -57,7 +59,7 @@ export default function Home() {
                 <div className="featured-imagebox featured-imagebox-portfolio style1">
                   <div className="featured-thumbnail">
                     <div className="featured-thumbnail-inner">
-                      <img width="744" height="544" className="img-fluid" src="/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Omurga Cerrahisi" />
+                      <img className="portfolio-img" src="/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Omurga Cerrahisi" />
                     </div>
                   </div>
                   <div className="featured-content">
@@ -74,7 +76,7 @@ export default function Home() {
                 <div className="featured-imagebox featured-imagebox-portfolio style1">
                   <div className="featured-thumbnail">
                     <div className="featured-thumbnail-inner">
-                      <img width="744" height="544" className="img-fluid" src="/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="Deformite Cerrahisi" />
+                      <img className="portfolio-img" src="/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="Deformite Cerrahisi" />
                     </div>
                   </div>
                   <div className="featured-content">
@@ -91,7 +93,7 @@ export default function Home() {
                 <div className="featured-imagebox featured-imagebox-portfolio style1">
                   <div className="featured-thumbnail">
                     <div className="featured-thumbnail-inner">
-                      <img width="744" height="544" className="img-fluid" src="/assets/images/hizmetlerimiz_image/frksynellazer.jpg" alt="Endoskopik Omurga Cerrahisi" />
+                      <img className="portfolio-img" src="/assets/images/hizmetlerimiz_image/frksynellazer.jpg" alt="Endoskopik Omurga Cerrahisi" />
                     </div>
                   </div>
                   <div className="featured-content">
@@ -116,19 +118,19 @@ export default function Home() {
             <p className="section-subtitle" style={{ textAlign: 'center' }}>Güncel bilgilendirme yazılarımdan öne çıkanlar.</p>
             <div className="grid cols-3 cards">
               <article className="card">
-                <img src="/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="Blog görseli 1" />
+                <img className="blog-img" src="/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="Blog görseli 1" />
                 <h3>Endoskopik Omurga Cerrahisi 101</h3>
                 <p>Küçük kesilerle hızlı iyileşme: endoskopik yaklaşımın temelleri.</p>
                 <Link className="btn btn-outline" to="/blog/endoskopik-omurga-cerrahisi-101">Devamını oku</Link>
               </article>
               <article className="card">
-                <img src="/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Blog görseli 2" />
+                <img className="blog-img" src="/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Blog görseli 2" />
                 <h3>Bel Kayması Belirtileri ve Tedavi</h3>
                 <p>Belirtileri tanıma ve kişiye özel tedavi seçeneklerini değerlendirme.</p>
                 <Link className="btn btn-outline" to="/blog/endoskopik-omurga-cerrahisi-101">Devamını oku</Link>
               </article>
               <article className="card">
-                <img src="/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="Blog görseli 3" />
+                <img className="blog-img" src="/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="Blog görseli 3" />
                 <h3>Skolyozda Tedavi Yaklaşımları</h3>
                 <p>Ergen ve erişkin skolyozunda cerrahi-dışı ve cerrahi yöntemler.</p>
                 <Link className="btn btn-outline" to="/blog/endoskopik-omurga-cerrahisi-101">Devamını oku</Link>
@@ -136,11 +138,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className="fixed-social">
-          <a onClick={() => window.gtag_report_conversion && window.gtag_report_conversion()} href="https://wa.me/+905330669156" target="_blank" className="whatsapp" rel="noopener noreferrer" aria-label="WhatsApp ile yazın">
-            <i className="fa fa-whatsapp"></i>
-          </a>
-        </div>
+        <WhatsAppButton />
+        <LanguageSwitcher />
       </main>
     </div>
   )

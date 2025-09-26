@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import WhatsAppButton from '../components/WhatsAppButton'
+import LanguageSwitcher from '../components/LanguageSwitcher'
 
 export default function Tedaviler() {
   const [selectedTreatment, setSelectedTreatment] = useState(null)
@@ -83,10 +85,14 @@ export default function Tedaviler() {
 
   const handleTreatmentClick = (treatment) => {
     setSelectedTreatment(treatment)
+    // Sayfanın başına scroll yap
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const handleBackToList = () => {
     setSelectedTreatment(null)
+    // Sayfanın başına scroll yap
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   // URL parametresinden (sec) varsayılan seçim yap ve slug <-> title eşlemesini hazırla
@@ -150,31 +156,6 @@ export default function Tedaviler() {
                       })}
                     </ul>
                   </aside>
-                  <aside className="widget widget-banner">
-                    <div className="cmt-bg cmt-col-bgimage-yes col-bg-img-sixteen bg-base-dark">
-                      <div className="cmt-col-wrapper-bg-layer cmt-bg-layer">
-                        <div className="cmt-col-wrapper-bg-layer-inner"></div>
-                      </div>
-                      <div className="layer-content">
-                        <h3 className="widget-title">İSTANBUL / Türkiye</h3>
-
-                        <span> Ortahisar/Trabzon</span>
-                        <div className="featured-icon-box style14 bg-base-white">
-                          <div className="featured-title">
-                            <h3>Bana Ulaşabilirsiniz</h3>
-                          </div>
-                          <div className="featured-icon">
-                            <div className="cmt-icon cmt-icon_element-size-sm cmt-icon_element-color-skincolor">
-                              <i className="flaticon-chat"></i>
-                            </div>
-                          </div>
-                          <div className="featured-desc">
-                            <p>Gsm: <a href="tel:+9055 555 55 55">0555 555 55 55</a></p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </aside>
                 </aside>
 
                 <div className="treatment-detail">
@@ -183,7 +164,13 @@ export default function Tedaviler() {
                       <div className="row">
                         <div className="col-lg-12">
                           <div className="cmt_single_image-wrapper">
-                            <img className="img-fluid" src={`https://picsum.photos/seed/${(titleToSlug.current[selectedTreatment] || 'treatment')}/968/552`} width="968" height="552" alt={selectedTreatment} />
+                            <div className="hero-banner-container">
+                              <img 
+                                className="hero-banner" 
+                                src={`https://picsum.photos/seed/${(titleToSlug.current[selectedTreatment] || 'treatment')}/1920/400`} 
+                                alt={selectedTreatment} 
+                              />
+                            </div>
                           </div>
                           <div className="icerik mt-25">
                             <h3 className="fs-24 mb-10" id="toc_0_H3">{selectedTreatment}</h3>
@@ -233,6 +220,8 @@ export default function Tedaviler() {
               </div>
             </div>
           </section>
+          <WhatsAppButton />
+          <LanguageSwitcher />
         </main>
       </div>
     )
@@ -241,23 +230,80 @@ export default function Tedaviler() {
   return (
     <div className="site-main">
       <main id="main">
-        <section id="uzmanlik" className="section section-alt">
+
+        {/* Treatments Grid Section */}
+        <section className="section" style={{ paddingTop: '80px' }}>
           <div className="container">
-            <h1>Uzmanlık Alanlarım</h1>
-            <p className="section-subtitle">Aşağıdaki uzmanlık alanlarından birini seçerek detaylı bilgi alabilirsiniz.</p>
-            <div className="grid cols-3 specialties">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="section-title title-style-center_text">
+                  <div className="title-header">
+                    <h3>Hizmetlerimiz</h3>
+                    <span></span>
+                    <h2 className="title">Uzmanlık Alanlarım</h2>
+                  </div>
+                  <div className="title-desc">
+                    <p>Aşağıdaki uzmanlık alanlarından birini seçerek detaylı bilgi alabilirsiniz. Her tedavi yöntemi için kapsamlı açıklamalar, uygulanan prosedürler ve iyileşme süreçleri hakkında bilgi bulabilirsiniz.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="row pt-30">
               {Object.keys(treatments).map((treatment, index) => (
-                <div 
-                  key={index}
-                  className="specialty-item"
-                  onClick={() => handleTreatmentClick(treatment)}
-                >
-                  {treatment}
+                <div key={index} className="col-lg-4 col-md-6 mb-30">
+                  <div className="featured-imagebox featured-imagebox-portfolio style1">
+                    <div className="featured-thumbnail">
+                      <div className="featured-thumbnail-inner">
+                        <img 
+                          className="portfolio-img" 
+                          src={`https://picsum.photos/seed/${treatment.replace(/\s+/g, '-').toLowerCase()}/400/300`} 
+                          alt={treatment} 
+                        />
+                        <div className="featured-thumbnail-overlay">
+                          <div className="featured-thumbnail-overlay-inner">
+                            <div className="featured-thumbnail-overlay-content">
+                              <div className="featured-thumbnail-overlay-icon">
+                                <i className="fa fa-plus"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="featured-content">
+                      <div className="featured-title">
+                        <h3>
+                          <span 
+                            className="treatment-link" 
+                            onClick={() => handleTreatmentClick(treatment)}
+                            style={{ cursor: 'pointer' }}
+                          >
+                            {treatment}
+                          </span>
+                        </h3>
+                      </div>
+                      <div className="featured-desc">
+                        <p>{treatments[treatment].description}</p>
+                        <div className="featured-bottom">
+                          <span 
+                            className="cmt-btn cmt-btn-size-sm cmt-btn-shape-square cmt-btn-style-fill cmt-btn-color-skincolor"
+                            onClick={() => handleTreatmentClick(treatment)}
+                            style={{ cursor: 'pointer' }}
+                          >
+                            Detayları Gör
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
+        <WhatsAppButton />
+        <LanguageSwitcher />
       </main>
     </div>
   )

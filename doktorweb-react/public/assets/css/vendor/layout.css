@@ -186,7 +186,9 @@ input[type="color"]:focus {
     border: 1px solid transparent;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
+    box-shadow: none;
     -webkit-appearance: searchfield;
+    appearance: searchfield;
 }
 
 /* clears the 'X' from Internet Explorer */
@@ -233,7 +235,7 @@ menu, ol, ul {
 }
 
 /** Typo Colors **/
-.border-color: { color: #e5e5e5;}
+.border-color { color: #e5e5e5;}
 .bodyfont-color { color: var(--base-bodyfont-color);}
 .headingfont-color { color: var(--base-headingfont-color); }
 
@@ -872,7 +874,6 @@ label { font-size: 14px; }
     display: block;
     margin: 0 auto;
     position: relative;
-    vertical-align: middle;
 }
 .loader-blob,
 .loader-blob:before,
@@ -1589,7 +1590,7 @@ nav.main-menu ul {
     left: 15%;
     margin: auto;
     opacity: 0.20; 
-    transform: ;
+    transform: 1px;
     transition: all 0.3s ease-out;
 }
 .cmt-header-style-01 .site-navigation nav.main-menu ul.menu > li > a:hover:before ,
@@ -1741,7 +1742,6 @@ nav.main-menu ul {
     text-align: center;
     border-radius: 50%;
 }
-.cmt-header-style-03 .header_extra .widget_info .widget_content h3 a {}
 .cmt-header-style-03 .site-menubar .header_extra > div { height: 120px; }
 .cmt-header-style-03 .site-menubar .header_extra > div:before {
     content: '';
@@ -1886,6 +1886,7 @@ ul.footer-nav-menu li:last-child:after {
     text-transform: uppercase;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2055,7 +2056,6 @@ footer .g-map iframe {
   background-color: transparent!important;
   border-radius: 0;
   position: relative;
-  vertical-align: middle;
 }
 
 /*widget social*/
@@ -2063,9 +2063,7 @@ footer .g-map iframe {
     margin-top: 25px;
     margin-bottom: 35px;
 }
-.footer .widget.cmt-social-links-wrapper { 
-    
-}
+
 .footer .social-icons li {
     margin: 0;
     min-width: 23px;
@@ -2127,7 +2125,7 @@ footer .g-map iframe {
     padding-left: 30px;
 }
 
-/** copyright **/
+/* Custom styles */
 .copyright{
     color: rgba(255,255,255,0.7);
     display: block;
@@ -2368,7 +2366,6 @@ footer .g-map iframe {
     margin-bottom: 20px;
 }
 .cmt-list.style1 li { padding-left: 6px; }
-.cmt-list.style1 li i {}
 .performance-section .layer-content .performance-sec-btn { margin-top: 20px; }
 .performance-section .layer-content .performance-sec-btn a { text-transform: uppercase;  }
 
@@ -2518,6 +2515,7 @@ footer .g-map iframe {
 .service-section-3 .section-title h2.title {
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis; 
@@ -3066,6 +3064,7 @@ article.cmt-blog-classic .cmt-blog-classic-content{
 .cmt-post-prev-next-buttons .pagination-content a span {
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -3269,9 +3268,10 @@ section.error-404 .page-content p { margin-bottom: 28px; }
 .cmt-post-item-popup {
     background: rgba(0,0,0,.8);
 }
-
+}
 @media (max-width: 1199px) {
 .cmt_item_popup_details {
     width: 83%;
 }
 
+}

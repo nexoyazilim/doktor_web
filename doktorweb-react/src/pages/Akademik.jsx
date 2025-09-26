@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import WhatsAppButton from '../components/WhatsAppButton'
+import LanguageSwitcher from '../components/LanguageSwitcher'
 
 export default function Akademik() {
   const [activeFilter, setActiveFilter] = useState('all')
@@ -109,6 +111,8 @@ export default function Akademik() {
             </div>
           </div>
         </section>
+        <WhatsAppButton />
+        <LanguageSwitcher />
       </main>
     </div>
   )

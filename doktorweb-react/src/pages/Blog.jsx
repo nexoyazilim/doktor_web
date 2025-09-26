@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import WhatsAppButton from '../components/WhatsAppButton'
+import LanguageSwitcher from '../components/LanguageSwitcher'
 
 export default function Blog() {
   return (
@@ -150,6 +152,8 @@ export default function Blog() {
           </div>
         </div>
       </div>
+        <WhatsAppButton />
+        <LanguageSwitcher />
     </div>
   )
 }

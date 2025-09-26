@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import WhatsAppButton from '../components/WhatsAppButton'
+import LanguageSwitcher from '../components/LanguageSwitcher'
 
 export default function Iletisim() {
   const [formData, setFormData] = useState({
@@ -29,7 +31,9 @@ export default function Iletisim() {
       <main id="main">
         {/* Page Header */}
         <div className="cmt-page-title-row-inner">
+          
           <div className="container">
+            
             <div className="row">
               <div className="col">
                 <div className="page-title-heading">
@@ -129,6 +133,8 @@ export default function Iletisim() {
             </div>
           </div>
         </section>
+        <WhatsAppButton />
+        <LanguageSwitcher />
       </main>
     </div>
   )

@@ -1,3 +1,6 @@
+import WhatsAppButton from '../components/WhatsAppButton'
+import LanguageSwitcher from '../components/LanguageSwitcher'
+
 export default function Hakkimda() {
   return (
     <div className="site-main">
@@ -250,6 +253,8 @@ export default function Hakkimda() {
             </div>
           </div>
         </section>
+        <WhatsAppButton />
+        <LanguageSwitcher />
       </main>
     </div>
   )
