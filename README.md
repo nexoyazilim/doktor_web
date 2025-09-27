@@ -1,59 +1,16 @@
-# Doktor Web - Statik Site
+# React + Vite
 
-Bu proje; Hakkımda, Uzmanlık Alanlarım, İletişim, Akademik, Blog, Galeri, Dil Destekleri, Online Randevu, Yorumlar, SSS, Tanı/Tedavi ve Son Makaleler modüllerini içeren çok dilli (TR/EN) statik bir web sitesidir.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-- Temiz kod prensipleri: anlamlı fonksiyon/degisken adlari, küçük ve tek sorumluluklu fonksiyonlar, yan etkisiz yardimcilar.
-- Hafif CSS: sadece temel değişkenler, grid ve bileşen çerçeveleri; animasyon yok, minimal.
+Currently, two official plugins are available:
 
-## Yol Haritası
-- [x] Proje iskeletini oluştur (klasörler, temel dosyalar)
-- [x] README ve yol haritası ile TODO yaz
-- [x] Çok dilli (TR/EN) altyapıyı kur ve dil anahtarlarını yerleştir
-- [x] Navigasyon ve tüm sayfa bölümlerini ekle
-- [x] Online randevu formunu oluştur ve basit gönderim işlemini ekle
-- [x] SSS (akordeon) ve Yorumlar/Referanslar bileşenlerini ekle
-- [x] Blog, Son Makaleler ve Akademik içerik için şablonlar
-- [x] Galeri grid ve lightbox yer tutucu
-- [x] Stil (responsive, temalar) ve temel SEO etiketleri
-- [x] Yayınlama talimatları (static hosting) ekle
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Proje Yapısı
-```
-/ (proje kökü)
-├─ index.html
-├─ assets/
-│  ├─ css/
-│  │  └─ styles.css
-│  ├─ js/
-│  │  └─ app.js
-│  └─ i18n/
-│     ├─ tr.json
-│     └─ en.json
-```
+## React Compiler
 
-## Geliştirme
-- `index.html` tek sayfa uygulama iskeletini barındırır.
-- `assets/js/app.js` dil desteğini, SSS akordeonunu ve basit form işlemlerini yönetir.
-- `assets/i18n/*.json` anahtar-değer çevirilerini içerir. `data-i18n` attributeleri üzerinden uygulanır.
+The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-Yerel geliştirme için basit bir HTTP sunucusu önerilir:
+## Expanding the ESLint configuration
 
-```bash
-# Python 3
-python3 -m http.server 5173
-# veya Node.js (npx)
-npx serve . -l 5173
-```
-
-Ardından tarayıcıda `http://localhost:5173` adresine gidin.
-
-## Yayınlama (Static Hosting)
-- GitHub Pages, Netlify veya Vercel üzerinde kök dizini yayınlayın.
-- Önbellekleme için basit `Cache-Control` başlıkları önerilir.
-
-## Katkı ve Özelleştirme
-- Yeni dil eklemek için `assets/i18n` içine `xx.json` ekleyip dil seçicisinde listelenmesini sağlayın.
-- Bölüm içeriklerini `index.html` içinde ilgili `section` bloklarında güncelleyebilirsiniz.
-
-## Lisans
-Bu proje örnek amaçlıdır; dilediğiniz gibi uyarlayabilirsiniz.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

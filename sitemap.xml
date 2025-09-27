@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url><loc>/</loc></url>
-	<url><loc>/hakkimda.html</loc></url>
-	<url><loc>/uzmanlik.html</loc></url>
-	<url><loc>/tani-tedavi.html</loc></url>
-	<url><loc>/blog.html</loc></url>
-	<url><loc>/akademik.html</loc></url>
-	<url><loc>/galeri.html</loc></url>
-	<url><loc>/yorumlar.html</loc></url>
-	<url><loc>/sss.html</loc></url>
-	<url><loc>/randevu.html</loc></url>
-	<url><loc>/iletisim.html</loc></url>
+	<url><loc>/hakkimda</loc></url>
+	<url><loc>/tedaviler</loc></url>
+	<url><loc>/tedaviler/burun-estetigi</loc></url>
+	<url><loc>/tedaviler/meme-estetigi</loc></url>
+	<url><loc>/tedaviler/liposuction</loc></url>
+	<url><loc>/tedaviler/botoks</loc></url>
+	<url><loc>/tedaviler/dolgu</loc></url>
+	<url><loc>/tedaviler/sac-ekimi</loc></url>
+	<url><loc>/blog</loc></url>
+	<url><loc>/akademik</loc></url>
+	<url><loc>/foto-galeri</loc></url>
+	<url><loc>/video-galeri</loc></url>
+	<url><loc>/iletisim</loc></url>
 </urlset>
