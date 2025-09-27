@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import WhatsAppButton from '../components/WhatsAppButton'
 import LanguageSwitcher from '../components/LanguageSwitcher'
 
 export default function Iletisim() {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,7 +25,7 @@ export default function Iletisim() {
     e.preventDefault()
     // Form gönderme işlemi burada yapılacak
     console.log('Form gönderildi:', formData)
-    alert('Mesajınız başarıyla gönderildi!')
+    alert(t('contactPage.form.success'))
   }
 
   return (
@@ -31,17 +33,14 @@ export default function Iletisim() {
       <main id="main">
         {/* Page Header */}
         <div className="cmt-page-title-row-inner">
-          
           <div className="container">
-            
             <div className="row">
-              <div className="col">
-                <div className="page-title-heading">
-                  <h1 className="title">İletişim</h1>
-                  <p className="page-title-desc">
-                    Sorularınız için bizimle iletişime geçin<br />
-                    Size en kısa sürede dönüş yapacağız
-                  </p>
+              <div className="col-lg-12">
+                <div className="breadcrumb-wrapper-inner">
+                  <span>
+                    <a title="Homepage" href="/">Anasayfa</a>
+                  </span>
+                  <span>{t('contactPage.title')}</span>
                 </div>
               </div>
             </div>
@@ -49,19 +48,19 @@ export default function Iletisim() {
         </div>
 
         {/* Contact Form */}
-        <section className="section contact-form-section">
+        <section id="appointment" className="section contact-form-section">
           <div className="container">
             <div className="row">
               <div className="col-lg-8 col-md-12">
                 <div className="form-container">
-                  <h2>Bize Mesaj Gönderin</h2>
+                  <h2>{t('contactPage.form.title')}</h2>
                   <form onSubmit={handleSubmit} className="contact-form">
                     <div className="row">
                       <div className="col-md-6 mb-3">
                         <input
                           type="text"
                           name="name"
-                          placeholder="Adınız Soyadınız"
+                          placeholder={t('contactPage.form.name')}
                           value={formData.name}
                           onChange={handleInputChange}
                           required
@@ -71,7 +70,7 @@ export default function Iletisim() {
                         <input
                           type="email"
                           name="email"
-                          placeholder="E-posta Adresiniz"
+                          placeholder={t('contactPage.form.email')}
                           value={formData.email}
                           onChange={handleInputChange}
                           required
@@ -83,7 +82,7 @@ export default function Iletisim() {
                         <input
                           type="tel"
                           name="phone"
-                          placeholder="Telefon Numaranız"
+                          placeholder={t('contactPage.form.phone')}
                           value={formData.phone}
                           onChange={handleInputChange}
                         />
@@ -95,31 +94,31 @@ export default function Iletisim() {
                           onChange={handleInputChange}
                           required
                         >
-                          <option value="">Konu Seçin</option>
-                          <option value="randevu">Randevu Talebi</option>
-                          <option value="soru">Genel Soru</option>
-                          <option value="tedavi">Tedavi Bilgisi</option>
-                          <option value="diger">Diğer</option>
+                          <option value="">{t('contactPage.form.subject')}</option>
+                          <option value="randevu">{t('contactPage.form.subjects.appointment')}</option>
+                          <option value="soru">{t('contactPage.form.subjects.question')}</option>
+                          <option value="tedavi">{t('contactPage.form.subjects.treatment')}</option>
+                          <option value="diger">{t('contactPage.form.subjects.other')}</option>
                         </select>
                       </div>
                     </div>
                     <div className="mb-3">
                       <textarea
                         name="message"
-                        placeholder="Mesajınız"
+                        placeholder={t('contactPage.form.message')}
                         rows="5"
                         value={formData.message}
                         onChange={handleInputChange}
                         required
                       ></textarea>
                     </div>
-                    <button type="submit" className="btn btn-primary">Mesaj Gönder</button>
+                    <button type="submit" className="btn btn-primary">{t('contactPage.form.submit')}</button>
                   </form>
                 </div>
               </div>
               <div className="col-lg-4 col-md-12">
                 <div className="map-container">
-                  <h3>Konumumuz</h3>
+                  <h3>{t('contactPage.location.title')}</h3>
                   <iframe
                     title="Harita"
                     loading="lazy"

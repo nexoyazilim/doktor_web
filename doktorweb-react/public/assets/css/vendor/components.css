@@ -48,7 +48,7 @@
 /* ===============================================
     1.cmt-row
 ------------------------*/
-.cmt-row{ padding: 20px 0;}
+.cmt-row{ padding: 60px 0;}
 .cmt-row.padding_bottom_zero-section { padding: 30px 0 0; }
 .cmt-row.padding_top_zero-section { padding: 0 0 100px; }
 .cmt-row.padding_zero-section { padding: 0 0; }
@@ -2317,7 +2317,7 @@ div:hover > .cmt-box-view-overlay:before, div:hover > .cmt-box-view-content-inne
     transform: scale(1);
 }
 .featured-imagebox-portfolio.style1 .featured-content {
-    padding: 15px 15px 20px;
+    padding: 20px 20px 25px;
     transform-style: preserve-3d;
     background-color: var(--base-white);
 }
@@ -2343,7 +2343,8 @@ div:hover > .cmt-box-view-overlay:before, div:hover > .cmt-box-view-content-inne
     margin-bottom: 4px;
     line-height: 26px;
     position: relative;
-    font-size: 17px;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 

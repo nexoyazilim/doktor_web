@@ -1,9 +1,10 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
+import { getLocalizedUrl, getTreatmentUrl } from '../utils/urlHelper'
 
 export default function Header() {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
   const location = useLocation()
   function changeLang(e) { const lng = e.target.value; i18n.changeLanguage(lng); localStorage.setItem('lang', lng); }
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -13,10 +14,11 @@ export default function Header() {
     document.documentElement.classList.toggle('dark', localStorage.getItem('theme') === 'dark')
   }, [])
 
-  // Sayfa değiştiğinde scroll pozisyonunu sıfırla
+  // Sayfa değiştiğinde scroll pozisyonunu sıfırla ve menüyü kapat
   useEffect(() => {
     window.scrollTo(0, 0)
     setIsHeaderVisible(true) // Header'ı göster
+    setIsMenuOpen(false) // Mobil menüyü kapat
   }, [location.pathname])
   
   useEffect(() => {
@@ -82,15 +84,16 @@ export default function Header() {
           <div className="container">
             <div className="row">
               <div className="col">
-                <div className="site-navigation d-flex flex-row align-items-center justify-content-between">
-                  <div className="site-branding">
-                    <Link className="home-link" to="/" title="Dr. Doğan ŞENTÜRK" rel="home">
-                      <span className="brand-name" style={{ fontWeight: 800, fontSize: '20px', color: 'var(--fg)' }}>Dr. Doğan ŞENTÜRK</span>
+                <div className="site-navigation d-flex flex-row align-items-center justify-content-between" style={{ flexWrap: 'nowrap' }}>
+                  <div className="site-branding" style={{ flexShrink: 0, maxWidth: '60%' }}>
+                    <Link className="home-link" to={getLocalizedUrl('home', i18n.language)} title={t('site.brand')} rel="home" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                      <img src="/assets/images/doktor_logo.png" alt={t('site.brand')} className="logo-img" style={{ height: '100px', width: 'auto', maxHeight: 'none', display: 'inline-block' }} />
+                      <span className="brand-name" style={{fontSize: '20px', fontWeight: '600'}}>{t('site.brand')}</span>
                     </Link>
                   </div>
-                  <div className="site-menubar">
-                    <Link className="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-btn-color-dark d-block d-sm-none" style={{marginRight: '50px'}} to="/randevu" rel="noopener" aria-label="icon">Randevu Al</Link>
-                    <div className="btn-show-menu-mobile menubar menubar--squeeze" onClick={() => setIsMenuOpen(v => !v)}>
+                  <div className="site-menubar" style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>
+                    <Link className="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-btn-color-dark d-block d-sm-none" style={{marginRight: '40px'}} to={`${getLocalizedUrl('contact', i18n.language)}#appointment`} rel="noopener" aria-label="icon">{t('nav.appointment')}</Link>
+                    <div className={"btn-show-menu-mobile menubar menubar--squeeze" + (isMenuOpen ? " is-active" : "")} onClick={() => setIsMenuOpen(v => !v)}>
                       <span className="menubar-box">
                         <span className="menubar-inner"></span>
                       </span>
@@ -99,17 +102,17 @@ export default function Header() {
                       <div className="widget_info">
                         <div className="widget_content">
                           <a href="tel:+90555 555 55 55">0555 555 55 55</a>
-                          <p className="widget_desc">Bana Ulaşın</p>
+                          <p className="widget_desc">{t('contact.phone')}</p>
                         </div>
                       </div>
                       <div className="widget_info">
                         <div className="widget_content">
                           <a href="mailto:info@demo.com">info@demo.com</a>
-                          <p className="widget_desc">E-Posta Gönderin</p>
+                          <p className="widget_desc">{t('contact.email')}</p>
                         </div>
                       </div>
                       <div className="header_btn">
-                        <Link className="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-btn-color-dark" to="/iletisim#hiza" rel="noopener" aria-label="icon">Randevu Al</Link>
+                        <Link className="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-btn-color-dark" to={`${getLocalizedUrl('contact', i18n.language)}#appointment`} rel="noopener" aria-label="icon">{t('nav.appointment')}</Link>
                       </div>
                     </div>
                   </div>
@@ -124,34 +127,34 @@ export default function Header() {
         <div className="container"><div className="row"><div className="col">
           <div className="site-navigation d-flex justify-content-between align-items-center">
             <div className="align-self-center">
-              <nav className={"main-menu menu-mobile" + (isMenuOpen ? " open" : "")} id="menu">
+              <nav className={"main-menu nav" + (isMenuOpen ? " open" : "")} id="menu">
                 <ul className="menu">
-                  <li className="mega-menu-item "><Link to="/hakkimda">Hakkımda</Link></li>
-                  <li className="mega-menu-item  "><Link to="/tedaviler" className="mega-menu-link">Uzmanlık Alanlarım</Link>
+                  <li className="mega-menu-item "><Link to={getLocalizedUrl('about', i18n.language)}>{t('nav.about')}</Link></li>
+                  <li className="mega-menu-item  "><Link to={getLocalizedUrl('treatments', i18n.language)} className="mega-menu-link">{t('nav.specialties')}</Link>
                     <ul className="mega-submenu">
-                      <li><Link to="/tedaviler?sec=boyun-fitigi-ameliyati">Boyun Fıtığı Ameliyatı</Link></li>
-                      <li><Link to="/tedaviler?sec=boyun-kanal-darligi">Boyun Kanal Darlığı</Link></li>
-                      <li><Link to="/tedaviler?sec=sirt-fitigi-torakal-disk-hernisi">Sırt Fıtığı (Torakal Disk Hernisi)</Link></li>
-                      <li><Link to="/tedaviler?sec=omurga-agrilarinda-enjeksiyon-tedavisi">Omurga Ağrılarında Enjeksiyon Tedavisi</Link></li>
-                      <li><Link to="/tedaviler?sec=siyatik-agrisi-tedavisi">Siyatik Ağrısı Tedavisi</Link></li>
-                      <li><Link to="/tedaviler?sec=omurga-tumorleri">Omurga Tümörleri</Link></li>
-                      <li><Link to="/tedaviler?sec=kifoz">Kifoz</Link></li>
-                      <li><Link to="/tedaviler?sec=gergin-omurilik-sendromu">Gergin Omurilik Sendromu</Link></li>
-                      <li><Link to="/tedaviler?sec=cocuklarda-skolyoz">Çocuklarda Skolyoz</Link></li>
-                      <li><Link to="/tedaviler?sec=eriskin-skolyoz">Erişkin Skolyoz</Link></li>
-                      <li><Link to="/tedaviler?sec=beyin-tumoru">Beyin Tümörü</Link></li>
-                      <li><Link to="/tedaviler?sec=beyincik-sarkmasi">Beyincik Sarkması</Link></li>
+                      <li><Link to={getTreatmentUrl('burun-estetigi-rinoplasti', i18n.language)}>{t('nav.treatments.rhinoplasty')}</Link></li>
+                      <li><Link to={getTreatmentUrl('meme-buyutme', i18n.language)}>{t('nav.treatments.breastAugmentation')}</Link></li>
+                      <li><Link to={getTreatmentUrl('meme-kucultme', i18n.language)}>{t('nav.treatments.breastReduction')}</Link></li>
+                      <li><Link to={getTreatmentUrl('liposuction-yag-aldirma', i18n.language)}>{t('nav.treatments.liposuction')}</Link></li>
+                      <li><Link to={getTreatmentUrl('karin-germe-abdominoplasti', i18n.language)}>{t('nav.treatments.tummyTuck')}</Link></li>
+                      <li><Link to={getTreatmentUrl('yuz-germe', i18n.language)}>{t('nav.treatments.facelift')}</Link></li>
+                      <li><Link to={getTreatmentUrl('goz-kapagi-estetigi', i18n.language)}>{t('nav.treatments.eyelidSurgery')}</Link></li>
+                      <li><Link to={getTreatmentUrl('botoks-uygulamasi', i18n.language)}>{t('nav.treatments.botox')}</Link></li>
+                      <li><Link to={getTreatmentUrl('dolgu-uygulamasi', i18n.language)}>{t('nav.treatments.filler')}</Link></li>
+                      <li><Link to={getTreatmentUrl('sac-ekimi', i18n.language)}>{t('nav.treatments.hairTransplant')}</Link></li>
+                      <li><Link to={getTreatmentUrl('meme-diklestirme', i18n.language)}>{t('nav.treatments.breastLift')}</Link></li>
+                      <li><Link to={getTreatmentUrl('vucut-konturu', i18n.language)}>{t('nav.treatments.bodyContouring')}</Link></li>
                     </ul>
                   </li>
-                  <li className="mega-menu-item"><Link to="/akademik">Akademik</Link></li>
-                  <li className="mega-menu-item"><Link to="/blog">Blog</Link></li>
-                  <li className="mega-menu-item  "><a href="#" className="mega-menu-link">Galeri</a>
+                  <li className="mega-menu-item"><Link to={getLocalizedUrl('academic', i18n.language)}>{t('nav.academic')}</Link></li>
+                  <li className="mega-menu-item"><Link to={getLocalizedUrl('blog', i18n.language)}>{t('nav.blog')}</Link></li>
+                  <li className="mega-menu-item  "><a href="#" className="mega-menu-link">{t('nav.gallery')}</a>
                     <ul className="mega-submenu">
-                      <li><Link to="/foto-galeri">Foto Galeri</Link></li>
-                      <li><Link to="/video-galeri">Videolar</Link></li>
+                      <li><Link to={getLocalizedUrl('photoGallery', i18n.language)}>{t('gallery.photo.title')}</Link></li>
+                      <li><Link to={getLocalizedUrl('videoGallery', i18n.language)}>{t('gallery.video.title')}</Link></li>
                     </ul>
                   </li>
-                  <li className="mega-menu-item "><Link to="/iletisim">İletişim</Link></li>
+                  <li className="mega-menu-item "><Link to={getLocalizedUrl('contact', i18n.language)}>{t('nav.contact')}</Link></li>
                 </ul>
               </nav>
             </div>

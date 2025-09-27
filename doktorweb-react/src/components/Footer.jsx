@@ -1,4 +1,8 @@
+import { useTranslation } from 'react-i18next'
+import { getLocalizedUrl, getTreatmentUrl } from '../utils/urlHelper'
+
 export default function Footer() {
+  const { t } = useTranslation()
   const year = new Date().getFullYear()
   return (
     <footer className="footer widget-footer clearfix">
@@ -7,20 +11,20 @@ export default function Footer() {
           <div className="row">
             <div className="col-lg-5 align-self-center">
               <div className="featured-icon-box icon-align-before-content style5">
-                <div className="featured-content"><div className="featured-title"><h3>ATAŞEHİR İSTANBUL</h3></div></div>
+                <div className="featured-content"><div className="featured-title"><h3>{t('contact.address')}</h3></div></div>
                 <div className="featured-icon"><div className="cmt-icon cmt-icon_element-onlytxt cmt-icon_element-size-md cmt-icon_element-color-white"><i className="fa fa-map-marker"></i></div></div>
               </div>
             </div>
             <div className="col-lg-2">
               <div className="featured-icon-box style6">
                 <div className="featured-icon"><div className="cmt-icon cmt-icon_element-onlytxt cmt-icon_element-color-white"><i className="fa fa-life-ring"></i></div></div>
-                <div className="featured-content"><div className="featured-title"><h3>Bana Ulaşın</h3></div><div className="featured-desc"><p><a href="tel:+9055 555 55 55 "> 0555 555 55 55</a></p></div></div>
+                <div className="featured-content"><div className="featured-title"><h3>{t('contact.phone')}</h3></div><div className="featured-desc"><p><a href="tel:+9055 555 55 55 "> 0555 555 55 55</a></p></div></div>
               </div>
             </div>
             <div className="col-lg-5 align-self-center">
               <div className="featured-icon-box icon-align-before-content style5 reverse">
                 <div className="featured-icon"><div className="cmt-icon cmt-icon_element-onlytxt cmt-icon_element-size-md cmt-icon_element-color-white"><i className="fa fa-heartbeat"></i></div></div>
-                <div className="featured-content"><div className="featured-title"><h3>Bana UlaşabİLİRSİNİZ</h3></div></div>
+                <div className="featured-content"><div className="featured-title"><h3>{t('contact.reachMe')}</h3></div></div>
               </div>
             </div>
           </div>
@@ -32,10 +36,10 @@ export default function Footer() {
             <div className="col-sm-12 col-md-12 col-lg-5 pr-30 res-991-pr-0">
               <div className="row"><div className="col-sm-12 col-md-12 col-lg-10 widget-area"><div className="widget widget_text clearfix">
                 <div className="footer-logo"><img id="footer-logo-img" className="img-fluid auto_size" height="92" width="400" src="/assets/images/doktor_1.png" alt="Prof. Dr. Demo" /></div>
-                <div className="textwidget widget-text"><p>Prof. Dr. Demo hakkında kısa tanıtım alanı. Bu metni kendi içeriklerinizle güncelleyebilirsiniz.</p></div>
+                <div className="textwidget widget-text"><p>{t('footer.description')}</p></div>
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <div className="cmt-section footer-subscribebox">
-                    <p>Beni Sosyal Medyada Takip Edin</p>
+                    <p>{t('footer.followMe')}</p>
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 widget-area">
                       <div className="widget cmt-social-links-wrapper">
                         <ul className="social-icons">
@@ -76,9 +80,9 @@ export default function Footer() {
             </div>
             <div className="col-sm-12 col-md-12 col-lg-7">
               <div className="row">
-                <div className="col-sm-4 col-md-4 col-lg-4 widget-area"><div className="widget widget-recent-post with-title"><h3 className="widget-title">Menü</h3><ul className="widget_contact_wrapper"><li><p><a href="/hakkimda" className="footer-link">Hakkımda</a></p></li><li><p><a href="/akademik" className="footer-link">Akademik</a></p></li><li><p><a href="/tedaviler" className="footer-link">Tedaviler</a></p></li><li><p><a href="/blog" className="footer-link">Blog</a></p></li><li><p><a href="/foto-galeri" className="footer-link">Foto Galeri</a></p></li><li><p><a href="/video-galeri" className="footer-link">Video Galeri</a></p></li><li><p><a href="/iletisim" className="footer-link">İletişim</a></p></li></ul></div></div>
-                <div className="col-sm-4 col-md-4 col-lg-4 widget-area"><div className="widget widget_contact clearfix"><h3 className="widget-title">İletişim</h3><ul className="widget_contact_wrapper"><li><p><strong>Gsm : </strong><a href="tel:+9055 555 55 55"> 0555 555 55 55</a></p></li><li><p><strong>Email : </strong><a href="mailto:info@demo.com">info@demo.com</a></p></li><li><p><strong>Adres : </strong> Ortahisar/Trabzon</p></li><li><p><strong>Çalışma : </strong> Pzt - Cum 08.30 - 22.00</p></li><li><p><strong>Çalışma : </strong> Cts - Pzr 10.00 - 18.00</p></li></ul></div></div>
-                <div className="col-sm-4 col-md-4 col-lg-4 widget-area"><div className="widget widget-recent-post with-title"><h3 className="widget-title">Uzmanlık Alanları</h3><ul className="widget_contact_wrapper"><li><p><a href="/tedaviler?sec=boyun-fitigi-ameliyati" className="footer-link">Boyun Fıtığı Ameliyatı</a></p></li><li><p><a href="/tedaviler?sec=boyun-kanal-darligi" className="footer-link">Boyun Kanal Darlığı</a></p></li><li><p><a href="/tedaviler?sec=sirt-fitigi" className="footer-link">Sırt Fıtığı</a></p></li><li><p><a href="/tedaviler?sec=omurga-agrilarinda-enjeksiyon" className="footer-link">Omurga Ağrılarında Enjeksiyon</a></p></li><li><p><a href="/tedaviler?sec=siyatik-agrisi" className="footer-link">Siyatik Ağrısı Tedavisi</a></p></li><li><p><a href="/tedaviler?sec=omurga-tumorleri" className="footer-link">Omurga Tümörleri</a></p></li><li><p><a href="/tedaviler?sec=kifoz" className="footer-link">Kifoz</a></p></li><li><p><a href="/tedaviler?sec=cocuklarda-skolyoz" className="footer-link">Çocuklarda Skolyoz</a></p></li><li><p><a href="/tedaviler?sec=eriskin-skolyoz" className="footer-link">Erişkin Skolyoz</a></p></li><li><p><a href="/tedaviler?sec=beyin-tumoru" className="footer-link">Beyin Tümörü</a></p></li></ul></div></div>
+                <div className="col-sm-4 col-md-4 col-lg-4 widget-area"><div className="widget widget-recent-post with-title"><h3 className="widget-title">{t('footer.menu')}</h3><ul className="widget_contact_wrapper"><li><p><a href="/hakkimda" className="footer-link">{t('nav.about')}</a></p></li><li><p><a href="/akademik" className="footer-link">{t('nav.academic')}</a></p></li><li><p><a href="/tedaviler" className="footer-link">{t('nav.specialties')}</a></p></li><li><p><a href="/blog" className="footer-link">{t('nav.blog')}</a></p></li><li><p><a href="/foto-galeri" className="footer-link">{t('gallery.photo.title')}</a></p></li><li><p><a href="/video-galeri" className="footer-link">{t('gallery.video.title')}</a></p></li><li><p><a href="/iletisim" className="footer-link">{t('nav.contact')}</a></p></li></ul></div></div>
+                <div className="col-sm-4 col-md-4 col-lg-4 widget-area"><div className="widget widget_contact clearfix"><h3 className="widget-title">{t('footer.contact')}</h3><ul className="widget_contact_wrapper"><li><p><strong>Gsm : </strong><a href="tel:+9055 555 55 55"> 0555 555 55 55</a></p></li><li><p><strong>Email : </strong><a href="mailto:info@demo.com">info@demo.com</a></p></li><li><p><strong>Adres : </strong> Ortahisar/Trabzon</p></li><li><p><strong>Çalışma : </strong> {t('footer.workingHours.weekdays')}</p></li><li><p><strong>Çalışma : </strong> {t('footer.workingHours.weekends')}</p></li></ul></div></div>
+                <div className="col-sm-4 col-md-4 col-lg-4 widget-area"><div className="widget widget-recent-post with-title"><h3 className="widget-title">{t('footer.specialties')}</h3><ul className="widget_contact_wrapper"><li><p><a href="/tedaviler?sec=burun-estetigi-rinoplasti" className="footer-link">{t('nav.treatments.rhinoplasty')}</a></p></li><li><p><a href="/tedaviler?sec=meme-buyutme" className="footer-link">{t('nav.treatments.breastAugmentation')}</a></p></li><li><p><a href="/tedaviler?sec=meme-kucultme" className="footer-link">{t('nav.treatments.breastReduction')}</a></p></li><li><p><a href="/tedaviler?sec=liposuction-yag-aldirma" className="footer-link">{t('nav.treatments.liposuction')}</a></p></li><li><p><a href="/tedaviler?sec=karin-germe-abdominoplasti" className="footer-link">{t('nav.treatments.tummyTuck')}</a></p></li><li><p><a href="/tedaviler?sec=yuz-germe" className="footer-link">{t('nav.treatments.facelift')}</a></p></li><li><p><a href="/tedaviler?sec=goz-kapagi-estetigi" className="footer-link">{t('nav.treatments.eyelidSurgery')}</a></p></li><li><p><a href="/tedaviler?sec=botoks-uygulamasi" className="footer-link">{t('nav.treatments.botox')}</a></p></li><li><p><a href="/tedaviler?sec=dolgu-uygulamasi" className="footer-link">{t('nav.treatments.filler')}</a></p></li><li><p><a href="/tedaviler?sec=sac-ekimi" className="footer-link">{t('nav.treatments.hairTransplant')}</a></p></li></ul></div></div>
               </div>
             </div>
           </div>
@@ -89,7 +93,7 @@ export default function Footer() {
           <div className="row">
             <div className="col-lg-12">
               <div className="copyright">
-                 <a className="text-white" target="_blank" href="">Prof. Dr. Demo </a> {year} Tüm Hakları Saklıdır.
+                 <a className="text-white" target="_blank" href="">{t('site.brand')} </a> {year} {t('site.rights')}
               </div>
             </div>
           </div>

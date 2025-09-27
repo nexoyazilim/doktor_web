@@ -1,10 +1,18 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 import WhatsAppButton from '../components/WhatsAppButton'
 import LanguageSwitcher from '../components/LanguageSwitcher'
+import { getLocalizedUrl, getBlogDetailUrl } from '../utils/urlHelper'
 
 export default function Home() {
+  const { t, i18n, ready } = useTranslation()
   const blogRef = useScrollReveal()
+  
+  // Çeviri dosyaları yüklenene kadar bekle
+  if (!ready) {
+    return <div>Loading...</div>
+  }
   return (
     <div className="site-main">
       <main id="main">
@@ -16,17 +24,13 @@ export default function Home() {
                   <div className="col-lg-12">
                     <div className="section-title">
                       <div className="title-header">
-                        <h3>Beyin, Sinir ve Omurga Cerrahisi </h3>
-                        <h2 className="title">Dr.<br />Doğan ŞENTÜRK  Kimdir?</h2>
+                        <h3>{t('hero.title')}</h3>
+                        <h2 className="title">{t('hero.subtitle')}</h2>
                       </div>
                       <div className="title-desc">
-                        <p className="text-justify">Dr. Ayşe Kaya 1990 yılında İstanbul'da doğdu. 2014 yılında İstanbul Üniversitesi Tıp Fakültesinden mezun oldu.</p>
-                        <p className="text-justify">2015-2019 yılları arasında Ankara Şehir Hastanesinde Dahiliye uzmanlık eğitimini tamamladı. 2020 yılından itibaren kendi kliniğinde hasta kabul etmeye başladı.</p>
-                        <p className="text-justify">Mesleki ilgi alanları arasında endokrinoloji ve metabolizma hastalıkları yer almaktadır. Ulusal ve uluslararası birçok kongrede sunumlar yapmış ve makaleler yayınlamıştır.</p>
-                        <p className="text-justify">Mesleki ilgi alanları arasında endokrinoloji ve metabolizma hastalıkları yer almaktadır. Ulusal ve uluslararası birçok kongrede sunumlar yapmış ve makaleler yayınlamıştır.</p>
-                        <p className="text-justify">Mesleki ilgi alanları arasında endokrinoloji ve metabolizma hastalıkları yer almaktadır. Ulusal ve uluslararası birçok kongrede sunumlar yapmış ve makaleler yayınlamıştır.</p>
+                        <p className="text-justify">{t('hero.description')}</p>
 
-                        <Link className="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-btn-color-dark" to="/hakkimda" rel="noopener" aria-label="icon">Devamını Oku</Link>
+                        <Link className="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-btn-color-dark" to={getLocalizedUrl('about', i18n.language)} rel="noopener" aria-label="icon">{t('hero.cta')}</Link>
                       </div>
                     </div>
                   </div>
@@ -34,7 +38,7 @@ export default function Home() {
               </div>
               <div className="col-lg-6 res-991-pt-30">
                 <div className="cmt_single_image-wrapper">
-                  <img className="profile-img" src="/assets/images/doktor_1.png" alt="Dr. Doğan ŞENTÜRK" />
+                  <img className="profile-img" src="/assets/images/doktor_1.png" alt="Dr. Elif YAMAN" />
                 </div>
               </div>
             </div>
@@ -47,9 +51,9 @@ export default function Home() {
               <div className="col-lg-12">
                 <div className="section-title title-style-center_text">
                   <div className="title-header">
-                    <h3 className="d-none">Dr. Doğan ŞENTÜRK</h3>
+                    <h3 className="d-none">{t('site.brand')}</h3>
                     <span></span>
-                    <h2 className="title" style={{ textAlign: 'center' }}>Uzmanlık Alanlarım</h2>
+                    <h2 className="title" style={{ textAlign: 'center' }}>{t('treatments.title')}</h2>
                   </div>
                 </div>
               </div>
@@ -59,15 +63,15 @@ export default function Home() {
                 <div className="featured-imagebox featured-imagebox-portfolio style1">
                   <div className="featured-thumbnail">
                     <div className="featured-thumbnail-inner">
-                      <img className="portfolio-img" src="/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Omurga Cerrahisi" />
+                      <img className="portfolio-img" src="/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="Yüz Estetiği" />
                     </div>
                   </div>
                   <div className="featured-content">
                     <div className="featured-title">
-                      <Link to="/tedaviler/omurga-cerrahisi">Omurga Cerrahisi</Link>
+                      <Link to={`${getLocalizedUrl('treatments', i18n.language)}/yuz-estetigi`}>{t('about.specializations.facial')}</Link>
                     </div>
                     <div className="featured-desc">
-                      <span className="portfolio_category d-none">Dr. Doğan ŞENTÜRK</span>
+                      <span className="portfolio_category d-none">Dr. Elif YAMAN</span>
                     </div>
                   </div>
                 </div>
@@ -76,15 +80,15 @@ export default function Home() {
                 <div className="featured-imagebox featured-imagebox-portfolio style1">
                   <div className="featured-thumbnail">
                     <div className="featured-thumbnail-inner">
-                      <img className="portfolio-img" src="/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="Deformite Cerrahisi" />
+                      <img className="portfolio-img" src="/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Meme Estetiği" />
                     </div>
                   </div>
                   <div className="featured-content">
                     <div className="featured-title">
-                      <Link to="/tedaviler/deformite-cerrahisi">Deformite Cerrahisi</Link>
+                      <Link to={`${getLocalizedUrl('treatments', i18n.language)}/meme-estetigi`}>{t('about.specializations.breast')}</Link>
                     </div>
                     <div className="featured-desc">
-                      <span className="portfolio_category d-none">Dr. Doğan ŞENTÜRK</span>
+                      <span className="portfolio_category d-none">Dr. Elif YAMAN</span>
                     </div>
                   </div>
                 </div>
@@ -93,15 +97,15 @@ export default function Home() {
                 <div className="featured-imagebox featured-imagebox-portfolio style1">
                   <div className="featured-thumbnail">
                     <div className="featured-thumbnail-inner">
-                      <img className="portfolio-img" src="/assets/images/hizmetlerimiz_image/frksynellazer.jpg" alt="Endoskopik Omurga Cerrahisi" />
+                      <img className="portfolio-img" src="/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="Vücut Kontürü" />
                     </div>
                   </div>
                   <div className="featured-content">
                     <div className="featured-title">
-                      <Link to="/tedaviler/endoskopik-omurga-cerrahisi">Endoskopik Omurga Cerrahisi</Link>
+                      <Link to={`${getLocalizedUrl('treatments', i18n.language)}/vucut-konturu`}>{t('about.specializations.body')}</Link>
                     </div>
                     <div className="featured-desc">
-                      <span className="portfolio_category d-none">Dr. Doğan ŞENTÜRK</span>
+                      <span className="portfolio_category d-none">Dr. Elif YAMAN</span>
                     </div>
                   </div>
                 </div>
@@ -114,26 +118,26 @@ export default function Home() {
 
         <section id="blog" className="section section-alt reveal" ref={blogRef}>
           <div className="container">
-            <h2 style={{ textAlign: 'center' }}>Blog</h2>
-            <p className="section-subtitle" style={{ textAlign: 'center' }}>Güncel bilgilendirme yazılarımdan öne çıkanlar.</p>
+            <h2 style={{ textAlign: 'center' }}>{t('blog.title')}</h2>
+            <p className="section-subtitle" style={{ textAlign: 'center' }}>{t('blog.subtitle')}</p>
             <div className="grid cols-3 cards">
               <article className="card">
-                <img className="blog-img" src="/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="Blog görseli 1" />
-                <h3>Endoskopik Omurga Cerrahisi 101</h3>
-                <p>Küçük kesilerle hızlı iyileşme: endoskopik yaklaşımın temelleri.</p>
-                <Link className="btn btn-outline" to="/blog/endoskopik-omurga-cerrahisi-101">Devamını oku</Link>
+                <img className="blog-img" src="/assets/images/hizmetlerimiz_image/frksynellazer.jpg" alt="Burun Estetiği" />
+                <h3>{t('blog.posts.rhinoplasty.title')}</h3>
+                <p>{t('blog.posts.rhinoplasty.description')}</p>
+                <Link className="btn btn-outline" to={getBlogDetailUrl('burun-estetigi-dogal-gorunum', i18n.language)}>{t('blog.readMore')}</Link>
               </article>
               <article className="card">
-                <img className="blog-img" src="/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Blog görseli 2" />
-                <h3>Bel Kayması Belirtileri ve Tedavi</h3>
-                <p>Belirtileri tanıma ve kişiye özel tedavi seçeneklerini değerlendirme.</p>
-                <Link className="btn btn-outline" to="/blog/endoskopik-omurga-cerrahisi-101">Devamını oku</Link>
+                <img className="blog-img" src="/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="Meme Estetiği" />
+                <h3>{t('blog.posts.breastSurgery.title')}</h3>
+                <p>{t('blog.posts.breastSurgery.description')}</p>
+                <Link className="btn btn-outline" to={getBlogDetailUrl('meme-estetigi-guvenli-yontemler', i18n.language)}>{t('blog.readMore')}</Link>
               </article>
               <article className="card">
-                <img className="blog-img" src="/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="Blog görseli 3" />
-                <h3>Skolyozda Tedavi Yaklaşımları</h3>
-                <p>Ergen ve erişkin skolyozunda cerrahi-dışı ve cerrahi yöntemler.</p>
-                <Link className="btn btn-outline" to="/blog/endoskopik-omurga-cerrahisi-101">Devamını oku</Link>
+                <img className="blog-img" src="/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Yaşlanma Karşıtı Estetik" />
+                <h3>{t('blog.posts.antiAging.title')}</h3>
+                <p>{t('blog.posts.antiAging.description')}</p>
+                <Link className="btn btn-outline" to={getBlogDetailUrl('yaslanma-karsiti-estetik', i18n.language)}>{t('blog.readMore')}</Link>
               </article>
             </div>
           </div>

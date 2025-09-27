@@ -1,16 +1,400 @@
 {
-	"site": {"title": "Doktor Web Sitesi", "brand": "Dr. Ad Soyad", "rights": "Tüm hakları saklıdır."},
-	"nav": {"about": "Hakkımda", "specialties": "Uzmanlık", "diagnosis": "Tanı/Tedavi", "blog": "Blog", "latest": "Son Makaleler", "academic": "Akademik", "gallery": "Galeri", "testimonials": "Yorumlar", "faq": "SSS", "contact": "İletişim", "appointment": "Online Randevu"},
-	"hero": {"title": "Sağlığınız Güvende", "subtitle": "Uzman hekimlik, güncel tedaviler ve hasta odaklı yaklaşım.", "cta": "Randevu Al"},
-	"about": {"title": "Hakkımda", "text": "Kısa biyografi metni burada yer alır. Deneyimler, eğitim ve ilgi alanları."},
-	"specialties": {"title": "Uzmanlık Alanlarım", "item1": "Uzmanlık 1", "item2": "Uzmanlık 2", "item3": "Uzmanlık 3"},
-	"diagnosis": {"title": "Tanı / Tedavi", "item1": "Hizmet 1", "item2": "Hizmet 2", "item3": "Hizmet 3", "desc1": "Açıklama", "desc2": "Açıklama", "desc3": "Açıklama"},
-	"blog": {"title": "Blog"},
-	"latest": {"title": "Son Makaleler"},
-	"academic": {"title": "Akademik", "text": "Akademik yayınlar, konferanslar ve görevler."},
-	"gallery": {"title": "Galeri"},
-	"testimonials": {"title": "Yorumlar / Hasta Görüşleri"},
-	"faq": {"title": "Sık Sorulan Sorular"},
-	"appointment": {"title": "Online Randevu"},
-	"form": {"name": "Ad Soyad", "email": "E-posta", "date": "Tarih", "message": "Not", "submit": "Gönder"}
+	"site": {
+    "title": "Dr. Elif YAMAN - Estetik ve Plastik Cerrahi",
+		"brand": "Dr. Elif YAMAN",
+		"rights": "Tüm hakları saklıdır.",
+		"specialty": "Estetik ve Plastik Cerrahi Uzmanı"
+	},
+	"nav": {
+		"about": "Hakkımda",
+		"specialties": "Uzmanlık Alanlarım",
+		"diagnosis": "Tanı/Tedavi",
+		"blog": "Blog",
+		"latest": "Son Makaleler",
+		"academic": "Akademik",
+		"gallery": "Galeri",
+		"testimonials": "Yorumlar",
+		"faq": "SSS",
+		"contact": "İletişim",
+		"appointment": "Randevu Al",
+		"services": "Hizmetlerimiz",
+		"treatments": {
+			"rhinoplasty": "Burun Estetiği (Rinoplasti)",
+			"breastAugmentation": "Meme Büyütme",
+			"breastReduction": "Meme Küçültme",
+			"liposuction": "Liposuction (Yağ Aldırma)",
+			"tummyTuck": "Karın Germe (Abdominoplasti)",
+			"facelift": "Yüz Germe",
+			"eyelidSurgery": "Göz Kapağı Estetiği",
+			"botox": "Botoks Uygulaması",
+			"filler": "Dolgu Uygulaması",
+			"hairTransplant": "Saç Ekimi",
+			"breastLift": "Meme Dikleştirme",
+			"bodyContouring": "Vücut Kontürü"
+		}
+	},
+	"hero": {
+		"title": "Estetik ve Plastik Cerrahi",
+		"subtitle": "Dr. Elif YAMAN Kimdir?",
+		"description": "20 yılı aşkın deneyimimle estetik ve plastik cerrahi alanında binlerce hastaya hizmet verdim. Modern estetik cerrahi teknikleri, minimal invaziv yöntemler, doğal görünüm odaklı yaklaşımlar ve güvenli tedavi yöntemleri konusunda uzmanım. Hastalarımın kendilerini daha güvenli hissetmelerini sağlamak ve doğal güzelliklerini ortaya çıkarmak için sürekli kendimi geliştiriyorum. Uluslararası konferanslardaki sunumlarım ve akademik çalışmalarım ile alanımdaki yenilikleri takip ediyor, en son teknolojileri hastalarımın hizmetine sunuyorum. Özellikle burun estetiği, meme estetiği, vücut kontürü, yüz gençleştirme, liposuction gibi estetik cerrahi işlemlerinde uzmanlaştım. Botoks, dolgu, saç ekimi gibi non-invaziv estetik uygulamalarda da deneyimliyim. Hastalarıma en uygun tedavi planını belirlemek için kişiye özel yaklaşım benimser, onların fiziksel ve psikolojik iyileşme süreçlerini desteklerim. Ameliyat sonrası takip ve bakım süreçlerinde de aktif rol alır, hastalarımın mükemmel sonuçlara ulaşmasını sağlarım.",
+		"cta": "Devamını Oku"
+	},
+	"about": {
+		"title": "Hakkımda",
+		"subtitle": "Dr. Elif YAMAN",
+		"specialty": "Estetik ve Plastik Cerrahi Uzmanı",
+		"description": "20 yılı aşkın deneyimimle estetik ve plastik cerrahi alanında binlerce hastaya hizmet verdim. Modern estetik cerrahi teknikleri ve güvenli tedavi yöntemleri konusunda uzmanım.",
+		"stats": {
+			"experience": "Yıl Deneyim",
+			"surgeries": "Başarılı Ameliyat",
+			"publications": "Bilimsel Yayın"
+		},
+		"education": {
+			"title": "Eğitim",
+			"professor": "Profesör",
+			"associate": "Doçent",
+			"specialist": "Uzman Doktor",
+			"doctor": "Tıp Doktoru"
+		},
+		"experience": {
+			"title": "Deneyim",
+			"chief": "Başhekim",
+			"clinical": "Klinik Şefi",
+			"specialist": "Uzman Doktor",
+			"fellowship": "Fellowship"
+		},
+		"specializations": {
+			"title": "Uzmanlık Alanlarım",
+			"subtitle": "Estetik ve plastik cerrahi alanında uzmanlaştığım konular",
+			"facial": "Yüz Estetiği",
+			"breast": "Meme Estetiği",
+			"body": "Vücut Kontürü",
+			"noninvasive": "Non-İnvaziv Estetik",
+			"reconstructive": "Rekonstrüktif Cerrahi",
+			"hair": "Saç Ekimi"
+		},
+		"philosophy": {
+			"title": "Hekimlik Felsefem",
+			"quote": "Her hasta benim için özeldir. Doğal güzellik anlayışıyla, güvenli ve etkili estetik cerrahi teknikleri kullanarak hastalarımın kendilerini daha güvenli hissetmelerini sağlamak ve onlara en iyi hizmeti sunmak temel prensibimdir."
+		}
+	},
+	"treatments": {
+		"title": "Uzmanlık Alanlarım",
+		"subtitle": "Hizmetlerimiz",
+		"description": "Aşağıdaki uzmanlık alanlarından birini seçerek detaylı bilgi alabilirsiniz. Her tedavi yöntemi için kapsamlı açıklamalar, uygulanan prosedürler ve iyileşme süreçleri hakkında bilgi bulabilirsiniz.",
+		"seeDetails": "Detayları Gör",
+		"whatIs": "Nedir?",
+		"symptoms": "Belirtiler Nelerdir?",
+		"trackedDiseases": "Takip Edilen Hastalıklar",
+		"commonDiseases": "Sık Görülen Hastalıklar",
+		"emergency": "Acil Müdahale Gerektiren Durumlar",
+		"methods": "Kullanılan Yöntemler",
+		"generalDescription": "alanı; tanı ve tedavide modern, kanıta dayalı yöntemler kullanılarak kişiye özel planlama yapılan bir uzmanlık alanıdır.",
+		"symptomsList": {
+			"pain": "Ağrı ve hareket kısıtlılığı",
+			"numbness": "Uyuşma, karıncalanma, güçsüzlük",
+			"posture": "Duruş bozukluğu ve dengesizlik"
+		},
+		"commonDiseasesDescription": "Yaşa, aktivite düzeyine ve eşlik eden durumlara göre değişiklik gösterebilir.",
+		"emergencyList": {
+			"severePain": "Şiddetli ağrı ve hızla artan güç kaybı",
+			"incontinence": "İdrar-dışkı kontrol kaybı",
+			"trauma": "Travma sonrası yeni nörolojik bulgular"
+		},
+		"categories": {
+			"rhinoplasty": {
+				"title": "Burun Estetiği (Rinoplasti)",
+				"description": "Burun şeklinin ve fonksiyonunun estetik cerrahi ile düzeltilmesi.",
+				"procedures": ["Açık rinoplasti", "Kapalı rinoplasti", "Septoplasti"],
+				"conditions": ["Burun şekil bozukluğu", "Nefes alma güçlüğü", "Burun ucu düşüklüğü"],
+				"recovery": "Burun estetiği sonrası 1-2 hafta içinde şişlik azalır, 3-6 ay içinde final sonuç görülür."
+			},
+			"breastAugmentation": {
+				"title": "Meme Büyütme",
+				"description": "Meme boyutunun implant veya yağ transferi ile artırılması.",
+				"procedures": ["Silikon implant", "Yağ transferi", "Hibrit yöntem"],
+				"conditions": ["Küçük meme", "Asimetrik meme", "Meme kaybı"],
+				"recovery": "Meme büyütme sonrası 1-2 hafta dinlenme, 4-6 hafta spor kısıtlaması."
+			},
+			"breastReduction": {
+				"title": "Meme Küçültme",
+				"description": "Büyük memelerin boyutunun azaltılması ve şekillendirilmesi.",
+				"procedures": ["Anchor tekniği", "Vertical tekniği", "Liposuction"],
+				"conditions": ["Büyük meme", "Sırt ağrısı", "Omuz çukuru"],
+				"recovery": "Meme küçültme sonrası 2-3 hafta dinlenme, 6 hafta spor kısıtlaması."
+			},
+			"liposuction": {
+				"title": "Liposuction (Yağ Aldırma)",
+				"description": "Vücudun belirli bölgelerinden yağ dokusunun cerrahi olarak çıkarılması.",
+				"procedures": ["Tumescent liposuction", "VASER liposuction", "Smart lipo"],
+				"conditions": ["Karın yağları", "Kalça yağları", "Kol yağları"],
+				"recovery": "Liposuction sonrası 1 hafta kompresyon giysisi, 2-4 hafta normal aktivite."
+			},
+			"tummyTuck": {
+				"title": "Karın Germe (Abdominoplasti)",
+				"description": "Karın bölgesindeki fazla deri ve yağın çıkarılması, kasların sıkılaştırılması.",
+				"procedures": ["Tam abdominoplasti", "Mini abdominoplasti", "Fleur-de-lis"],
+				"conditions": ["Gevşek karın derisi", "Karın kası ayrılması", "Gebelik sonrası"],
+				"recovery": "Karın germe sonrası 2-3 hafta dinlenme, 6 hafta ağır kaldırma yasağı."
+			},
+			"facelift": {
+				"title": "Yüz Germe",
+				"description": "Yüz ve boyun bölgesindeki yaşlanma belirtilerinin cerrahi ile düzeltilmesi.",
+				"procedures": ["SMAS lifting", "Deep plane lifting", "Mini facelift"],
+				"conditions": ["Yüz sarkması", "Boyun sarkması", "Derin kırışıklıklar"],
+				"recovery": "Yüz germe sonrası 1-2 hafta şişlik, 2-3 hafta morluk, 3-6 ay final sonuç."
+			},
+			"eyelidSurgery": {
+				"title": "Göz Kapağı Estetiği",
+				"description": "Üst ve alt göz kapaklarındaki fazla deri ve yağın çıkarılması.",
+				"procedures": ["Blefaroplasti", "Transkonjonktival yaklaşım", "Kombine yaklaşım"],
+				"conditions": ["Göz kapağı sarkması", "Göz altı torbaları", "Görme kısıtlaması"],
+				"recovery": "Göz kapağı estetiği sonrası 1 hafta şişlik, 2 hafta morluk, 1 ay final sonuç."
+			},
+			"botox": {
+				"title": "Botoks Uygulaması",
+				"description": "Yüz kırışıklıklarının botulinum toksin ile geçici olarak düzeltilmesi.",
+				"procedures": ["Alın botoksu", "Göz çevresi botoksu", "Kaş arası botoksu"],
+				"conditions": ["Alın kırışıklıkları", "Göz çevresi kırışıklıkları", "Kaş arası çizgiler"],
+				"recovery": "Botoks sonrası 3-7 gün etki başlar, 3-6 ay süreyle etkili olur."
+			},
+			"filler": {
+				"title": "Dolgu Uygulaması",
+				"description": "Yüz kontürlerinin ve hacim kayıplarının dolgu maddeleri ile düzeltilmesi.",
+				"procedures": ["Hyaluronik asit", "Kalıcı dolgular", "Yağ transferi"],
+				"conditions": ["Dudak inceliği", "Yanak çöküklüğü", "Çene çizgisi"],
+				"recovery": "Dolgu sonrası 1-2 gün şişlik, 1 hafta final sonuç, 6-18 ay süreyle etkili."
+			},
+			"hairTransplant": {
+				"title": "Saç Ekimi",
+				"description": "Saç dökülmesi olan bölgelere saç köklerinin nakledilmesi.",
+				"procedures": ["FUE tekniği", "FUT tekniği", "DHI tekniği"],
+				"conditions": ["Erkek tipi saç dökülmesi", "Kadın tipi saç dökülmesi", "Saç çizgisi gerilemesi"],
+				"recovery": "Saç ekimi sonrası 1 hafta yıkama yasağı, 3-6 ay saç çıkışı, 12 ay final sonuç."
+			},
+			"breastLift": {
+				"title": "Meme Dikleştirme",
+				"description": "Sarkmış memelerin yukarı kaldırılması ve şekillendirilmesi.",
+				"procedures": ["Periareolar", "Vertical", "Anchor"],
+				"conditions": ["Meme sarkması", "Gebelik sonrası", "Kilo kaybı sonrası"],
+				"recovery": "Meme dikleştirme sonrası 2-3 hafta dinlenme, 6 hafta spor kısıtlaması."
+			},
+			"bodyContouring": {
+				"title": "Vücut Kontürü",
+				"description": "Vücut şeklinin estetik cerrahi yöntemleri ile iyileştirilmesi.",
+				"procedures": ["360 derece liposuction", "Vücut germe", "Kombine yöntemler"],
+				"conditions": ["Vücut şekil bozukluğu", "Kilo kaybı sonrası", "Gebelik sonrası"],
+				"recovery": "Vücut kontürü sonrası 2-4 hafta dinlenme, 6 hafta spor kısıtlaması."
+			}
+		}
+	},
+	"blog": {
+		"title": "Blog",
+		"subtitle": "Estetik cerrahi hakkında güncel bilgilendirme yazılarımdan öne çıkanlar.",
+		"readMore": "Devamını oku",
+		"posts": {
+			"rhinoplasty": {
+				"title": "Burun Estetiği: Doğal Görünümün Sırları",
+				"description": "Doğal ve güzel bir burun için estetik cerrahi yaklaşımları ve teknikleri."
+			},
+			"breastSurgery": {
+				"title": "Meme Estetiği: Güvenli ve Etkili Yöntemler",
+				"description": "Meme büyütme, küçültme ve dikleştirme işlemlerinde modern teknikler."
+			},
+			"antiAging": {
+				"title": "Yaşlanma Karşıtı Estetik Uygulamalar",
+				"description": "Botoks, dolgu ve cerrahi yöntemlerle genç görünüm kazanma."
+			}
+		}
+	},
+	"contact": {
+		"title": "İletişim",
+		"phone": "Bana Ulaşın",
+		"email": "E-Posta Gönderin",
+		"address": "ATAŞEHİR İSTANBUL",
+		"reachMe": "Bana Ulaşabilirsiniz"
+	},
+	"footer": {
+		"menu": "Menü",
+		"contact": "İletişim",
+		"specialties": "Uzmanlık Alanları",
+		"followMe": "Beni Sosyal Medyada Takip Edin",
+		"description": "Dr. Elif YAMAN hakkında kısa tanıtım alanı. Estetik ve plastik cerrahi alanında uzman hekimlik hizmeti sunmaktayım.",
+		"workingHours": {
+			"weekdays": "Pzt - Cum 08.30 - 22.00",
+			"weekends": "Cts - Pzr 10.00 - 18.00"
+		}
+	},
+	"gallery": {
+		"photo": {
+			"title": "Fotoğraf Galerisi",
+			"subtitle": "Dr. Elif YAMAN",
+			"specialty": "Estetik ve Plastik Cerrahi",
+			"items": {
+				"clinic": "Klinikten bir kare",
+				"teamwork": "Ekip çalışması",
+				"event": "Etkinlik anı",
+				"conference": "Kongre katılımı",
+				"preparation": "Ameliyat öncesi hazırlık",
+				"consultation": "Hasta konsültasyonu"
+			}
+		},
+		"video": {
+			"title": "Video Galerisi",
+			"subtitle": "Dr. Elif YAMAN",
+			"specialty": "Estetik ve Plastik Cerrahi",
+			"items": {
+				"rhinoplasty": "Burun Estetiği: Doğal Sonuçlar",
+				"breastSurgery": "Meme Estetiği: Modern Teknikler",
+				"liposuction": "Liposuction: Vücut Kontürü"
+			}
+		}
+	},
+	"contactPage": {
+		"title": "İletişim",
+		"subtitle": "Sorularınız için bizimle iletişime geçin",
+		"description": "Size en kısa sürede dönüş yapacağız",
+		"form": {
+			"title": "Bize Mesaj Gönderin",
+			"name": "Adınız Soyadınız",
+			"email": "E-posta Adresiniz",
+			"phone": "Telefon Numaranız",
+			"subject": "Konu Seçin",
+			"subjects": {
+				"appointment": "Randevu Talebi",
+				"question": "Genel Soru",
+				"treatment": "Tedavi Bilgisi",
+				"other": "Diğer"
+			},
+			"message": "Mesajınız",
+			"submit": "Mesaj Gönder",
+			"success": "Mesajınız başarıyla gönderildi!"
+		},
+		"location": {
+			"title": "Konumumuz"
+		}
+	},
+	"academic": {
+		"title": "Akademik Çalışmalar ve Yayınlar",
+		"subtitle": "Estetik cerrahi alanında hakemli makaleler, bildiriler ve kitap bölümlerinden seçkiler",
+		"description": "Estetik cerrahi eğitimi ve klinik deneyimle bütünleşen bilimsel üretim",
+		"stats": {
+			"publications": "Hakemli Yayın",
+			"presentations": "Bildiri",
+			"chapters": "Kitap Bölümü",
+			"citations": "Atıf"
+		},
+		"publications": {
+			"title": "Yayınlar ve Çalışmalar",
+			"filters": {
+				"all": "Tümü",
+				"article": "Hakemli Makale",
+				"presentation": "Bildiri",
+				"chapter": "Kitap Bölümü"
+			},
+			"items": {
+				"rhinoplasty": {
+					"title": "Burun Estetiğinde Doğal Görünüm Yaklaşımları",
+					"journal": "Estetik Cerrahi Dergisi, 2023",
+					"linkText": "PDF"
+				},
+				"breastSurgery": {
+					"title": "Meme Estetiğinde Komplikasyon Yönetimi: Çok Merkezli Deneyim",
+					"journal": "Uluslararası Estetik Cerrahi Kongresi, 2022",
+					"linkText": "Özet"
+				},
+				"liposuction": {
+					"title": "Liposuction: Modern Teknikler ve Sonuçlar",
+					"journal": "Plastik Cerrahi El Kitabı, 2021",
+					"linkText": "Detay"
+				}
+			}
+		}
+	},
+	"blogPage": {
+		"title": "Blog",
+		"subtitle": "Estetik ve plastik cerrahi alanındaki",
+		"description": "güncel gelişmeler ve bilgilendirici yazılar",
+		"categories": {
+			"facial": "Yüz Estetiği",
+			"breast": "Meme Estetiği",
+			"body": "Vücut Estetiği",
+			"noninvasive": "Non-İnvaziv Estetik",
+			"reconstructive": "Rekonstrüktif Cerrahi",
+			"hair": "Saç Ekimi",
+			"surgery": "Cerrahi İşlemler",
+			"brain": "Beyin Cerrahisi"
+		},
+		"posts": {
+			"rhinoplasty": {
+				"title": "Burun Estetiği Kimler İçin Uygundur?",
+				"description": "Burun estetiği, burun şeklinden memnun olmayan ve daha güzel bir görünüm isteyen kişiler için uygun bir seçenektir.",
+				"readMore": "Devamını Oku"
+			},
+			"breastSurgery": {
+				"title": "Meme Estetiği: Hangi Yöntem Sizin İçin Uygun?",
+				"description": "Meme büyütme, küçültme ve dikleştirme işlemleri hakkında detaylı bilgi ve hangi yöntemin size uygun olduğunu öğrenin.",
+				"readMore": "Devamını Oku"
+			},
+			"liposuction": {
+				"title": "Liposuction: Vücut Şekillendirme Yöntemleri",
+				"description": "Liposuction ile vücut kontürünüzü iyileştirin. Modern teknikler ve güvenli uygulama yöntemleri hakkında bilgi alın.",
+				"readMore": "Devamını Oku"
+			},
+			"antiAging": {
+				"title": "Yaşlanma Karşıtı Estetik: Botoks ve Dolgu",
+				"description": "Botoks ve dolgu uygulamaları ile genç görünüm kazanın. Güvenli ve etkili yöntemler hakkında detaylı bilgi.",
+				"readMore": "Devamını Oku"
+			},
+			"hairTransplant": {
+				"title": "Saç Ekimi: Modern Teknikler ve Sonuçlar",
+				"description": "FUE, FUT ve DHI teknikleri ile saç ekimi. Hangi yöntemin size uygun olduğunu ve beklenen sonuçları öğrenin.",
+				"readMore": "Devamını Oku"
+			},
+			"recovery": {
+				"title": "Estetik Cerrahi Sonrası İyileşme Süreci",
+				"description": "Estetik cerrahi sonrası iyileşme sürecinde dikkat edilmesi gereken noktalar ve bakım önerileri.",
+				"readMore": "Devamını Oku"
+			},
+			"surgeryRisks": {
+				"title": "Estetik Cerrahi Riskleri ve Önleme Yöntemleri",
+				"description": "Estetik cerrahi işlemleri günümüzde güvenli yöntemlerle gerçekleştirilmektedir. Ameliyat öncesi ve sonrası dikkat edilmesi gereken noktalar.",
+				"readMore": "Devamını Oku"
+			}
+		}
+	},
+	"blogDetail": {
+		"breadcrumb": {
+			"home": "Ana Sayfa",
+			"blog": "Blog"
+		},
+		"author": {
+			"name": "Dr. Elif YAMAN",
+			"title": "Estetik ve Plastik Cerrahi Uzmanı",
+			"description": "Estetik cerrahi konusunda uzmanlaşmış, 20+ yıl deneyimli cerrah."
+		},
+		"sidebar": {
+			"aboutAuthor": "Yazar Hakkında",
+			"relatedPosts": "İlgili Makaleler",
+			"specialties": "Uzmanlık Alanları"
+		},
+		"cta": {
+			"title": "Estetik Cerrahi Hakkında Daha Fazla Bilgi",
+			"description": "Estetik cerrahi hakkında detaylı bilgi almak veya bu tedavi yönteminin sizin için uygun olup olmadığını öğrenmek için bizimle iletişime geçebilirsiniz.",
+			"contact": "İletişime Geç",
+			"appointment": "Randevu Al"
+		},
+		"relatedPosts": {
+			"rhinoplasty": "Burun Estetiği Sonrası İyileşme",
+			"breastSurgery": "Meme Estetiğinde Yeni Yaklaşımlar",
+			"liposuction": "Liposuction Sonrası Bakım"
+		}
+	},
+	"form": {
+		"name": "Ad Soyad",
+		"email": "E-posta",
+		"date": "Tarih",
+		"message": "Not",
+		"submit": "Gönder"
+	}
 }

@@ -1,7 +1,9 @@
+import { useTranslation } from 'react-i18next'
 import WhatsAppButton from '../components/WhatsAppButton'
 import LanguageSwitcher from '../components/LanguageSwitcher'
 
 export default function VideoGaleri() {
+  const { t } = useTranslation()
   return (
     <div className="site-main">
       <main id="main">
@@ -10,9 +12,11 @@ export default function VideoGaleri() {
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
-                <div className="page-title-heading">
-                  <h2 className="title">Video Galerisi</h2>
-                  <p className="page-title-desc">Dr. Doğan ŞENTÜRK<br/>Beyin, Sinir ve Omurga Cerrahisi</p>
+                <div className="breadcrumb-wrapper-inner">
+                  <span>
+                    <a title="Homepage" href="/">Anasayfa</a>
+                  </span>
+                  <span>{t('gallery.video.title')}</span>
                 </div>
               </div>
             </div>
@@ -26,25 +30,25 @@ export default function VideoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <div className="video-container">
-                    <iframe loading="lazy" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Bel Fıtığı: Tedavi Yaklaşımları" allowFullScreen></iframe>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title={t('gallery.video.items.rhinoplasty')} allowFullScreen></iframe>
                   </div>
-                  <figcaption className="gallery-caption">Bel Fıtığı: Tedavi Yaklaşımları</figcaption>
+                  <figcaption className="gallery-caption">{t('gallery.video.items.rhinoplasty')}</figcaption>
                 </figure>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <div className="video-container">
-                    <iframe loading="lazy" src="https://www.youtube.com/embed/ysz5S6PUM-U" title="Boyun Fıtığında Mikrocerrahi" allowFullScreen></iframe>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title={t('gallery.video.items.breastSurgery')} allowFullScreen></iframe>
                   </div>
-                  <figcaption className="gallery-caption">Boyun Fıtığında Mikrocerrahi</figcaption>
+                  <figcaption className="gallery-caption">{t('gallery.video.items.breastSurgery')}</figcaption>
                 </figure>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <div className="video-container">
-                    <iframe loading="lazy" src="https://www.youtube.com/embed/oHg5SJYRHA0" title="Skolyozda Tedavi Planlama" allowFullScreen></iframe>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/oHg5SJYRHA0" title={t('gallery.video.items.liposuction')} allowFullScreen></iframe>
                   </div>
-                  <figcaption className="gallery-caption">Skolyozda Tedavi Planlama</figcaption>
+                  <figcaption className="gallery-caption">{t('gallery.video.items.liposuction')}</figcaption>
                 </figure>
               </div>
             </div>
