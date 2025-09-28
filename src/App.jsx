@@ -17,8 +17,11 @@ export default function App() {
     return () => clearTimeout(timer)
   }, [])
 
+  // GitHub Pages için basename belirle
+  const basename = process.env.NODE_ENV === 'production' ? '/doktor_web' : ''
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <div className="site-shell">
         {isLoading && <Loading />}
         <Header />

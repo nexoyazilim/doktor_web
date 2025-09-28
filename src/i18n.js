@@ -9,7 +9,7 @@ i18n
     lng: localStorage.getItem('lang') || 'tr',
     fallbackLng: 'tr',
     backend: {
-      loadPath: '/assets/i18n/{{lng}}.json',
+      loadPath: './assets/i18n/{{lng}}.json',
     },
     interpolation: { escapeValue: false },
   })

@@ -51,7 +51,7 @@ export default function Akademik() {
             <div className="grid cols-3 cards">
               {filteredPublications.map((pub, index) => (
                 <article key={index} className="card" data-type={pub.type}>
-                  <img loading="lazy" src={`/assets/images/hizmetlerimiz_image/${pub.key === 'rhinoplasty' ? 'alnskllndrme' : pub.key === 'breastSurgery' ? 'bntdvsi' : 'cltbkm'}.jpg`} alt="Makale görseli" />
+                  <img loading="lazy" src={`./assets/images/hizmetlerimiz_image/${pub.key === 'rhinoplasty' ? 'alnskllndrme' : pub.key === 'breastSurgery' ? 'bntdvsi' : 'cltbkm'}.jpg`} alt="Makale görseli" />
                   <h3>{t(`academic.publications.items.${pub.key}.title`)}</h3>
                   <p>{t(`academic.publications.items.${pub.key}.journal`)}</p>
                   <a className="btn btn-outline" href={pub.link} target="_blank" rel="noopener">{t(`academic.publications.items.${pub.key}.linkText`)}</a>
