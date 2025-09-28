@@ -2,9 +2,9 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ react_dondurme ]
+    branches: [ main ]
   pull_request:
-    branches: [ react_dondurme ]
+    branches: [ main ]
 
 jobs:
   build-and-deploy:
@@ -26,14 +26,14 @@ jobs:
     - name: Build
       run: npm run build
       
-    - name: Copy assets
+    - name: Prepare for deployment
       run: |
-        cp -r public/assets dist/
         echo "" > dist/.nojekyll
+        echo "Repository: ${{ github.repository }}" >> dist/deployment-info.txt
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/react_dondurme'
+      if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
