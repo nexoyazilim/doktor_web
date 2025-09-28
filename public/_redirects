@@ -1,0 +1,5 @@
+# GitHub Pages SPA routing redirects
+# Bu dosya GitHub Pages'de SPA routing için kullanılır
+
+# Tüm sayfaları index.html'e yönlendir (React Router handle edecek)
+/*    /index.html   200

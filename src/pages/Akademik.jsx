@@ -8,9 +8,9 @@ export default function Akademik() {
   const [activeFilter, setActiveFilter] = useState('all')
 
   const publications = [
-    { type: 'makale', key: 'rhinoplasty', title: 'Burun Estetiğinde Doğal Görünüm Teknikleri', journal: 'Plastik ve Rekonstrüktif Cerrahi Dergisi, 2023', link: '#', linkText: 'PDF' },
-    { type: 'bildiri', key: 'breastSurgery', title: 'Meme Estetiğinde Komplikasyon Yönetimi: Çok Merkezli Deneyim', journal: 'Uluslararası Estetik Cerrahi Kongresi, 2022', link: '#', linkText: 'Özet' },
-    { type: 'kitap', key: 'liposuction', title: 'Liposuction: Modern Teknikler ve Uygulamalar', journal: 'Estetik Cerrahi El Kitabı, 2021', link: '#', linkText: 'Detay' }
+    { type: 'makale', key: 'rhinoplasty', title: 'Burun Estetiğinde Doğal Görünüm Teknikleri', journal: 'Plastik ve Rekonstrüktif Cerrahi Dergisi, 2023', link: null, linkText: 'PDF' },
+    { type: 'bildiri', key: 'breastSurgery', title: 'Meme Estetiğinde Komplikasyon Yönetimi: Çok Merkezli Deneyim', journal: 'Uluslararası Estetik Cerrahi Kongresi, 2022', link: null, linkText: 'Özet' },
+    { type: 'kitap', key: 'liposuction', title: 'Liposuction: Modern Teknikler ve Uygulamalar', journal: 'Estetik Cerrahi El Kitabı, 2021', link: null, linkText: 'Detay' }
   ]
 
   const filteredPublications = activeFilter === 'all' ? publications : publications.filter(pub => pub.type === activeFilter)
@@ -54,7 +54,11 @@ export default function Akademik() {
                   <img loading="lazy" src={`/doktor_web/assets/images/hizmetlerimiz_image/${pub.key === 'rhinoplasty' ? 'alnskllndrme' : pub.key === 'breastSurgery' ? 'bntdvsi' : 'cltbkm'}.jpg`} alt="Makale görseli" />
                   <h3>{t(`academic.publications.items.${pub.key}.title`)}</h3>
                   <p>{t(`academic.publications.items.${pub.key}.journal`)}</p>
-                  <a className="btn btn-outline" href={pub.link} target="_blank" rel="noopener">{t(`academic.publications.items.${pub.key}.linkText`)}</a>
+                  {pub.link ? (
+                    <a className="btn btn-outline" href={pub.link} target="_blank" rel="noopener">{t(`academic.publications.items.${pub.key}.linkText`)}</a>
+                  ) : (
+                    <button className="btn btn-outline" disabled style={{ opacity: 0.6, cursor: 'not-allowed' }}>{t(`academic.publications.items.${pub.key}.linkText`)}</button>
+                  )}
                 </article>
               ))}
             </div>

@@ -23,7 +23,7 @@ export default function FotoGaleri() {
           </div>
         </div>
         
-        <section className="section">
+        <section className="section photo-gallery-section">
           <div className="container">
             
             {/* Gallery Grid - 3 Columns */}
@@ -31,7 +31,7 @@ export default function FotoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <a href="#" aria-label="Galeri 1">
-                    <img loading="lazy" src="https://picsum.photos/seed/photo1/400/300" alt={t('gallery.photo.items.clinic')} />
+                    <img loading="lazy" src="/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt={t('gallery.photo.items.clinic')} />
                   </a>
                   <figcaption className="gallery-caption">{t('gallery.photo.items.clinic')}</figcaption>
                 </figure>
@@ -39,7 +39,7 @@ export default function FotoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <a href="#" aria-label="Galeri 2">
-                    <img loading="lazy" src="https://picsum.photos/seed/photo2/400/300" alt={t('gallery.photo.items.teamwork')} />
+                    <img loading="lazy" src="/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt={t('gallery.photo.items.teamwork')} />
                   </a>
                   <figcaption className="gallery-caption">{t('gallery.photo.items.teamwork')}</figcaption>
                 </figure>
@@ -47,7 +47,7 @@ export default function FotoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <a href="#" aria-label="Galeri 3">
-                    <img loading="lazy" src="https://picsum.photos/seed/photo3/400/300" alt={t('gallery.photo.items.event')} />
+                    <img loading="lazy" src="/doktor_web/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt={t('gallery.photo.items.event')} />
                   </a>
                   <figcaption className="gallery-caption">{t('gallery.photo.items.event')}</figcaption>
                 </figure>
@@ -55,7 +55,7 @@ export default function FotoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <a href="#" aria-label="Galeri 4">
-                    <img loading="lazy" src="https://picsum.photos/seed/photo4/400/300" alt={t('gallery.photo.items.conference')} />
+                    <img loading="lazy" src="/doktor_web/assets/images/hizmetlerimiz_image/frksynellazer.jpg" alt={t('gallery.photo.items.conference')} />
                   </a>
                   <figcaption className="gallery-caption">{t('gallery.photo.items.conference')}</figcaption>
                 </figure>
@@ -63,7 +63,7 @@ export default function FotoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <a href="#" aria-label="Galeri 5">
-                    <img loading="lazy" src="https://picsum.photos/seed/photo5/400/300" alt={t('gallery.photo.items.preparation')} />
+                    <img loading="lazy" src="/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt={t('gallery.photo.items.preparation')} />
                   </a>
                   <figcaption className="gallery-caption">{t('gallery.photo.items.preparation')}</figcaption>
                 </figure>
@@ -71,7 +71,7 @@ export default function FotoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <a href="#" aria-label="Galeri 6">
-                    <img loading="lazy" src="https://picsum.photos/seed/photo6/400/300" alt={t('gallery.photo.items.consultation')} />
+                    <img loading="lazy" src="/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt={t('gallery.photo.items.consultation')} />
                   </a>
                   <figcaption className="gallery-caption">{t('gallery.photo.items.consultation')}</figcaption>
                 </figure>

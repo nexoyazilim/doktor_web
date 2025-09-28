@@ -235,7 +235,7 @@ export default function Tedaviler() {
                               <li>{t('treatments.symptomsList.pain')}</li>
                               <li>{t('treatments.symptomsList.numbness')}</li>
                               <li>{t('treatments.symptomsList.posture')}</li>
-                            </ul>
+                            </ul>z
                             <h3 id="toc_3_H3">{t('treatments.trackedDiseases')}</h3>
                             <ul>
                               {treatment.conditions.slice(0, 6).map((c, i) => (<li key={i}>{c}</li>))}
@@ -273,7 +273,7 @@ export default function Tedaviler() {
       <main id="main">
 
         {/* Treatments Grid Section */}
-        <section className="section treatments-page" style={{ paddingTop: '80px' }}>
+        <section className="section treatments-page">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">

@@ -3,62 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sayfa Bulunamadı - Dr. Web</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-        .container {
-            text-align: center;
-            max-width: 600px;
-            padding: 2rem;
-        }
-        h1 {
-            font-size: 4rem;
-            margin: 0;
-            font-weight: 300;
-        }
-        h2 {
-            font-size: 1.5rem;
-            margin: 1rem 0;
-            font-weight: 400;
-        }
-        p {
-            font-size: 1.1rem;
-            margin: 2rem 0;
-            opacity: 0.9;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        .btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-        }
-    </style>
+    <title>Dr. Web - Plastik ve Rekonstrüktif Cerrahi</title>
+    <link rel="icon" type="image/svg+xml" href="/doktor_web/assets/favicon.svg">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/framework.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/layout.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/components.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/icons.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/navigation.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/slider.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/animations.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/gallery.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/mobile.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/themify.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/custom-icons.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/custom.css">
+    
+    <script>
+        // GitHub Pages SPA routing fix
+        // This script takes the current URL and converts it from a GitHub Pages 404 redirect
+        // to the correct URL for the SPA to handle
+        (function() {
+            var redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            if (redirect && redirect !== location.href) {
+                history.replaceState(null, null, redirect);
+            }
+        })();
+    </script>
 </head>
 <body>
-    <div class="container">
-        <h1>404</h1>
-        <h2>Sayfa Bulunamadı</h2>
-        <p>Aradığınız sayfa mevcut değil veya taşınmış olabilir.</p>
-        <a href="/" class="btn">Ana Sayfaya Dön</a>
+    <div id="root">
+        <!-- Loading content will be replaced by React -->
+        <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: Arial, sans-serif;">
+            <div style="text-align: center;">
+                <h2>Yönlendiriliyor...</h2>
+                <p>Sayfa yükleniyor, lütfen bekleyin.</p>
+            </div>
+        </div>
     </div>
+    
+    <!-- React App Script -->
+    <script type="module" src="/doktor_web/src/main.jsx"></script>
+    
+    <script>
+        // Fallback redirect for non-JS users
+        setTimeout(function() {
+            window.location.href = '/doktor_web/';
+        }, 2000);
+    </script>
 </body>
 </html>
