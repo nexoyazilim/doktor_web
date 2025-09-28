@@ -7,6 +7,7 @@ export default defineConfig({
   base: process.env.NODE_ENV === 'production' ? '/doktor_web/' : '/',
   build: {
     outDir: 'dist',
-    assetsDir: 'assets'
+    assetsDir: 'assets',
+    copyPublicDir: true
   }
 })
