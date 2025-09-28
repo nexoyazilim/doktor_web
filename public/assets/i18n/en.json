@@ -1,0 +1,393 @@
+{
+	"site": {
+    "title": "Dr. Elif YAMAN - Aesthetic and Plastic Surgery",
+		"brand": "Dr. Elif YAMAN",
+		"rights": "All rights reserved.",
+		"specialty": "Aesthetic and Plastic Surgery Specialist"
+	},
+	"nav": {
+		"about": "About",
+		"specialties": "Specialties",
+		"diagnosis": "Diagnosis/Treatment",
+		"blog": "Blog",
+		"latest": "Latest Articles",
+		"academic": "Academic",
+		"gallery": "Gallery",
+		"testimonials": "Testimonials",
+		"faq": "FAQ",
+		"contact": "Contact",
+		"appointment": "Book Appointment",
+		"services": "Our Services",
+		"treatments": {
+			"rhinoplasty": "Rhinoplasty (Nose Surgery)",
+			"breastAugmentation": "Breast Augmentation",
+			"breastReduction": "Breast Reduction",
+			"liposuction": "Liposuction (Fat Removal)",
+			"tummyTuck": "Tummy Tuck (Abdominoplasty)",
+			"facelift": "Facelift",
+			"eyelidSurgery": "Eyelid Surgery",
+			"botox": "Botox Treatment",
+			"filler": "Filler Treatment",
+			"hairTransplant": "Hair Transplant",
+			"breastLift": "Breast Lift",
+			"bodyContouring": "Body Contouring"
+		}
+	},
+	"hero": {
+		"title": "Aesthetic and Plastic Surgery",
+		"subtitle": "Who is Dr. Elif YAMAN?",
+		"description": "With over 20 years of experience, I have served thousands of patients in the field of aesthetic and plastic surgery. I am an expert in modern aesthetic surgical techniques, minimally invasive methods, natural appearance-focused approaches and safe treatment methods. I continuously improve myself to help my patients feel more confident and bring out their natural beauty. Through my presentations at international conferences and academic work, I follow innovations in my field and bring the latest technologies to the service of my patients. I have specialized in aesthetic surgical procedures such as rhinoplasty, breast surgery, body contouring, facial rejuvenation, and liposuction. I am also experienced in non-invasive aesthetic applications such as botox, fillers, and hair transplantation. I adopt a personalized approach to determine the most appropriate treatment plan for my patients and support their physical and psychological recovery processes. I also play an active role in post-operative follow-up and care processes to ensure my patients achieve perfect results.",
+		"cta": "Read More"
+	},
+	"about": {
+		"title": "About",
+		"subtitle": "Dr. Elif YAMAN",
+		"specialty": "Aesthetic and Plastic Surgery Specialist",
+		"description": "With over 20 years of experience, I have served thousands of patients in the field of aesthetic and plastic surgery. I am an expert in modern aesthetic surgical techniques and safe treatment methods.",
+		"stats": {
+			"experience": "Years Experience",
+			"surgeries": "Successful Surgeries",
+			"publications": "Scientific Publications"
+		},
+		"education": {
+			"title": "Education",
+			"professor": "Professor",
+			"associate": "Associate Professor",
+			"specialist": "Specialist Doctor",
+			"doctor": "Medical Doctor"
+		},
+		"experience": {
+			"title": "Experience",
+			"chief": "Chief Physician",
+			"clinical": "Clinical Chief",
+			"specialist": "Specialist Doctor",
+			"fellowship": "Fellowship"
+		},
+		"specializations": {
+			"title": "My Specializations",
+			"subtitle": "Topics I specialize in the field of aesthetic and plastic surgery",
+			"facial": "Facial Aesthetics",
+			"breast": "Breast Surgery",
+			"body": "Body Contouring",
+			"noninvasive": "Non-Invasive Aesthetics",
+			"reconstructive": "Reconstructive Surgery",
+			"hair": "Hair Transplant"
+		},
+		"philosophy": {
+			"title": "My Medical Philosophy",
+			"quote": "Every patient is special to me. My fundamental principle is to help my patients feel more confident by using safe and effective aesthetic surgical techniques with a natural beauty approach and provide them with the best service."
+		}
+	},
+	"treatments": {
+		"title": "My Specializations",
+		"subtitle": "Our Services",
+		"description": "You can get detailed information by selecting one of the following specialty areas. For each treatment method, you can find comprehensive explanations, applied procedures and information about recovery processes.",
+		"seeDetails": "See Details",
+		"whatIs": "What is it?",
+		"symptoms": "What are the Symptoms?",
+		"trackedDiseases": "Diseases Followed",
+		"commonDiseases": "Common Diseases",
+		"emergency": "Situations Requiring Emergency Intervention",
+		"methods": "Methods Used",
+		"generalDescription": "is a specialty area where personalized planning is made using modern, evidence-based methods in diagnosis and treatment.",
+		"symptomsList": {
+			"pain": "Pain and movement limitation",
+			"numbness": "Numbness, tingling, weakness",
+			"posture": "Posture disorder and imbalance"
+		},
+		"commonDiseasesDescription": "It may vary according to age, activity level and accompanying conditions.",
+		"emergencyList": {
+			"severePain": "Severe pain and rapidly increasing power loss",
+			"incontinence": "Loss of urinary-fecal control",
+			"trauma": "New neurological findings after trauma"
+		},
+		"categories": {
+			"rhinoplasty": {
+				"title": "Rhinoplasty (Nose Surgery)",
+				"description": "Correction of nose shape and function with aesthetic surgery.",
+				"procedures": ["Open rhinoplasty", "Closed rhinoplasty", "Septoplasty"],
+				"conditions": ["Nose shape deformity", "Breathing difficulty", "Drooping nose tip"],
+				"recovery": "Swelling decreases within 1-2 weeks after rhinoplasty, final result visible within 3-6 months."
+			},
+			"breastAugmentation": {
+				"title": "Breast Augmentation",
+				"description": "Increasing breast size with implants or fat transfer.",
+				"procedures": ["Silicone implant", "Fat transfer", "Hybrid method"],
+				"conditions": ["Small breasts", "Asymmetric breasts", "Breast loss"],
+				"recovery": "1-2 weeks rest after breast augmentation, 4-6 weeks sports restriction."
+			},
+			"breastReduction": {
+				"title": "Breast Reduction",
+				"description": "Reducing and reshaping large breasts.",
+				"procedures": ["Anchor technique", "Vertical technique", "Liposuction"],
+				"conditions": ["Large breasts", "Back pain", "Shoulder grooves"],
+				"recovery": "2-3 weeks rest after breast reduction, 6 weeks sports restriction."
+			},
+			"liposuction": {
+				"title": "Liposuction (Fat Removal)",
+				"description": "Surgical removal of fat tissue from specific body areas.",
+				"procedures": ["Tumescent liposuction", "VASER liposuction", "Smart lipo"],
+				"conditions": ["Abdominal fat", "Hip fat", "Arm fat"],
+				"recovery": "1 week compression garment after liposuction, 2-4 weeks normal activity."
+			},
+			"tummyTuck": {
+				"title": "Tummy Tuck (Abdominoplasty)",
+				"description": "Removal of excess skin and fat from abdominal area, tightening of muscles.",
+				"procedures": ["Full abdominoplasty", "Mini abdominoplasty", "Fleur-de-lis"],
+				"conditions": ["Loose abdominal skin", "Abdominal muscle separation", "Post-pregnancy"],
+				"recovery": "2-3 weeks rest after tummy tuck, 6 weeks heavy lifting restriction."
+			},
+			"facelift": {
+				"title": "Facelift",
+				"description": "Surgical correction of aging signs in face and neck area.",
+				"procedures": ["SMAS lifting", "Deep plane lifting", "Mini facelift"],
+				"conditions": ["Facial sagging", "Neck sagging", "Deep wrinkles"],
+				"recovery": "1-2 weeks swelling after facelift, 2-3 weeks bruising, 3-6 months final result."
+			},
+			"eyelidSurgery": {
+				"title": "Eyelid Surgery",
+				"description": "Removal of excess skin and fat from upper and lower eyelids.",
+				"procedures": ["Blepharoplasty", "Transconjunctival approach", "Combined approach"],
+				"conditions": ["Eyelid sagging", "Under-eye bags", "Vision restriction"],
+				"recovery": "1 week swelling after eyelid surgery, 2 weeks bruising, 1 month final result."
+			},
+			"botox": {
+				"title": "Botox Treatment",
+				"description": "Temporary correction of facial wrinkles with botulinum toxin.",
+				"procedures": ["Forehead botox", "Eye area botox", "Between eyebrows botox"],
+				"conditions": ["Forehead wrinkles", "Eye area wrinkles", "Between eyebrows lines"],
+				"recovery": "Effect begins 3-7 days after botox, effective for 3-6 months."
+			},
+			"filler": {
+				"title": "Filler Treatment",
+				"description": "Correction of facial contours and volume loss with filler materials.",
+				"procedures": ["Hyaluronic acid", "Permanent fillers", "Fat transfer"],
+				"conditions": ["Thin lips", "Cheek hollowing", "Jawline"],
+				"recovery": "1-2 days swelling after filler, 1 week final result, effective for 6-18 months."
+			},
+			"hairTransplant": {
+				"title": "Hair Transplant",
+				"description": "Transplantation of hair follicles to areas with hair loss.",
+				"procedures": ["FUE technique", "FUT technique", "DHI technique"],
+				"conditions": ["Male pattern hair loss", "Female pattern hair loss", "Hairline recession"],
+				"recovery": "1 week washing restriction after hair transplant, 3-6 months hair growth, 12 months final result."
+			},
+			"breastLift": {
+				"title": "Breast Lift",
+				"description": "Lifting and reshaping sagging breasts.",
+				"procedures": ["Periareolar", "Vertical", "Anchor"],
+				"conditions": ["Breast sagging", "Post-pregnancy", "After weight loss"],
+				"recovery": "2-3 weeks rest after breast lift, 6 weeks sports restriction."
+			},
+			"bodyContouring": {
+				"title": "Body Contouring",
+				"description": "Improvement of body shape with aesthetic surgical methods.",
+				"procedures": ["360-degree liposuction", "Body lifting", "Combined methods"],
+				"conditions": ["Body shape deformity", "After weight loss", "Post-pregnancy"],
+				"recovery": "2-4 weeks rest after body contouring, 6 weeks sports restriction."
+			}
+		}
+	},
+	"blog": {
+		"title": "Blog",
+		"subtitle": "Highlights from my current informative articles about aesthetic surgery.",
+		"readMore": "Read more",
+		"posts": {
+			"rhinoplasty": {
+				"title": "Rhinoplasty: Secrets of Natural Appearance",
+				"description": "Aesthetic surgical approaches and techniques for a natural and beautiful nose."
+			},
+			"breastSurgery": {
+				"title": "Breast Surgery: Safe and Effective Methods",
+				"description": "Modern techniques in breast augmentation, reduction and lifting procedures."
+			},
+			"antiAging": {
+				"title": "Anti-Aging Aesthetic Applications",
+				"description": "Achieving a youthful appearance with botox, fillers and surgical methods."
+			}
+		}
+	},
+	"contact": {
+		"title": "Contact",
+		"phone": "Contact Me",
+		"email": "Send Email",
+		"address": "ATAŞEHİR İSTANBUL",
+		"reachMe": "You Can Reach Me"
+	},
+	"footer": {
+		"menu": "Menu",
+		"contact": "Contact",
+		"specialties": "Specialties",
+		"followMe": "Follow Me on Social Media",
+		"description": "Brief introduction area about Dr. Elif YAMAN. I provide expert medical services in the field of aesthetic and plastic surgery.",
+		"workingHours": {
+			"weekdays": "Mon - Fri 08.30 - 22.00",
+			"weekends": "Sat - Sun 10.00 - 18.00"
+		}
+	},
+	"gallery": {
+		"photo": {
+			"title": "Photo Gallery",
+			"subtitle": "Dr. Elif YAMAN",
+			"specialty": "Aesthetic and Plastic Surgery",
+			"items": {
+				"clinic": "A moment from the clinic",
+				"teamwork": "Teamwork",
+				"event": "Event moment",
+				"conference": "Conference participation",
+				"preparation": "Pre-surgery preparation",
+				"consultation": "Patient consultation"
+			}
+		},
+		"video": {
+			"title": "Video Gallery",
+			"subtitle": "Dr. Elif YAMAN",
+			"specialty": "Aesthetic and Plastic Surgery",
+			"items": {
+				"rhinoplasty": "Rhinoplasty: Natural Results",
+				"breastSurgery": "Breast Surgery: Modern Techniques",
+				"liposuction": "Liposuction: Body Contouring"
+			}
+		}
+	},
+	"contactPage": {
+		"title": "Contact",
+		"subtitle": "Contact us for your questions",
+		"description": "We will get back to you as soon as possible",
+		"form": {
+			"title": "Send us a Message",
+			"name": "Your Name and Surname",
+			"email": "Your Email Address",
+			"phone": "Your Phone Number",
+			"subject": "Select Subject",
+			"subjects": {
+				"appointment": "Appointment Request",
+				"question": "General Question",
+				"treatment": "Treatment Information",
+				"other": "Other"
+			},
+			"message": "Your Message",
+			"submit": "Send Message",
+			"success": "Your message has been sent successfully!"
+		},
+		"location": {
+			"title": "Our Location"
+		}
+	},
+	"academic": {
+		"title": "Academic Studies and Publications",
+		"subtitle": "Selection of peer-reviewed articles, presentations and book chapters",
+		"description": "Scientific production integrated with education and clinical experience",
+		"stats": {
+			"publications": "Peer-reviewed Publications",
+			"presentations": "Presentations",
+			"chapters": "Book Chapters",
+			"citations": "Citations"
+		},
+		"publications": {
+			"title": "Publications and Studies",
+			"filters": {
+				"all": "All",
+				"article": "Peer-reviewed Article",
+				"presentation": "Presentation",
+				"chapter": "Book Chapter"
+			},
+			"items": {
+				"endoscopic": {
+					"title": "New Approaches in Endoscopic Spine Surgery",
+					"journal": "",
+					"linkText": "PDF"
+				},
+				"scoliosis": {
+					"title": "Complication Management in Scoliosis: Multicenter Experience",
+					"journal": "International Spine Congress, 2022",
+					"linkText": "Abstract"
+				},
+				"cervical": {
+					"title": "Cervical Myelopathy: From Diagnosis to Treatment",
+					"journal": "Spine Surgery Handbook, 2021",
+					"linkText": "Details"
+				}
+			}
+		}
+	},
+	"blogPage": {
+		"title": "Blog",
+		"subtitle": "Current developments and informative articles in the field of",
+		"description": "brain, nerve and spine surgery",
+		"categories": {
+			"spine": "Spine Surgery",
+			"back": "Back Diseases",
+			"surgery": "Surgery Information",
+			"scoliosis": "Scoliosis",
+			"brain": "Brain Surgery",
+			"rehabilitation": "Rehabilitation"
+		},
+		"posts": {
+			"endoscopic": {
+				"title": "Who is Endoscopic Spine Surgery Suitable For?",
+				"description": "Endoscopic spine surgery is increasingly used in the treatment of lumbar and cervical disc herniation as a minimally invasive method.",
+				"readMore": "Read More"
+			},
+			"spondylolisthesis": {
+				"title": "How to Understand Spondylolisthesis? Symptoms and Treatment Options",
+				"description": "Spondylolisthesis is one of the important causes of back pain. Patients' quality of life can be improved with early diagnosis and appropriate treatment options.",
+				"readMore": "Read More"
+			},
+			"surgeryRisks": {
+				"title": "Spine Surgery Risks and Prevention Methods",
+				"description": "Spine surgeries are performed with safe methods today. Points to be considered before and after surgery.",
+				"readMore": "Read More"
+			},
+			"pediatricScoliosis": {
+				"title": "Scoliosis in Children: Early Diagnosis and Treatment",
+				"description": "Scoliosis seen in childhood can be successfully treated with non-surgical methods when detected early.",
+				"readMore": "Read More"
+			},
+			"brainTumor": {
+				"title": "New Technologies in Brain Tumor Surgeries",
+				"description": "The latest technologies used in brain tumor surgery significantly increase surgical success while improving patient safety.",
+				"readMore": "Read More"
+			},
+			"rehabilitation": {
+				"title": "Rehabilitation Process After Spine Surgery",
+				"description": "Post-surgical rehabilitation is critical for a successful recovery process. Physical therapy programs and exercise recommendations.",
+				"readMore": "Read More"
+			}
+		}
+	},
+	"blogDetail": {
+		"breadcrumb": {
+			"home": "Home",
+			"blog": "Blog"
+		},
+		"author": {
+			"name": "Dr. Elif YAMAN",
+			"title": "Brain, Nerve and Spine Surgery Specialist",
+			"description": "A surgeon with 15+ years of experience, specialized in endoscopic spine surgery."
+		},
+		"sidebar": {
+			"aboutAuthor": "About the Author",
+			"relatedPosts": "Related Articles",
+			"specialties": "Specialties"
+		},
+		"cta": {
+			"title": "More Information About Endoscopic Spine Surgery",
+			"description": "You can contact us to get detailed information about endoscopic spine surgery or to learn whether this treatment method is suitable for you.",
+			"contact": "Contact",
+			"appointment": "Book Appointment"
+		},
+		"relatedPosts": {
+			"hernia": "Recovery After Herniated Disc Surgery",
+			"scoliosis": "New Approaches in Scoliosis Treatment",
+			"physiotherapy": "Physical Therapy for Spine Pain"
+		}
+	},
+	"form": {
+		"name": "Full Name",
+		"email": "Email",
+		"date": "Date",
+		"message": "Note",
+		"submit": "Send"
+	}
+}

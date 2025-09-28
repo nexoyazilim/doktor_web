@@ -1,0 +1,148 @@
+/* Custom global styles for React app */
+body {
+  margin: 0;
+  font-family: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Header branding styles */
+.site-branding {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.site-branding .home-link {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+  text-decoration: none;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+}
+
+.site-branding .logo-img {
+  height: 100px !important;
+  width: auto;
+  max-height: none !important;
+}
+
+.site-branding .home-link .brand-name {
+  font-weight: 600 !important;
+  font-size: 20px !important;
+  color: var(--fg) !important;
+  line-height: 1.2 !important;
+  max-width: none !important;
+}
+
+/* Daha spesifik selector */
+.site-navigation .site-branding .home-link .brand-name {
+  font-size: 20px !important;
+}
+
+/* En spesifik selector - tüm diğer kuralları geçersiz kılar */
+#masthead .site-header-menu .site-header-menu-inner .container .row .col .site-navigation .site-branding .home-link .brand-name {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .site-branding .home-link .brand-name {
+    font-size: 10px !important;
+    white-space: nowrap !important;
+    line-height: 1 !important;
+  }
+  
+  .site-branding .logo-img {
+    height: 50px !important;
+  }
+  
+  .site-branding .home-link {
+    gap: 6px !important;
+  }
+}
+
+/* Header container height fix */
+.site-navigation {
+  min-height: 120px !important;
+  align-items: center !important;
+}
+
+/* Mobile header adjustments */
+@media (max-width: 768px) {
+  .site-navigation {
+    min-height: 80px !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+  }
+  
+  .site-branding {
+    flex-shrink: 0 !important;
+    max-width: 60% !important;
+  }
+  
+  .site-menubar {
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+  
+  .cmt-btn {
+    font-size: 12px !important;
+    padding: 6px 8px !important;
+    white-space: nowrap !important;
+  }
+  
+  .site-menubar .cmt-btn.d-block.d-sm-none {
+    max-width: 100px !important;
+    width: auto !important;
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-navigation {
+    min-height: 70px !important;
+  }
+  
+  .site-branding {
+    max-width: 55% !important;
+  }
+  
+  .cmt-btn {
+    font-size: 11px !important;
+    padding: 5px 7px !important;
+  }
+  
+  .site-menubar .cmt-btn.d-block.d-sm-none {
+    max-width: 90px !important;
+    width: auto !important;
+    font-size: 9px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-navigation {
+    min-height: 60px !important;
+  }
+  
+  .site-branding {
+    max-width: 50% !important;
+  }
+  
+  .cmt-btn {
+    font-size: 10px !important;
+    padding: 4px 6px !important;
+  }
+  
+  .site-menubar .cmt-btn.d-block.d-sm-none {
+    max-width: 80px !important;
+    width: auto !important;
+    font-size: 8px !important;
+  }
+}
