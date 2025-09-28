@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import WhatsAppButton from '../components/WhatsAppButton'
 import LanguageSwitcher from '../components/LanguageSwitcher'
+import { getImagePath } from '../utils/assetHelper'
 
 export default function Tedaviler() {
   const { t } = useTranslation()
@@ -29,20 +30,20 @@ export default function Tedaviler() {
   // Görsel eşleştirme sistemi
   const getTreatmentImage = (treatmentKey) => {
     const imageMap = {
-      'rhinoplasty': '/assets/images/hizmetlerimiz_image/alnskllndrme.jpg',
-      'breastAugmentation': '/assets/images/hizmetlerimiz_image/bntdvsi.jpg',
-      'breastReduction': '/assets/images/hizmetlerimiz_image/bntdvsi.jpg',
-      'liposuction': '/assets/images/hizmetlerimiz_image/cltbkm.jpg',
-      'tummyTuck': '/assets/images/hizmetlerimiz_image/cltbkm.jpg',
-      'facelift': '/assets/images/hizmetlerimiz_image/alnskllndrme.jpg',
-      'eyelidSurgery': '/assets/images/hizmetlerimiz_image/alnskllndrme.jpg',
-      'botox': '/assets/images/hizmetlerimiz_image/frksynellazer.jpg',
-      'filler': '/assets/images/hizmetlerimiz_image/frksynellazer.jpg',
-      'hairTransplant': '/assets/images/hizmetlerimiz_image/frksynellazer.jpg',
-      'breastLift': '/assets/images/hizmetlerimiz_image/bntdvsi.jpg',
-      'bodyContouring': '/assets/images/hizmetlerimiz_image/cltbkm.jpg'
+      'rhinoplasty': getImagePath('hizmetlerimiz_image/alnskllndrme.jpg'),
+      'breastAugmentation': getImagePath('hizmetlerimiz_image/bntdvsi.jpg'),
+      'breastReduction': getImagePath('hizmetlerimiz_image/bntdvsi.jpg'),
+      'liposuction': getImagePath('hizmetlerimiz_image/cltbkm.jpg'),
+      'tummyTuck': getImagePath('hizmetlerimiz_image/cltbkm.jpg'),
+      'facelift': getImagePath('hizmetlerimiz_image/alnskllndrme.jpg'),
+      'eyelidSurgery': getImagePath('hizmetlerimiz_image/alnskllndrme.jpg'),
+      'botox': getImagePath('hizmetlerimiz_image/frksynellazer.jpg'),
+      'filler': getImagePath('hizmetlerimiz_image/frksynellazer.jpg'),
+      'hairTransplant': getImagePath('hizmetlerimiz_image/frksynellazer.jpg'),
+      'breastLift': getImagePath('hizmetlerimiz_image/bntdvsi.jpg'),
+      'bodyContouring': getImagePath('hizmetlerimiz_image/cltbkm.jpg')
     }
-    return imageMap[treatmentKey] || '/assets/images/hizmetlerimiz_image/alnskllndrme.jpg'
+    return imageMap[treatmentKey] || getImagePath('hizmetlerimiz_image/alnskllndrme.jpg')
   }
 
   const treatments = {
@@ -156,7 +157,6 @@ export default function Tedaviler() {
       'goz-kapagi-estetigi': 'Göz Kapağı Estetiği',
       'botoks-uygulamasi': 'Botoks Uygulaması',
       'dolgu-uygulamasi': 'Dolgu Uygulaması',
-      'sac-ekimi': 'Saç Ekimi',
       'meme-diklestirme': 'Meme Dikleştirme',
       'vucut-konturu': 'Vücut Kontürü',
     }
@@ -173,6 +173,22 @@ export default function Tedaviler() {
     }
   }, [location.search])
 
+  // Mobil görünümde hizmet seçildiğinde scroll yap
+  useEffect(() => {
+    if (selectedTreatment) {
+      // Kısa bir gecikme ile scroll yap (DOM güncellenmesi için)
+      setTimeout(() => {
+        const treatmentDetail = document.querySelector('.treatment-detail')
+        if (treatmentDetail) {
+          treatmentDetail.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          })
+        }
+      }, 100)
+    }
+  }, [selectedTreatment])
+
   if (selectedTreatment) {
     const treatment = treatments[selectedTreatment]
     return (
@@ -183,7 +199,7 @@ export default function Tedaviler() {
               <div className="treatment-layout">
                 <aside className="widget-area sidebar-left">
                   <aside className="widget widget-nav-menu with-title">
-                    <h3 className="widget-title">{t('treatments.subtitle')}</h3>
+                    <h3 className="widget-title">{t('treatments.title')}</h3>
                     <ul>
                       {Object.keys(treatments).map((title) => {
                         const slug = titleToSlug.current[title] || encodeURIComponent(title.toLowerCase().replace(/\s+/g, '-'))
@@ -214,11 +230,9 @@ export default function Tedaviler() {
                             </div>
                           </div>
                           <div className="icerik mt-25">
-                            <h3 className="fs-24 mb-10" id="toc_0_H3">{t(`treatments.categories.${treatment.key}.title`)}</h3>
                             <div className="table-of-content mt-30" style={{ position: 'static' }}>
                               <div className="wrap-toc">
                                 <ul className="toc-box">
-                                  <li className="toc-item toc-H3"><a className="toc-item-link" href="#toc_0_H3">{t(`treatments.categories.${treatment.key}.title`)}</a></li>
                                   <li className="toc-item toc-H2"><a className="toc-item-link" href="#toc_1_H2">{t(`treatments.categories.${treatment.key}.title`)} {t('treatments.whatIs')}</a></li>
                                   <li className="toc-item toc-H2"><a className="toc-item-link" href="#toc_2_H2">{t('treatments.symptoms')}</a></li>
                                   <li className="toc-item toc-H3"><a className="toc-item-link" href="#toc_3_H3">{t('treatments.trackedDiseases')}</a></li>
@@ -273,14 +287,12 @@ export default function Tedaviler() {
       <main id="main">
 
         {/* Treatments Grid Section */}
-        <section className="section" style={{ paddingTop: '80px' }}>
+        <section className="section">
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
                 <div className="section-title title-style-center_text">
                   <div className="title-header">
-                    <h3>{t('treatments.subtitle')}</h3>
-                    <span></span>
                     <h2 className="title">{t('treatments.title')}</h2>
                   </div>
                   <div className="title-desc">

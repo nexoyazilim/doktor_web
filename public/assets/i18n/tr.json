@@ -17,7 +17,6 @@
 		"faq": "SSS",
 		"contact": "İletişim",
 		"appointment": "Randevu Al",
-		"services": "Hizmetlerimiz",
 		"treatments": {
 			"rhinoplasty": "Burun Estetiği (Rinoplasti)",
 			"breastAugmentation": "Meme Büyütme",
@@ -80,7 +79,6 @@
 	},
 	"treatments": {
 		"title": "Uzmanlık Alanlarım",
-		"subtitle": "Hizmetlerimiz",
 		"description": "Aşağıdaki uzmanlık alanlarından birini seçerek detaylı bilgi alabilirsiniz. Her tedavi yöntemi için kapsamlı açıklamalar, uygulanan prosedürler ve iyileşme süreçleri hakkında bilgi bulabilirsiniz.",
 		"seeDetails": "Detayları Gör",
 		"whatIs": "Nedir?",

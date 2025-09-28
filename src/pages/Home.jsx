@@ -49,17 +49,6 @@ export default function Home() {
         <section className="cmt-row blog-section clearfix">
           <div className="container">
             <div className="row">
-              <div className="col-lg-12">
-                <div className="section-title title-style-center_text">
-                  <div className="title-header">
-                    <h3 className="d-none">{t('site.brand')}</h3>
-                    <span></span>
-                    <h2 className="title" style={{ textAlign: 'center' }}>{t('treatments.title')}</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row pt-30">
               <div className="col-lg-4 col-md-6 diabetes-endorinology">
                 <div className="featured-imagebox featured-imagebox-portfolio style1">
                   <div className="featured-thumbnail">

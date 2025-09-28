@@ -48,7 +48,7 @@ export default function FotoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <a href="#" aria-label="Galeri 3">
-                    <img loading="lazy" src={getImagePath('alt_resim.png')} alt={t('gallery.photo.items.event')} />
+                    <img loading="lazy" src={getImagePath('doktor_1.png')} alt={t('gallery.photo.items.event')} />
                   </a>
                   <figcaption className="gallery-caption">{t('gallery.photo.items.event')}</figcaption>
                 </figure>

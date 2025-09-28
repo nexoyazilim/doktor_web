@@ -257,11 +257,7 @@
 	.res-1199-pl-15 { padding-left: 15px; }
 	.res-1199-pr-15{ padding-right: 15px!important; }
 
-	.res-1199-mt-15 { margin-top: 15px !important; }
-	.res-1199-mt-30 { margin-top: 30px !important; }
-	.res-1199-mt-50 { margin-top: 50px !important; }
-
-	.res-1199-mb-30 { margin-bottom: 30px !important; }
+	/* Margin utilities moved to custom.css */
 
 	.res-1199-plr-15 { padding-right: 15px; padding-left: 15px; }
 	.res-1199-mlr-15 { margin-right: 15px; margin-left: 15px; }
@@ -526,11 +522,7 @@
 	.res-991-mt-0 { margin-top: 0 !important; }
 	.res-991-mt-10{ margin-top: 10px !important; }
 	.res-991-mt-15{ margin-top: 15px !important; }
-	.res-991-mt-20{ margin-top: 20px !important; }
-	.res-991-mt-30{ margin-top: 30px !important; }
-	.res-991-mt-40{ margin-top: 40px !important; }
-	.res-991-mt-50{ margin-top: 50px !important; }
-	.res-991-mt-60{ margin-top: 60px !important; }
+	/* Margin utilities moved to custom.css */
 
 	.res-991-mt_15 { margin-top: -15px !important; }
 	.res-991-mt_20 { margin-top: -20px !important; }
@@ -539,11 +531,7 @@
 	.res-991-mt_50 { margin-top: -50px !important; }	
 
 	.res-991-mb-0  { margin-bottom: 0 !important; }
-	.res-991-mb-15 { margin-bottom: 15px !important; }
-	.res-991-mb-10 { margin-bottom: 10px !important; }
-	.res-991-mb-20 { margin-bottom: 20px !important; }
-	.res-991-mb-25 { margin-bottom: 25px !important; }
-	.res-991-mb-30 { margin-bottom: 30px !important; }
+	/* Margin bottom utilities moved to custom.css */
 	.res-991-mb-35 { margin-bottom: 35px !important; }
 	.res-991-mb-40 { margin-bottom: 40px !important; }
 	.res-991-mb-50 { margin-bottom: 50px !important; }
@@ -652,7 +640,7 @@
 
 @media (max-width: 778px) {
 
-	.res-778-mt-30{margin-top: 30px !important;}
+	/* Margin utilities moved to custom.css */
 
 }
 
@@ -677,10 +665,7 @@
 	.res-767-mt-0{ margin-top: 0px !important; }
 	.res-767-mt-10{ margin-top: 10px !important; }
 	.res-767-mt-15{ margin-top: 15px !important; }
-	.res-767-mt-20{ margin-top: 20px !important; }
-	.res-767-mt-25{ margin-top: 25px !important; }
-	.res-767-mt-30{ margin-top: 30px !important; }
-	.res-767-mt-40{ margin-top: 40px !important; }
+	/* Margin utilities moved to custom.css */
 
 	.res-767-pt-0 { padding-top: 0 !important; }
 	.res-767-pb-0 { padding-bottom: 0 !important; }
@@ -777,14 +762,7 @@
 	.res-575-mt-0{ margin-top: 0px !important; }
 	.res-575-mt-10{ margin-top: 10px !important; }
 	.res-575-mt-15{ margin-top: 15px !important; }
-	.res-575-mt-20{ margin-top: 20px !important; }
-	.res-575-mt-30{ margin-top: 30px !important; }
-
-	.res-575-mb-0{ margin-bottom: 0px !important; }
-	.res-575-mb-10{ margin-bottom: 10px !important; }
-	.res-575-mb-15{ margin-bottom: 15px !important; }
-	.res-575-mb-20{ margin-bottom: 20px !important; }
-	.res-575-mb-30{ margin-bottom: 30px !important; }
+	/* Margin utilities moved to custom.css */
 	.res-575-mb-50{ margin-bottom: 50px !important; }
 
 	.res-575-ml-0{ margin-left: 0 !important; }
