@@ -787,7 +787,7 @@ h3 { font-weight: 700; }
 @keyframes float { 0% { transform: translateY(0); } 100% { transform: translateY(16px); } }
 
 /* Sections */
-.section { padding: 12px 0; }
+.section { padding: 75px 0; }
 .section-alt { background: #fff; }
 /* Force white background for content containers */
 .site-main .container,
