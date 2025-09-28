@@ -18,7 +18,7 @@ export default function App() {
   }, [])
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.PROD ? '/doktor_web' : '/'}>
       <div className="site-shell">
         {isLoading && <Loading />}
         <Header />
