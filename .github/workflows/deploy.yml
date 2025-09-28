@@ -23,8 +23,20 @@ jobs:
     - name: Install dependencies
       run: npm ci
       
+    - name: Backup index.html
+      run: |
+        if [ -f index.html ]; then
+          mv index.html index.html.backup
+        fi
+      
     - name: Build
       run: npm run build
+      
+    - name: Restore index.html
+      run: |
+        if [ -f index.html.backup ]; then
+          rm index.html.backup
+        fi
       
     - name: Copy assets
       run: |
