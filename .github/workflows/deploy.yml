@@ -34,6 +34,11 @@ jobs:
       - name: Build
         run: npm run build
         
+      - name: Copy public assets
+        run: |
+          cp -r public/assets dist/
+          echo "" > dist/.nojekyll
+        
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
