@@ -9,6 +9,9 @@ export default defineConfig(({ command, mode }) => {
   return {
     plugins: [react()],
     base: base,
+    define: {
+      'process.env.NODE_ENV': JSON.stringify(mode)
+    },
     build: {
       outDir: 'dist',
       assetsDir: 'assets',

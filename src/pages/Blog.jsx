@@ -33,7 +33,7 @@ export default function Blog() {
                 <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="featured-imagebox-blog style2">
                     <div className="featured-thumbnail">
-                      <img src="./assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="Burun Estetiği" />
+                      <img src="/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="Burun Estetiği" />
                     </div>
                     <div className="featured-content">
                       <div className="ser_category">{t('blogPage.categories.facial')}</div>
@@ -53,7 +53,7 @@ export default function Blog() {
                 <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="featured-imagebox-blog style2">
                     <div className="featured-thumbnail">
-                      <img src="./assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="Liposuction" />
+                      <img src="/doktor_web/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="Liposuction" />
                     </div>
                     <div className="featured-content">
                       <div className="ser_category">{t('blogPage.categories.body')}</div>
@@ -73,7 +73,7 @@ export default function Blog() {
                 <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="featured-imagebox-blog style2">
                     <div className="featured-thumbnail">
-                      <img src="./assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Estetik Cerrahi Riskleri" />
+                      <img src="/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Estetik Cerrahi Riskleri" />
                     </div>
                     <div className="featured-content">
                       <div className="ser_category">{t('blogPage.categories.surgery')}</div>
@@ -93,7 +93,7 @@ export default function Blog() {
                 <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="featured-imagebox-blog style2">
                     <div className="featured-thumbnail">
-                      <img src="./assets/images/hizmetlerimiz_image/frksynellazer.jpg" alt="Saç Ekimi" />
+                      <img src="/doktor_web/assets/images/hizmetlerimiz_image/frksynellazer.jpg" alt="Saç Ekimi" />
                     </div>
                     <div className="featured-content">
                       <div className="ser_category">{t('blogPage.categories.hair')}</div>
@@ -113,7 +113,7 @@ export default function Blog() {
                 <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="featured-imagebox-blog style2">
                     <div className="featured-thumbnail">
-                      <img src="./assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Estetik Cerrahi İyileşme" />
+                      <img src="/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Estetik Cerrahi İyileşme" />
                     </div>
                     <div className="featured-content">
                       <div className="ser_category">{t('blogPage.categories.brain')}</div>
@@ -133,7 +133,7 @@ export default function Blog() {
                 <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="featured-imagebox-blog style2">
                     <div className="featured-thumbnail">
-                      <img src="./assets/images/hizmetlerimiz_image/frksynellazer.jpg" alt="Yaşlanma Karşıtı Estetik" />
+                      <img src="/doktor_web/assets/images/hizmetlerimiz_image/frksynellazer.jpg" alt="Yaşlanma Karşıtı Estetik" />
                     </div>
                     <div className="featured-content">
                       <div className="ser_category">{t('blogPage.categories.noninvasive')}</div>

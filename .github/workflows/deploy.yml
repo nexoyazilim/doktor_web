@@ -48,6 +48,10 @@ jobs:
           echo "" > dist/.nojekyll
           # CSS dosyalarının varlığını kontrol et
           ls -la dist/assets/css/vendor/ || echo "CSS vendor klasörü bulunamadı"
+          # MIME type ayarları için .htaccess oluştur
+          echo "AddType application/javascript .js" > dist/.htaccess
+          echo "AddType text/css .css" >> dist/.htaccess
+          echo "AddType application/json .json" >> dist/.htaccess
         
       - name: Setup Pages
         uses: actions/configure-pages@v4

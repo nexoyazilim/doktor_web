@@ -83,7 +83,7 @@ export default function BlogDetail() {
                 <h1>{post.title}</h1>
                 <div className="blog-meta">
                   <div className="author-info">
-                    <img src="./assets/images/doktor_1.png" alt="Dr. Elif YAMAN" className="author-avatar" />
+                    <img src="/doktor_web/assets/images/doktor_1.png" alt="Dr. Elif YAMAN" className="author-avatar" />
                     <div className="author-details">
                       <span className="author-name">{t('blogDetail.author.name')}</span>
                       <span className="author-title">{t('blogDetail.author.title')}</span>
@@ -105,7 +105,7 @@ export default function BlogDetail() {
                 <div className="article-content">
                   {/* Featured Image */}
                   <div className="featured-image">
-                    <img src={`./assets/images/hizmetlerimiz_image/${post.imageSeed}.jpg`} alt={post.imageAlt} />
+                    <img src={`/doktor_web/assets/images/hizmetlerimiz_image/${post.imageSeed}.jpg`} alt={post.imageAlt} />
                     <div className="image-caption">
                       {post.subtitle}
                     </div>
@@ -248,7 +248,7 @@ export default function BlogDetail() {
                   <div className="sidebar-widget">
                     <h3>{t('blogDetail.sidebar.aboutAuthor')}</h3>
                     <div className="author-card">
-                      <img src="./assets/images/doktor_1.png" alt="Dr. Elif YAMAN" />
+                      <img src="/doktor_web/assets/images/doktor_1.png" alt="Dr. Elif YAMAN" />
                       <h4>{t('blogDetail.author.name')}</h4>
                       <p>{t('blogDetail.author.title')}</p>
                       <p>{t('blogDetail.author.description')}</p>
@@ -259,21 +259,21 @@ export default function BlogDetail() {
                     <h3>{t('blogDetail.sidebar.relatedPosts')}</h3>
                     <div className="related-posts">
                       <div className="related-post">
-                        <img src="./assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="İlgili makale" />
+                        <img src="/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="İlgili makale" />
                         <div className="related-content">
                           <h4><Link to={getLocalizedUrl('blog', i18n.language)}>{t('blogDetail.relatedPosts.rhinoplasty')}</Link></h4>
                           <span className="related-date">10 Aralık 2024</span>
                         </div>
                       </div>
                       <div className="related-post">
-                        <img src="./assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="İlgili makale" />
+                        <img src="/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="İlgili makale" />
                         <div className="related-content">
                           <h4><Link to={getLocalizedUrl('blog', i18n.language)}>{t('blogDetail.relatedPosts.breastSurgery')}</Link></h4>
                           <span className="related-date">5 Aralık 2024</span>
                         </div>
                       </div>
                       <div className="related-post">
-                        <img src="./assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="İlgili makale" />
+                        <img src="/doktor_web/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="İlgili makale" />
                         <div className="related-content">
                           <h4><Link to={getLocalizedUrl('blog', i18n.language)}>{t('blogDetail.relatedPosts.physiotherapy')}</Link></h4>
                           <span className="related-date">1 Aralık 2024</span>

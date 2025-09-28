@@ -29,20 +29,20 @@ export default function Tedaviler() {
   // Görsel eşleştirme sistemi
   const getTreatmentImage = (treatmentKey) => {
     const imageMap = {
-      'rhinoplasty': './assets/images/hizmetlerimiz_image/alnskllndrme.jpg',
-      'breastAugmentation': './assets/images/hizmetlerimiz_image/bntdvsi.jpg',
-      'breastReduction': './assets/images/hizmetlerimiz_image/bntdvsi.jpg',
-      'liposuction': './assets/images/hizmetlerimiz_image/cltbkm.jpg',
-      'tummyTuck': './assets/images/hizmetlerimiz_image/cltbkm.jpg',
-      'facelift': './assets/images/hizmetlerimiz_image/alnskllndrme.jpg',
-      'eyelidSurgery': './assets/images/hizmetlerimiz_image/alnskllndrme.jpg',
-      'botox': './assets/images/hizmetlerimiz_image/frksynellazer.jpg',
-      'filler': './assets/images/hizmetlerimiz_image/frksynellazer.jpg',
-      'hairTransplant': './assets/images/hizmetlerimiz_image/frksynellazer.jpg',
-      'breastLift': './assets/images/hizmetlerimiz_image/bntdvsi.jpg',
-      'bodyContouring': './assets/images/hizmetlerimiz_image/cltbkm.jpg'
+      'rhinoplasty': '/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg',
+      'breastAugmentation': '/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg',
+      'breastReduction': '/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg',
+      'liposuction': '/doktor_web/assets/images/hizmetlerimiz_image/cltbkm.jpg',
+      'tummyTuck': '/doktor_web/assets/images/hizmetlerimiz_image/cltbkm.jpg',
+      'facelift': '/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg',
+      'eyelidSurgery': '/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg',
+      'botox': '/doktor_web/assets/images/hizmetlerimiz_image/frksynellazer.jpg',
+      'filler': '/doktor_web/assets/images/hizmetlerimiz_image/frksynellazer.jpg',
+      'hairTransplant': '/doktor_web/assets/images/hizmetlerimiz_image/frksynellazer.jpg',
+      'breastLift': '/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg',
+      'bodyContouring': '/doktor_web/assets/images/hizmetlerimiz_image/cltbkm.jpg'
     }
-    return imageMap[treatmentKey] || './assets/images/hizmetlerimiz_image/alnskllndrme.jpg'
+    return imageMap[treatmentKey] || '/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg'
   }
 
   const treatments = {
