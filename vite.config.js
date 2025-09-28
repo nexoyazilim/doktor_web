@@ -9,10 +9,22 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     copyPublicDir: true,
+    sourcemap: false,
+    minify: 'terser',
     rollupOptions: {
       output: {
-        assetFileNames: 'assets/[name]-[hash][extname]'
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js'
       }
     }
+  },
+  server: {
+    port: 3000,
+    open: true
+  },
+  preview: {
+    port: 4173,
+    open: true
   }
 })
