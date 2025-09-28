@@ -273,14 +273,12 @@ export default function Tedaviler() {
       <main id="main">
 
         {/* Treatments Grid Section */}
-        <section className="section" style={{ paddingTop: '80px' }}>
+        <section className="section treatments-page" style={{ paddingTop: '80px' }}>
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
                 <div className="section-title title-style-center_text">
                   <div className="title-header">
-                    <h3>{t('treatments.subtitle')}</h3>
-                    <span></span>
                     <h2 className="title">{t('treatments.title')}</h2>
                   </div>
                   <div className="title-desc">

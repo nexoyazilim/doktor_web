@@ -1019,10 +1019,61 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--p
 /* Treatment content typography */
 .icerik h2 { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; margin: 26px 0 12px; color: var(--fg); }
 .icerik h3 { font-size: 20px; font-weight: 700; letter-spacing: 0; margin: 22px 0 10px; color: var(--fg); }
+
+/* Table of Content Styles */
+.table-of-content {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.wrap-toc {
+  width: 100%;
+}
+
+.toc-box {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc-item {
+  margin-bottom: 8px;
+}
+
+.toc-item:last-child {
+  margin-bottom: 0;
+}
+
+.toc-H2 {
+  font-weight: 600;
+  margin-left: 0;
+}
+
+.toc-H3 {
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+.toc-item-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+  display: block;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+}
+
+.toc-item-link:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
 /* Specific tweak for toc_3_H3 */
 #toc_3_H3 { font-size: 22px; font-weight: 800; }
-.toc-box .toc-item-link { font-size: 14px; font-weight: 600; color: var(--muted); }
-.toc-box .toc-item-link:hover { color: var(--primary); }
 
 /* Specialty pills */
 .specialties { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
@@ -2221,4 +2272,15 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--p
   .language-option .flag {
     font-size: 20px !important;
   }
+}
+
+/* Tedaviler sayfası için gereksiz padding/margin kaldırma */
+.treatments-page .section-title {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+}
+
+.treatments-page .section-title .title-header {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
 }
