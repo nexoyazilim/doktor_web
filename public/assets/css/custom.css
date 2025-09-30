@@ -1298,11 +1298,11 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--p
 .cmt-page-title-row-inner {
   background-image: url('../images/alt_resim.png');
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-color: transparent;
   width: 100%;
-  min-height: 400px;
+  min-height: clamp(320px, 45vh, 680px);
   padding: 0;
   position: relative;
   overflow: visible;
@@ -1312,6 +1312,13 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--p
   text-align: left;
   color: #fff;
   z-index: 2;
+}
+
+@media (min-width: 1920px) {
+  .cmt-page-title-row-inner {
+    background-position: center center;
+    min-height: clamp(420px, 50vh, 760px);
+  }
 }
 
 /* Hakkimda sayfası için resim kaldır ve breadcrumb gizle */
@@ -1417,6 +1424,18 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--p
   text-align: center;
   width: auto;
   white-space: nowrap;
+}
+
+/* 1920px ve üzeri genişlikte belirli sayfalarda breadcrumb alt padding artır */
+@media (min-width: 1920px) {
+  /* Blog listesi veya blog bölümü olan sayfalar */
+  .site-main:has(.blog-section) .breadcrumb-wrapper-inner,
+  /* Foto galeri sayfası */
+  .site-main:has(.gallery) .breadcrumb-wrapper-inner,
+  /* İletişim sayfası */
+  .site-main:has(.contact-form-section) .breadcrumb-wrapper-inner {
+    padding-bottom: 60px;
+  }
 }
 
 .breadcrumb-wrapper-inner span {
