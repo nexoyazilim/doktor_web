@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { getLocalizedUrl, getTreatmentUrl } from '../utils/urlHelper'
 
 export default function Footer() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const year = new Date().getFullYear()
   const base = (import.meta.env.BASE_URL || '').replace(/\/$/, '')
   const withBase = (path) => `${base}${String(path).replace(/^\//, '') ? '/' + String(path).replace(/^\//, '') : ''}`
