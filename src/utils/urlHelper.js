@@ -1,4 +1,4 @@
-import { urlMappings } from '../routes.jsx'
+import { urlMappings } from './urlMappings'
 
 /**
  * Mevcut dile göre doğru URL'i döndürür
