@@ -4,7 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig(({ command, mode }) => {
   const isProduction = mode === 'production'
-  const base = isProduction ? '/doktor_web/' : '/'
+  // GitHub Pages repo adı altından yayın: /doktorweb/
+  const base = isProduction ? '/doktorweb/' : '/'
   
   return {
     plugins: [react()],

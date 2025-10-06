@@ -3,9 +3,8 @@ import { Suspense, useState, useEffect } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Loading from './components/Loading'
-import routes from './routes'
 
-export default function App() {
+export default function App({ routes }) {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -18,7 +17,7 @@ export default function App() {
   }, [])
 
   // GitHub Pages için basename belirle
-  const basename = process.env.NODE_ENV === 'production' ? '/doktor_web' : ''
+  const basename = process.env.NODE_ENV === 'production' ? '/doktorweb' : ''
 
   return (
     <BrowserRouter basename={basename}>

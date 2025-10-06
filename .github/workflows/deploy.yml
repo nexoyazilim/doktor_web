@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main, react_dondurme, yedek-branch ]
+    branches: [ yedek ]
   workflow_dispatch:
 
 # GitHub Pages için gerekli permissions
