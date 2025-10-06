@@ -235,7 +235,7 @@ export default function Tedaviler() {
                               <li>{t('treatments.symptomsList.pain')}</li>
                               <li>{t('treatments.symptomsList.numbness')}</li>
                               <li>{t('treatments.symptomsList.posture')}</li>
-                            </ul>z
+                            </ul>
                             <h3 id="toc_3_H3">{t('treatments.trackedDiseases')}</h3>
                             <ul>
                               {treatment.conditions.slice(0, 6).map((c, i) => (<li key={i}>{c}</li>))}

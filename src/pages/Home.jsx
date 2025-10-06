@@ -9,9 +9,9 @@ export default function Home() {
   const { t, i18n, ready } = useTranslation()
   const blogRef = useScrollReveal()
   
-  // Çeviri dosyaları yüklenene kadar bekle
+  // Çeviri dosyaları yüklenene kadar bekle; global Loading mevcut, burada ekstra çıktı verme
   if (!ready) {
-    return <div>Loading...</div>
+    return null
   }
   return (
     <div className="site-main">

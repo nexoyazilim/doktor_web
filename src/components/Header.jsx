@@ -9,6 +9,7 @@ export default function Header() {
   function changeLang(e) { const lng = e.target.value; i18n.changeLanguage(lng); localStorage.setItem('lang', lng); }
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isHeaderVisible, setIsHeaderVisible] = useState(true)
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false)
   
   useEffect(() => {
     document.documentElement.classList.toggle('dark', localStorage.getItem('theme') === 'dark')
@@ -148,7 +149,14 @@ export default function Header() {
                   </li>
                   <li className="mega-menu-item"><Link to={getLocalizedUrl('academic', i18n.language)}>{t('nav.academic')}</Link></li>
                   <li className="mega-menu-item"><Link to={getLocalizedUrl('blog', i18n.language)}>{t('nav.blog')}</Link></li>
-                  <li className="mega-menu-item  "><a href="#" className="mega-menu-link">{t('nav.gallery')}</a>
+                  <li className={"mega-menu-item" + (isGalleryOpen ? " open" : " ")}>
+                    <a href="#" className="mega-menu-link" onClick={(e) => {
+                      // Mobilde alt menüyü aç/kapa
+                      if (window.innerWidth < 992) {
+                        e.preventDefault()
+                        setIsGalleryOpen(v => !v)
+                      }
+                    }}>{t('nav.gallery')}</a>
                     <ul className="mega-submenu">
                       <li><Link to={getLocalizedUrl('photoGallery', i18n.language)}>{t('gallery.photo.title')}</Link></li>
                       <li><Link to={getLocalizedUrl('videoGallery', i18n.language)}>{t('gallery.video.title')}</Link></li>
