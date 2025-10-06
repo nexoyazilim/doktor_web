@@ -640,6 +640,9 @@ h3 { font-weight: 700; }
 /* Mobile explicit open state */
 .nav .submenu.open, .nav .mega-submenu.open { display: grid; opacity: 1; transform: translateY(0); pointer-events: auto; }
 
+/* Explicit open when parent li has .open (works both desktop and mobile) */
+.nav .mega-menu-item.open > .mega-submenu { display: grid; opacity: 1; transform: translateY(0); pointer-events: auto; }
+
 /* Mobile toggle support: when parent li has .open, show submenu */
 @media (max-width: 991px) {
   .main-menu.nav.open .menu > li.open > .mega-submenu { display: grid; opacity: 1; transform: translateY(0); pointer-events: auto; position: static; box-shadow: none; border: 0; padding: 6px 0; }
@@ -1318,7 +1321,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--p
 .cmt-page-title-row-inner {
   background-image: url('../images/alt_resim.png');
   background-size: cover;
-  background-position: center center;
+  background-position: top;
   background-repeat: no-repeat;
   background-color: transparent;
   width: 100%;
