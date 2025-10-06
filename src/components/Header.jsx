@@ -161,7 +161,7 @@ export default function Header() {
                       {t('nav.gallery')}
                       <span className={"menu-arrow" + (isGalleryOpen ? " rotate" : "")}></span>
                     </a>
-                    <ul className="mega-submenu">
+                    <ul className={"mega-submenu" + (isGalleryOpen ? " open" : "") }>
                       <li><Link to={getLocalizedUrl('photoGallery', i18n.language)}>{t('gallery.photo.title')}</Link></li>
                       <li><Link to={getLocalizedUrl('videoGallery', i18n.language)}>{t('gallery.video.title')}</Link></li>
                     </ul>
