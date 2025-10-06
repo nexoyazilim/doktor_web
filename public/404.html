@@ -1,21 +1,59 @@
 <!DOCTYPE html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/doktor_web/assets/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dr. Elif YAMAN - Estetik ve Plastik Cerrahi</title>
-    <meta name="description" content="Dr. Elif YAMAN - Estetik ve Plastik Cerrahi Uzmanı. Burun estetiği, meme estetiği, liposuction, botoks, dolgu ve saç ekimi hizmetleri. İstanbul Ataşehir." />
-    <meta name="keywords" content="estetik cerrahi, plastik cerrahi, burun estetiği, meme estetiği, liposuction, botoks, dolgu, saç ekimi, Dr. Elif YAMAN, İstanbul" />
-    <meta name="author" content="Dr. Elif YAMAN" />
-    <meta property="og:title" content="Dr. Elif YAMAN - Estetik ve Plastik Cerrahi" />
-    <meta property="og:description" content="Estetik ve Plastik Cerrahi Uzmanı Dr. Elif YAMAN. 20+ yıl deneyim, modern teknikler, güvenli tedavi." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.drdogansenturk.com" />
-    <meta property="og:image" content="/doktor_web/assets/images/doktor_1.png" />
-  </head>
-  <body>
-    <div id="root"></div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Web - Plastik ve Rekonstrüktif Cerrahi</title>
+    <link rel="icon" type="image/svg+xml" href="/doktor_web/assets/favicon.svg">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/framework.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/layout.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/components.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/icons.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/navigation.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/slider.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/animations.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/gallery.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/mobile.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/themify.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/vendor/custom-icons.css">
+    <link rel="stylesheet" href="/doktor_web/assets/css/custom.css">
+    
+    <script>
+        // GitHub Pages SPA routing fix
+        // This script takes the current URL and converts it from a GitHub Pages 404 redirect
+        // to the correct URL for the SPA to handle
+        (function() {
+            var redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            if (redirect && redirect !== location.href) {
+                history.replaceState(null, null, redirect);
+            }
+        })();
+    </script>
+</head>
+<body>
+    <div id="root">
+        <!-- Loading content will be replaced by React -->
+        <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: Arial, sans-serif;">
+            <div style="text-align: center;">
+                <h2>Yönlendiriliyor...</h2>
+                <p>Sayfa yükleniyor, lütfen bekleyin.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- React App Script -->
     <script type="module" src="/doktor_web/src/main.jsx"></script>
-  </body>
+    
+    <script>
+        // Fallback redirect for non-JS users
+        setTimeout(function() {
+            window.location.href = '/doktor_web/';
+        }, 2000);
+    </script>
+</body>
+
 </html>

@@ -27,7 +27,7 @@ export default function Hakkimda() {
               <div className="col-lg-6 col-md-12 mb-4">
                 <div className="info-image">
                   <img 
-                    src="/assets/images/alt_resim.png" 
+                    src="/doktor_web/assets/images/alt_resim.png" 
                     alt="Estetik Cerrahi Yaklaşımı" 
                     className="img-fluid rounded"
                   />
@@ -43,7 +43,7 @@ export default function Hakkimda() {
               <div className="col-lg-6 col-md-12 mb-4">
                 <div className="info-image">
                   <img 
-                    src="/assets/images/doktor_1.png" 
+                    src="/doktor_web/assets/images/doktor_1.png" 
                     alt="Hasta Odaklı Yaklaşım" 
                     className="img-fluid rounded"
                   />

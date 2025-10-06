@@ -35,7 +35,7 @@ export default function Footer() {
           <div className="row g-0">
             <div className="col-sm-12 col-md-12 col-lg-5 pr-30 res-991-pr-0">
               <div className="row"><div className="col-sm-12 col-md-12 col-lg-10 widget-area"><div className="widget widget_text clearfix">
-                <div className="footer-logo"><img id="footer-logo-img" className="img-fluid auto_size" height="92" width="400" src="/assets/images/doktor_1.png" alt="Prof. Dr. Demo" /></div>
+                <div className="footer-logo"><img id="footer-logo-img" className="img-fluid auto_size" height="92" width="400" src="/doktor_web/assets/images/doktor_1.png" alt="Prof. Dr. Demo" /></div>
                 <div className="textwidget widget-text"><p>{t('footer.description')}</p></div>
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <div className="cmt-section footer-subscribebox">

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	<url><loc>/</loc></url>
-	<url><loc>/hakkimda</loc></url>
-	<url><loc>/tedaviler</loc></url>
-	<url><loc>/tedaviler/burun-estetigi</loc></url>
-	<url><loc>/tedaviler/meme-estetigi</loc></url>
-	<url><loc>/tedaviler/liposuction</loc></url>
-	<url><loc>/tedaviler/botoks</loc></url>
-	<url><loc>/tedaviler/dolgu</loc></url>
-	<url><loc>/tedaviler/sac-ekimi</loc></url>
-	<url><loc>/blog</loc></url>
-	<url><loc>/akademik</loc></url>
-	<url><loc>/foto-galeri</loc></url>
-	<url><loc>/video-galeri</loc></url>
-	<url><loc>/iletisim</loc></url>
+	<url><loc>https://zakzoklar123.github.io/doktor_web/</loc></url>
+	<url><loc>https://zakzoklar123.github.io/doktor_web/hakkimda</loc></url>
+	<url><loc>https://zakzoklar123.github.io/doktor_web/tedaviler</loc></url>
+	<url><loc>https://zakzoklar123.github.io/doktor_web/tedaviler?sec=burun-estetigi-rinoplasti</loc></url>
+	<url><loc>https://zakzoklar123.github.io/doktor_web/tedaviler?sec=meme-buyutme</loc></url>
+	<url><loc>https://zakzoklar123.github.io/doktor_web/tedaviler?sec=liposuction-yag-aldirma</loc></url>
+	<url><loc>https://zakzoklar123.github.io/doktor_web/tedaviler?sec=botoks-uygulamasi</loc></url>
+	<url><loc>https://zakzoklar123.github.io/doktor_web/tedaviler?sec=dolgu-uygulamasi</loc></url>
+	<url><loc>https://zakzoklar123.github.io/doktor_web/tedaviler?sec=sac-ekimi</loc></url>
+	<url><loc>https://zakzoklar123.github.io/doktor_web/blog</loc></url>
+	<url><loc>https://zakzoklar123.github.io/doktor_web/akademik</loc></url>
+	<url><loc>https://zakzoklar123.github.io/doktor_web/foto-galeri</loc></url>
+	<url><loc>https://zakzoklar123.github.io/doktor_web/video-galeri</loc></url>
+	<url><loc>https://zakzoklar123.github.io/doktor_web/iletisim</loc></url>
 </urlset>

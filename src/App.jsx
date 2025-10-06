@@ -3,9 +3,8 @@ import { Suspense, useState, useEffect } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Loading from './components/Loading'
-import routes from './routes'
 
-export default function App() {
+export default function App({ routes }) {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -16,6 +15,9 @@ export default function App() {
 
     return () => clearTimeout(timer)
   }, [])
+
+  // GitHub Pages için basename belirle
+  const basename = process.env.NODE_ENV === 'production' ? '/doktorweb' : ''
 
   return (
     <BrowserRouter basename={import.meta.env.PROD ? '/doktor_web' : '/'}>
