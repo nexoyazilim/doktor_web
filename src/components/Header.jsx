@@ -102,7 +102,7 @@ export default function Header() {
                     <div className="header_extra d-flex flex-row align-items-center justify-content-end">
                       <div className="widget_info">
                         <div className="widget_content">
-                          <a href="tel:+90555 555 55 55">0555 555 55 55</a>
+                          <a href="tel:+90535 308 44 66">0535 308 44 66</a>
                           <p className="widget_desc">{t('contact.phone')}</p>
                         </div>
                       </div>
@@ -150,13 +150,17 @@ export default function Header() {
                   <li className="mega-menu-item"><Link to={getLocalizedUrl('academic', i18n.language)}>{t('nav.academic')}</Link></li>
                   <li className="mega-menu-item"><Link to={getLocalizedUrl('blog', i18n.language)}>{t('nav.blog')}</Link></li>
                   <li className={"mega-menu-item" + (isGalleryOpen ? " open" : " ")}>
-                    <a href="#" className="mega-menu-link" onClick={(e) => {
+                    <a href="#" className="mega-menu-link" aria-expanded={isGalleryOpen}
+                      onClick={(e) => {
                       // Mobilde alt menüyü aç/kapa
                       if (window.innerWidth < 992) {
                         e.preventDefault()
                         setIsGalleryOpen(v => !v)
                       }
-                    }}>{t('nav.gallery')}</a>
+                    }}>
+                      {t('nav.gallery')}
+                      <span className={"menu-arrow" + (isGalleryOpen ? " rotate" : "")}></span>
+                    </a>
                     <ul className="mega-submenu">
                       <li><Link to={getLocalizedUrl('photoGallery', i18n.language)}>{t('gallery.photo.title')}</Link></li>
                       <li><Link to={getLocalizedUrl('videoGallery', i18n.language)}>{t('gallery.video.title')}</Link></li>
