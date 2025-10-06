@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
 import { getLocalizedUrl, getTreatmentUrl } from '../utils/urlHelper'
+import { getImagePath } from '../utils/assetHelper'
 
 export default function Header() {
   const { t, i18n } = useTranslation()
@@ -87,7 +88,7 @@ export default function Header() {
                 <div className="site-navigation d-flex flex-row align-items-center justify-content-between" style={{ flexWrap: 'nowrap' }}>
                   <div className="site-branding" style={{ flexShrink: 0, maxWidth: '60%' }}>
                     <Link className="home-link" to={getLocalizedUrl('home', i18n.language)} title={t('site.brand')} rel="home" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                      <img src="/doktor_web/assets/images/doktor_logo.png" alt={t('site.brand')} className="logo-img" style={{ height: '100px', width: 'auto', maxHeight: 'none', display: 'inline-block' }} />
+                      <img src={getImagePath('doktor_logo.png')} alt={t('site.brand')} className="logo-img" style={{ height: '100px', width: 'auto', maxHeight: 'none', display: 'inline-block' }} />
                       <span className="brand-name" style={{fontSize: '20px', fontWeight: '600'}}>{t('site.brand')}</span>
                     </Link>
                   </div>
