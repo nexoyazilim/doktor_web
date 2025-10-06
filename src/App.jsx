@@ -16,8 +16,8 @@ export default function App({ routes }) {
     return () => clearTimeout(timer)
   }, [])
 
-  // GitHub Pages için basename belirle
-  const basename = process.env.NODE_ENV === 'production' ? '/doktorweb' : ''
+  // GitHub Pages için basename belirle (repo adi: doktor_web)
+  const basename = process.env.NODE_ENV === 'production' ? '/doktor_web' : ''
 
   return (
     <BrowserRouter basename={basename}>
