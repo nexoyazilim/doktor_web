@@ -238,21 +238,6 @@ export default function Tedaviler() {
                                 </ul>
                               </div>
                             </div>
-                            <div className="table-of-content mt-30" style={{ position: 'static' }}>
-                              <div className="wrap-toc">
-                                <ul className="toc-box">
-                                  <li className="toc-item toc-H3"><a className="toc-item-link" href="#toc_0_H3">{t(`treatments.categories.${treatment.key}.title`)}</a></li>
-                                  <li className="toc-item toc-H2"><a className="toc-item-link" href="#toc_1_H2">{t('treatments.whatIs')}</a></li>
-                                  <li className="toc-item toc-H2"><a className="toc-item-link" href="#toc_2_H2">{t('treatments.symptoms')}</a></li>
-                                  <li className="toc-item toc-H3"><a className="toc-item-link" href="#toc_3_H3">{t('treatments.trackedDiseases')}</a></li>
-                                  <li className="toc-item toc-H3"><a className="toc-item-link" href="#toc_4_H3">{t('treatments.commonDiseases')}</a></li>
-                                  <li className="toc-item toc-H3"><a className="toc-item-link" href="#toc_5_H3">{t('treatments.emergency')}</a></li>
-                                  <li className="toc-item toc-H3"><a className="toc-item-link" href="#toc_6_H3">{t('treatments.methods')}</a></li>
-                                </ul>
-                              </div>
-                            </div>
-                            <h3 id="toc_4_H3" className="mt-25">{t('treatments.commonDiseases')}</h3>
-                            <p>{t('treatments.commonDiseasesDescription')}</p>
                             <div className="split">
                               <div>
                                 <h3 id="toc_5_H3">{t('treatments.emergency')}</h3>

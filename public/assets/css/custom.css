@@ -1142,7 +1142,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--p
 }
 
 /* Specific tweak for toc_3_H3 */
-#toc_3_H3 { font-size: 22px; font-weight: 800; }
+#toc_3_H3 { font-size: 30px; font-weight: 300; }
 
 /* Specialty pills */
 .specialties { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }

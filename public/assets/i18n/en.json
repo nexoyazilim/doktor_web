@@ -76,7 +76,20 @@
 		"philosophy": {
 			"title": "My Medical Philosophy",
 			"quote": "Every patient is special to me. My fundamental principle is to help my patients feel more confident by using safe and effective aesthetic surgical techniques with a natural beauty approach and provide them with the best service."
-		}
+    }
+    ,
+    "approach": {
+      "title": "My Aesthetic Surgery Approach",
+      "p1": "Aesthetic surgery is not just a physical change, but also an art that increases self-confidence and improves quality of life. Throughout my 20+ years of experience, I aim to achieve natural and harmonious results by considering each patient's unique anatomy and aesthetic expectations. In addition to modern surgical techniques, I also prefer minimally invasive approaches to enable faster recovery.",
+      "p2": "From rhinoplasty to breast surgery, facial rejuvenation to body contouring, I provide a wide range of services. Before each operation, I conduct a detailed consultation to understand my patients' expectations and inform them about realistic outcomes. My goal is not only to look good, but also to achieve healthy and functional results."
+    },
+    "patientFirst": {
+      "title": "My Patient-Centered Approach",
+      "p1": "Communication with my patients is the most important part of the treatment process. Treatment plans tailored specifically for each patient are not limited to surgical techniques alone. Preoperative psychological preparation, postoperative care and follow-up processes are integral parts of this plan.",
+      "p2": "From the first consultation, I focus on understanding my patients' expectations and concerns. Since every patient has a different story, different expectations and different concerns, instead of a standard approach, I prepare a personalized treatment plan for each patient.",
+      "p3": "Safety and quality form the basis of my working principles. Together with international standards of sterilization, modern operating room conditions and my experienced team, I provide the safest environment. I also follow and implement the latest developments in aesthetic surgery with a continuous education and development approach.",
+      "p4": "The postoperative follow-up process is at least as important as the operation itself. I closely monitor my patients' recovery process and provide guidance on nutrition, exercise and care to improve their quality of life after surgery."
+    }
 	},
 	"treatments": {
 		"title": "My Specializations",
