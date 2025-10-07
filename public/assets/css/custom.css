@@ -680,6 +680,20 @@ h3 { font-weight: 700; }
     color: #111 !important;
     text-align: center !important;
   }
+  /* Always show gallery submenu on mobile regardless of open state */
+  #masthead .site-header-menu .site-header-menu-inner .container .row .col .site-navigation .main-menu.nav.open .menu > li.gallery-menu > .mega-submenu {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    position: static !important;
+    width: 100% !important;
+    background: #fff !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 6px 0 !important;
+    z-index: 1000 !important;
+  }
 }
 
 /* Arrow indicator for dropdown */

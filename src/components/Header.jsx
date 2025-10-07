@@ -156,7 +156,7 @@ export default function Header() {
                   </li>
                   <li className="mega-menu-item"><Link to={getLocalizedUrl('academic', i18n.language)}>{t('nav.academic')}</Link></li>
                   <li className="mega-menu-item"><Link to={getLocalizedUrl('blog', i18n.language)}>{t('nav.blog')}</Link></li>
-                  <li className={"mega-menu-item" + (isGalleryOpen ? " open" : " ")}>
+                  <li className={"mega-menu-item gallery-menu" + (isGalleryOpen ? " open" : " ")}>
                     <a href="#" className="mega-menu-link" aria-expanded={isGalleryOpen}
                       onClick={(e) => {
                       // Mobilde alt menüyü aç/kapa
