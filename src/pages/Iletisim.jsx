@@ -38,7 +38,7 @@ export default function Iletisim() {
               <div className="col-lg-12">
                 <div className="breadcrumb-wrapper-inner">
                   <span>
-                    <a title="Homepage" href="/">Anasayfa</a>
+                    <a title={t('blogDetail.breadcrumb.home')} href="/">{t('blogDetail.breadcrumb.home')}</a>
                   </span>
                   <span>{t('contactPage.title')}</span>
                 </div>
@@ -47,14 +47,15 @@ export default function Iletisim() {
           </div>
         </div>
 
-        {/* Contact Form */}
-        <section id="appointment" className="section contact-form-section">
+        {/* Contact / Appointment Section */}
+        <section id="appointment" className="section contact-form-section appointment-section">
           <div className="container">
             <div className="row">
               <div className="col-lg-8 col-md-12">
-                <div className="form-container">
-                  <h2>{t('contactPage.form.title')}</h2>
-                  <form onSubmit={handleSubmit} className="contact-form">
+                <div className="form-container appointment-card">
+                  <h2 className="appointment-title">{t('contactPage.form.title')}</h2>
+                  <p className="appointment-subtitle">{t('nav.appointment')}</p>
+                  <form onSubmit={handleSubmit} className="contact-form appointment-form">
                     <div className="row">
                       <div className="col-md-6 mb-3">
                         <input
@@ -112,12 +113,12 @@ export default function Iletisim() {
                         required
                       ></textarea>
                     </div>
-                    <button type="submit" className="btn btn-primary">{t('contactPage.form.submit')}</button>
+                    <button type="submit" className="btn btn-primary appointment-submit">{t('contactPage.form.submit')}</button>
                   </form>
                 </div>
               </div>
               <div className="col-lg-4 col-md-12">
-                <div className="map-container">
+                <div className="map-container appointment-map">
                   <h3>{t('contactPage.location.title')}</h3>
                   <iframe
                     title="Harita"

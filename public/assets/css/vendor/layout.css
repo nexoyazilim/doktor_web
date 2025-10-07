@@ -326,12 +326,9 @@ menu, ol, ul {
     margin: 0;
 }
 body {    
-    font-family: var(--base-bodyfont);
     font-weight: 400;
     text-transform: inherit;
     font-size: var(--base-bodyfont-Size);
-    line-height: 26px;
-    color: var(--base-bodyfont-color);
 }
 /* Font styles moved to custom.css for consistency */
 
@@ -1402,9 +1399,6 @@ ul.social-icons{
     border-radius: 3px;
 }
 .header_extra .widget_info{
-    position: relative;
-    padding: 15px 30px;
-    display: flex;
     flex-direction: row;
     align-items: center;
 }
@@ -1640,8 +1634,6 @@ nav.main-menu ul {
 }
 .cmt-header-style-03 .site-navigation .header_extra { padding-right: 0px;}
 .cmt-header-style-03 .site-navigation .site-branding:before { display: none; }
-.cmt-header-style-03 .site-navigation .header_extra .widget_info { padding: 0 30px; }
-.cmt-header-style-03 .site-navigation .header_extra > div { height: 60px; }
 .cmt-header-style-03 .site-navigation .header_extra > div { position: relative; }
 .cmt-header-style-03 .site-navigation .header_extra > div:not(:last-child) { padding: 0 30px; }
 .cmt-header-style-03 .site-navigation .header_extra > div:last-child { padding-left: 30px; padding-right: 0; }

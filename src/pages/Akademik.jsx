@@ -25,7 +25,7 @@ export default function Akademik() {
               <div className="col-lg-12">
                 <div className="breadcrumb-wrapper-inner">
                   <span>
-                    <a title="Homepage" href="/">Anasayfa</a>
+                    <a title={t('blogDetail.breadcrumb.home')} href="/">{t('blogDetail.breadcrumb.home')}</a>
                   </span>
                   <span>{t('academic.title')}</span>
                 </div>

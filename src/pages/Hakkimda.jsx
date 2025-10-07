@@ -3,7 +3,8 @@ import WhatsAppButton from '../components/WhatsAppButton'
 import LanguageSwitcher from '../components/LanguageSwitcher'
 
 export default function Hakkimda() {
-  const { t } = useTranslation()
+  const { t, i18n, ready } = useTranslation()
+  if (!ready) return null
   return (
     <div className="site-main">
       <main id="main">
@@ -13,24 +14,20 @@ export default function Hakkimda() {
         <section className="section info-section">
           <div className="container">
             <div className="row align-items-center">
-              <div className="col-lg-6 col-md-12 mb-4">
+              <div className="col-lg-6 col-md-12 mb-4 order-lg-1 order-2">
                 <div className="info-content">
-                  <h3>Estetik Cerrahi Yaklaşımım</h3>
+                  <h3>{t('about.approach.title') || ''}</h3>
                   <p>
-                    Estetik cerrahi, sadece fiziksel değişim değil, aynı zamanda kişinin kendine olan güvenini artıran ve yaşam kalitesini yükselten bir sanattır. 20 yılı aşkın deneyimim boyunca, her hastanın benzersiz anatomik yapısını ve estetik beklentilerini dikkate alarak, doğal ve uyumlu sonuçlar elde etmeyi hedefledim. Modern cerrahi tekniklerin yanı sıra, minimal invaziv yaklaşımları da tercih ederek, hastalarımın daha hızlı iyileşme süreci yaşamalarını sağlıyorum.
+                    {t('about.approach.p1') || ''}
                   </p>
                   <p>
-                    Burun estetiğinden meme cerrahisine, yüz gençleştirmeden vücut kontürüne kadar geniş bir yelpazede hizmet veriyorum. Her operasyon öncesi detaylı konsültasyon yaparak, hastalarımın beklentilerini anlıyor ve gerçekçi sonuçlar hakkında bilgilendiriyorum. Amacım, sadece güzel görünmek değil, aynı zamanda sağlıklı ve fonksiyonel sonuçlar elde etmektir.
+                    {t('about.approach.p2') || ''}
                   </p>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-12 mb-4">
-                <div className="info-image">
-                  <img 
-                    src="/doktor_web/assets/images/alt_resim.png" 
-                    alt="Estetik Cerrahi Yaklaşımı" 
-                    className="img-fluid rounded"
-                  />
+              <div className="col-lg-6 col-md-12 mb-4 order-lg-2 order-1">
+                <div className="info-image" style={{ display: 'flex', justifyContent: 'center' }}>
+                <img alt="Estetik Cerrahi Yaklaşımı" class="img-fluid rounded" src="/doktor_web/assets/images/doktor_resim_2.png" style="max-width: 75%;height: auto;padding-top: 20px;"/>
                 </div>
               </div>
             </div>
@@ -51,18 +48,18 @@ export default function Hakkimda() {
               </div>
               <div className="col-lg-6 col-md-12 mb-4">
                 <div className="info-content">
-                  <h3>Hasta Odaklı Yaklaşımım</h3>
+                  <h3>{t('about.patientFirst.title') || ''}</h3>
                   <p>
-                    Hastalarımla kurduğum iletişim, tedavi sürecinin en önemli parçasıdır. Her hasta için özel olarak tasarlanan tedavi planları, sadece cerrahi tekniklerle sınırlı kalmaz. Ameliyat öncesi psikolojik hazırlık, ameliyat sonrası bakım ve takip süreçleri de bu planın ayrılmaz parçalarıdır. Hastalarımın endişelerini dinliyor, sorularını yanıtlıyor ve onları her aşamada bilgilendiriyorum.
+                    {t('about.patientFirst.p1') || ''}
                   </p>
                   <p>
-                    İlk konsültasyondan itibaren, hastalarımın beklentilerini ve endişelerini anlamaya odaklanıyorum. Her hastanın farklı bir hikayesi, farklı beklentileri ve farklı endişeleri vardır. Bu nedenle, standart bir yaklaşım yerine, her hasta için özelleştirilmiş bir tedavi planı hazırlıyorum. Ameliyat öncesi detaylı muayene, fotoğraf analizi ve 3D simülasyon gibi modern teknolojileri kullanarak, hastalarımın ameliyat sonrası nasıl görüneceklerini önceden görmelerini sağlıyorum.
+                    {t('about.patientFirst.p2') || ''}
                   </p>
                   <p>
-                    Güvenlik ve kalite, çalışma prensiplerimin temelini oluşturur. Uluslararası standartlarda sterilizasyon, modern ameliyathane koşulları ve deneyimli ekibimle birlikte, en güvenli ortamı sağlıyorum. Ayrıca, sürekli eğitim ve gelişim anlayışıyla, estetik cerrahi alanındaki en son gelişmeleri takip ediyor ve uyguluyorum. Her hastamın memnuniyeti, başarımın en büyük göstergesidir.
+                    {t('about.patientFirst.p3') || ''}
                   </p>
                   <p>
-                    Ameliyat sonrası takip süreci de en az ameliyat kadar önemlidir. Hastalarımın iyileşme sürecini yakından takip ediyor, gerekli kontrolleri yapıyor ve herhangi bir sorun durumunda 7/24 ulaşılabilir oluyorum. Ayrıca, hastalarımın ameliyat sonrası yaşam kalitelerini artırmak için beslenme, egzersiz ve bakım konularında da rehberlik ediyorum. Bu kapsamlı yaklaşım sayesinde, hastalarımın hem fiziksel hem de psikolojik olarak sağlıklı bir iyileşme süreci yaşamalarını sağlıyorum.
+                    {t('about.patientFirst.p4') || ''}
                   </p>
                 </div>
               </div>

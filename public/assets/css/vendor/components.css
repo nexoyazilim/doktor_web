@@ -48,7 +48,7 @@
 /* ===============================================
     1.cmt-row
 ------------------------*/
-.cmt-row{ padding: 30px 0;}
+.cmt-row{ padding: 50px 0;}
 .cmt-row.padding_bottom_zero-section { padding: 30px 0 0; }
 .cmt-row.padding_top_zero-section { padding: 0 0 100px; }
 .cmt-row.padding_zero-section { padding: 0 0; }
@@ -166,12 +166,12 @@
     opacity: .1;
 }
 .bg-img4{
-    background-image: url(../images/bg-image/row-bgimage-4.png);
+    background-image: url(../images/alt_resim.png);
     background-repeat: no-repeat;
     background-position: center bottom;
 }
 .bg-img5{
-    background-image: url(../images/bg-image/row-bgimage-5.png);
+    background-image: url(../images/alt_resim.png);
     background-repeat: no-repeat;
     background-position: center center;
 }

@@ -737,8 +737,6 @@ h3 { font-weight: 700; }
 /* Simple grid utilities used in header markup */
 .col { flex: 1 1 0%; }
 .d-flex { display: flex; }
-.align-items-center { align-items: center; }
-.justify-content-between { justify-content: space-between; }
 .justify-content-end { justify-content: flex-end; }
 .align-self-center { align-self: center; }
 .d-block { display: block; }
@@ -840,6 +838,13 @@ h3 { font-weight: 700; }
   }
 }
 
+/* Override: English locale - remove forced 16px on mobile appointment button */
+@media (max-width: 899px) {
+  html[lang="en"] .site-menubar .cmt-btn.d-block.d-sm-none {
+    font-size: inherit !important;
+  }
+}
+
 /* Mega menu */
 .nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 24px; align-items: center; }
 .nav li, .nav .mega-menu-item { position: relative; }
@@ -864,6 +869,55 @@ h3 { font-weight: 700; }
 
 /* Mobile explicit open state */
 .nav .submenu.open, .nav .mega-submenu.open { display: grid; opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+/* Explicit open when parent li has .open (works both desktop and mobile) */
+.nav .mega-menu-item.open > .mega-submenu { display: grid; opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+/* Mobile toggle support: when parent li has .open, show submenu */
+@media (max-width: 991px) {
+  .main-menu.nav.open .menu > li.open > .mega-submenu { display: grid; opacity: 1; transform: translateY(0); pointer-events: auto; position: static; box-shadow: none; border: 0; padding: 6px 0; }
+}
+
+/* Ensure submenu links visible on mobile */
+@media (max-width: 991px) {
+  .main-menu.nav.open .menu > li > .mega-submenu { background: #fff; }
+  .main-menu.nav.open .menu > li > .mega-submenu li a {
+    color: var(--fg) !important;
+    display: block;
+    padding: 12px 20px;
+  }
+}
+
+/* Arrow indicator for dropdown */
+.menu-arrow { display: inline-block; margin-left: 6px; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform .15s ease; }
+.menu-arrow.rotate { transform: rotate(-135deg); }
+/* Hide arrow on desktop */
+@media (min-width: 992px) {
+  .menu-arrow { display: none; }
+}
+
+/* Footer alignment tweaks */
+@media (min-width: 1200px) {
+  .second-footer .row.g-0 > .col-sm-12.col-md-12.col-lg-5 .row > .col-sm-12.col-md-12.col-lg-12.widget-area {
+    padding-right: 0;
+  }
+}
+
+/* Footer logo: center image inside its container */
+.footer-logo { display: flex; align-items: center; justify-content: center; }
+.footer-logo img { display: block; height: auto; width: 100%; max-width: 400px; }
+
+/* Page title row height tuning for very wide screens */
+@media (min-width: 1600px) {
+  .cmt-page-title-row-inner { padding-top: 24px !important; padding-bottom: 24px !important; }
+  .cmt-page-title-row-inner .breadcrumb-wrapper-inner { margin: 8px 0 !important; }
+}
+
+/* About page layout refinements */
+.info-section .info-content { margin-top: -8px; }
+@media (min-width: 992px) {
+  .info-section .info-content { margin-top: -16px; }
+}
 
 @media (max-width: 899px) {
 	.nav ul { flex-direction: column; align-items: stretch; }
@@ -1026,7 +1080,7 @@ h3 { font-weight: 700; }
 .site-content .container {
   background: var(--bg);
 }
-.section h2 { margin: 40px 0 16px; font-size: 28px; }
+.section h2 { margin: 40px 0 16px; font-size: 44px; }
 .section .section-subtitle { color: var(--muted); margin-top: -8px; margin-bottom: 16px; }
 .list { margin: 0; padding-left: 18px; }
 
@@ -1034,6 +1088,31 @@ h3 { font-weight: 700; }
 .strip { background: linear-gradient(90deg, color-mix(in oklab, var(--primary) 12%, transparent), color-mix(in oklab, var(--accent) 12%, transparent)); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .strip-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; }
 .strip-left { display: flex; flex-direction: column; }
+
+/* Appointment Section */
+.appointment-section { padding-top: 48px; padding-bottom: 48px; }
+.appointment-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 24px; box-shadow: 0 6px 26px rgba(0,0,0,0.06); }
+.appointment-title { margin: 0 0 6px; font-size: 28px; line-height: 34px; }
+.appointment-subtitle { margin: 0 0 18px; color: var(--muted); }
+.appointment-form input, .appointment-form select, .appointment-form textarea { width: 100%; border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; background: #fafafa; }
+.appointment-form input:focus, .appointment-form select:focus, .appointment-form textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary) 18%, transparent); background: #fff; }
+.appointment-submit { margin-top: 6px; padding: 12px 18px; border-radius: 10px; }
+.appointment-map { position: sticky; top: 24px; }
+@media (max-width: 991px) {
+  .appointment-map { position: static; margin-top: 18px; }
+}
+
+/* Treatment content redesign */
+.treatment-content { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+.treatment-header .lead { color: var(--muted); margin: 0; }
+.treatment-overview { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; margin-top: 16px; }
+.overview-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.bulleted { padding-left: 18px; margin: 8px 0 0; }
+.split { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; margin-top: 16px; }
+@media (max-width: 899px) {
+  .treatment-overview { grid-template-columns: 1fr; }
+  .split { grid-template-columns: 1fr; }
+}
 .strip-left .muted { color: var(--muted); font-size: 14px; }
 .strip-right { display: flex; gap: 10px; flex-wrap: wrap; }
 
@@ -1367,7 +1446,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--p
   .site-main:has(.gallery) .breadcrumb-wrapper-inner,
   /* İletişim sayfası */
   .site-main:has(.contact-form-section) .breadcrumb-wrapper-inner {
-    padding-bottom: 60px;
+    padding-bottom: 20px;
   }
 }
 

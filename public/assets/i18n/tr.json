@@ -76,6 +76,19 @@
 			"title": "Hekimlik Felsefem",
 			"quote": "Her hasta benim için özeldir. Doğal güzellik anlayışıyla, güvenli ve etkili estetik cerrahi teknikleri kullanarak hastalarımın kendilerini daha güvenli hissetmelerini sağlamak ve onlara en iyi hizmeti sunmak temel prensibimdir."
 		}
+    ,
+    "approach": {
+      "title": "Estetik Cerrahi Yaklaşımım",
+      "p1": "Estetik cerrahi, sadece fiziksel değişim değil, aynı zamanda kişinin kendine olan güvenini artıran ve yaşam kalitesini yükselten bir sanattır. 20 yılı aşkın deneyimim boyunca, her hastanın benzersiz anatomik yapısını ve estetik beklentilerini dikkate alarak, doğal ve uyumlu sonuçlar elde etmeyi hedefledim. Modern cerrahi tekniklerin yanı sıra, minimal invaziv yaklaşımları da tercih ederek, hastalarımın daha hızlı iyileşme süreci yaşamalarını sağlıyorum.",
+      "p2": "Burun estetiğinden meme cerrahisine, yüz gençleştirmeden vücut kontürüne kadar geniş bir yelpazede hizmet veriyorum. Her operasyon öncesi detaylı konsültasyon yaparak, hastalarımın beklentilerini anlıyor ve gerçekçi sonuçlar hakkında bilgilendiriyorum. Amacım, sadece güzel görünmek değil, aynı zamanda sağlıklı ve fonksiyonel sonuçlar elde etmektir."
+    },
+    "patientFirst": {
+      "title": "Hasta Odaklı Yaklaşımım",
+      "p1": "Hastalarımla kurduğum iletişim, tedavi sürecinin en önemli parçasıdır. Her hasta için özel olarak tasarlanan tedavi planları, sadece cerrahi tekniklerle sınırlı kalmaz. Ameliyat öncesi psikolojik hazırlık, ameliyat sonrası bakım ve takip süreçleri de bu planın ayrılmaz parçalarıdır. Hastalarımın endişelerini dinliyor, sorularını yanıtlıyor ve onları her aşamada bilgilendiriyorum.",
+      "p2": "İlk konsültasyondan itibaren, hastalarımın beklentilerini ve endişelerini anlamaya odaklanıyorum. Her hastanın farklı bir hikayesi, farklı beklentileri ve farklı endişeleri vardır. Bu nedenle, standart bir yaklaşım yerine, her hasta için özelleştirilmiş bir tedavi planı hazırlıyorum.",
+      "p3": "Güvenlik ve kalite, çalışma prensiplerimin temelini oluşturur. Uluslararası standartlarda sterilizasyon, modern ameliyathane koşulları ve deneyimli ekibimle birlikte, en güvenli ortamı sağlıyorum. Ayrıca, sürekli eğitim ve gelişim anlayışıyla, estetik cerrahi alanındaki en son gelişmeleri takip ediyor ve uyguluyorum.",
+      "p4": "Ameliyat sonrası takip süreci de en az ameliyat kadar önemlidir. Hastalarımın iyileşme sürecini yakından takip ediyor, gerekli kontrolleri yapıyor ve herhangi bir sorun durumunda 7/24 ulaşılabilir oluyorum. Ayrıca, ameliyat sonrası yaşam kalitesini artırmak için beslenme, egzersiz ve bakım konularında rehberlik ediyorum."
+    }
 	},
 	"treatments": {
 		"title": "Uzmanlık Alanlarım",

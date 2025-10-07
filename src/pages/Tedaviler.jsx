@@ -242,31 +242,23 @@ export default function Tedaviler() {
                                 </ul>
                               </div>
                             </div>
-                            <h2 id="toc_1_H2">{t(`treatments.categories.${treatment.key}.title`)} {t('treatments.whatIs')}</h2>
-                            <p><strong>{t(`treatments.categories.${treatment.key}.title`)}</strong> {t('treatments.generalDescription')}</p>
-                            <h2 id="toc_2_H2">{t('treatments.symptoms')}</h2>
-                            <ul>
-                              <li>{t('treatments.symptomsList.pain')}</li>
-                              <li>{t('treatments.symptomsList.numbness')}</li>
-                              <li>{t('treatments.symptomsList.posture')}</li>
-                            </ul>z
-                            <h3 id="toc_3_H3">{t('treatments.trackedDiseases')}</h3>
-                            <ul>
-                              {treatment.conditions.slice(0, 6).map((c, i) => (<li key={i}>{c}</li>))}
-                            </ul>
-                            <h3 id="toc_4_H3">{t('treatments.commonDiseases')}</h3>
-                            <p>{t('treatments.commonDiseasesDescription')}</p>
-                            <h3 id="toc_5_H3">{t('treatments.emergency')}</h3>
-                            <ul>
-                              <li>{t('treatments.emergencyList.severePain')}</li>
-                              <li>{t('treatments.emergencyList.incontinence')}</li>
-                              <li>{t('treatments.emergencyList.trauma')}</li>
-                            </ul>
-                            <h3 id="toc_6_H3">{t('treatments.methods')}</h3>
-                            <ul>
-                              {treatment.procedures.map((p, i) => (<li key={i}>{p}</li>))}
-                            </ul>
-                          </div>
+                            <div className="split">
+                              <div>
+                                <h3 id="toc_5_H3">{t('treatments.emergency')}</h3>
+                                <ul className="bulleted">
+                                  <li>{t('treatments.emergencyList.severePain')}</li>
+                                  <li>{t('treatments.emergencyList.incontinence')}</li>
+                                  <li>{t('treatments.emergencyList.trauma')}</li>
+                                </ul>
+                              </div>
+                              <div>
+                                <h3 id="toc_6_H3">{t('treatments.methods')}</h3>
+                                <ul className="bulleted">
+                                  {treatment.procedures.map((p, i) => (<li key={i}>{p}</li>))}
+                                </ul>
+                              </div>
+                            </div>
+                          </section>
                         </div>
                       </div>
                     </div>
