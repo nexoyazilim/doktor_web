@@ -10,6 +10,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isHeaderVisible, setIsHeaderVisible] = useState(true)
   const [isGalleryOpen, setIsGalleryOpen] = useState(false)
+  const [isAcademicOpen, setIsAcademicOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 992 : false)
   
   useEffect(() => {
@@ -158,7 +159,29 @@ export default function Header() {
                       <li><Link to={getTreatmentUrl('vucut-konturu', i18n.language)}>{t('nav.treatments.bodyContouring')}</Link></li>
                     </ul>
                   </li>
-                  <li className="mega-menu-item"><Link to={getLocalizedUrl('academic', i18n.language)}>{t('nav.academic')}</Link></li>
+                  {isMobile ? (
+                    <>
+                      <li className="mega-menu-item"><Link to={getLocalizedUrl('academic', i18n.language)}>{t('nav.academic')}</Link></li>
+                      <li className="mega-menu-item"><a href="#academic-publications">{t('academic.stats.publications')}</a></li>
+                      <li className="mega-menu-item"><a href="#academic-presentations">{t('academic.stats.presentations')}</a></li>
+                    </>
+                  ) : (
+                    <li className={"mega-menu-item" + (isAcademicOpen ? " open" : " ")}>
+                      <a href="#" className="mega-menu-link" aria-expanded={isAcademicOpen}
+                        onClick={(e) => {
+                          e.preventDefault()
+                          setIsAcademicOpen(v => !v)
+                        }}>
+                        {t('nav.academic')}
+                        <span className={"menu-arrow" + (isAcademicOpen ? " rotate" : "")}></span>
+                      </a>
+                      <ul className={"mega-submenu" + (isAcademicOpen ? " open" : "") } aria-hidden={!isAcademicOpen}>
+                        <li><a href="#academic-publications">{t('academic.stats.publications')}</a></li>
+                        <li><a href="#academic-presentations">{t('academic.stats.presentations')}</a></li>
+                        <li><a href="#academic-chapters">{t('academic.stats.chapters')}</a></li>
+                      </ul>
+                    </li>
+                  )}
                   <li className="mega-menu-item"><Link to={getLocalizedUrl('blog', i18n.language)}>{t('nav.blog')}</Link></li>
                   {isMobile ? (
                     <>

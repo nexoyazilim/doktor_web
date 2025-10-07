@@ -148,7 +148,7 @@ input[type="reset"] {
     font-size: 15px;
     line-height: 21px;
     font-weight: 500;
-    padding: 11px 40px 11px;
+    padding: 11px 30px 11px;
     border: 2px solid transparent;
     border-radius: 0;
     color: var(--base-white);

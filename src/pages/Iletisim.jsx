@@ -119,7 +119,6 @@ export default function Iletisim() {
               </div>
               <div className="col-lg-4 col-md-12">
                 <div className="map-container appointment-map">
-                  <h3>{t('contactPage.location.title')}</h3>
                   <iframe
                     title="Harita"
                     loading="lazy"
