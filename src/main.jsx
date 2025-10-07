@@ -2,13 +2,14 @@ import { StrictMode, lazy } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './i18n'
+import Hakkimda from './pages/Hakkimda'
 
 
 // Rota tanımları
 const routes = [
   { path: '/', element: lazy(() => import('./pages/Home')) },
-  { path: '/hakkimda', element: lazy(() => import('./pages/Hakkimda')) },
-  { path: '/about', element: lazy(() => import('./pages/Hakkimda')) },
+  { path: '/hakkimda', element: Hakkimda },
+  { path: '/about', element: Hakkimda },
   { path: '/tedaviler', element: lazy(() => import('./pages/Tedaviler')) },
   { path: '/treatments', element: lazy(() => import('./pages/Tedaviler')) },
   { path: '/akademik', element: lazy(() => import('./pages/Akademik')) },

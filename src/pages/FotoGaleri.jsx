@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import WhatsAppButton from '../components/WhatsAppButton'
 import LanguageSwitcher from '../components/LanguageSwitcher'
 
@@ -14,7 +15,7 @@ export default function FotoGaleri() {
               <div className="col-lg-12">
                 <div className="breadcrumb-wrapper-inner">
                   <span>
-                    <a title={t('blogDetail.breadcrumb.home')} href="/">{t('blogDetail.breadcrumb.home')}</a>
+                    <Link title={t('blogDetail.breadcrumb.home')} to="/">{t('blogDetail.breadcrumb.home')}</Link>
                   </span>
                   <span>{t('gallery.photo.title')}</span>
                 </div>
