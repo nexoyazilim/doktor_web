@@ -23,7 +23,7 @@ export default function FotoGaleri() {
           </div>
         </div>
         
-        <section className="section photo-gallery-section">
+        <section className="section gallery-section photo-gallery-section">
           <div className="container">
             
             {/* Gallery Grid - 3 Columns */}

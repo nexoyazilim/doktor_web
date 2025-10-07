@@ -23,7 +23,7 @@ export default function VideoGaleri() {
           </div>
         </div>
         
-        <section className="section">
+        <section className="section gallery-section">
           <div className="container">
             {/* Video Grid - 3 Columns (FotoGaleri ile aynı yapı) */}
             <div className="gallery row">
