@@ -13,7 +13,7 @@ export default function Hakkimda() {
         <section className="section info-section">
           <div className="container">
             <div className="row align-items-center">
-              <div className="col-lg-6 col-md-12 mb-4">
+              <div className="col-lg-6 col-md-12 mb-4 order-lg-1 order-2">
                 <div className="info-content">
                   <h3>Estetik Cerrahi Yaklaşımım</h3>
                   <p>
@@ -24,12 +24,13 @@ export default function Hakkimda() {
                   </p>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-12 mb-4">
-                <div className="info-image">
+              <div className="col-lg-6 col-md-12 mb-4 order-lg-2 order-1">
+                <div className="info-image" style={{ display: 'flex', justifyContent: 'center' }}>
                   <img 
                     src="/doktor_web/assets/images/doktor_resim_2.png" 
                     alt="Estetik Cerrahi Yaklaşımı" 
                     className="img-fluid rounded"
+                    style={{ maxWidth: '80%', height: 'auto' }}
                   />
                 </div>
               </div>

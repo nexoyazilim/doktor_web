@@ -673,6 +673,12 @@ h3 { font-weight: 700; }
   .cmt-page-title-row-inner .breadcrumb-wrapper-inner { margin: 8px 0 !important; }
 }
 
+/* About page layout refinements */
+.info-section .info-content { margin-top: -8px; }
+@media (min-width: 992px) {
+  .info-section .info-content { margin-top: -16px; }
+}
+
 @media (max-width: 899px) {
 	.nav ul { flex-direction: column; align-items: stretch; }
 	.nav .submenu { position: static; border: 0; box-shadow: none; padding: 6px 0 0; display: none; }
