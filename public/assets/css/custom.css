@@ -607,13 +607,14 @@ h3 { font-weight: 700; }
 
 /* Mobile appointment button styling */
 @media (max-width: 899px) {
-  .site-menubar .cmt-btn.d-block.d-sm-none {
+  html:not([lang="en"]) .site-menubar .cmt-btn.d-block.d-sm-none {
     font-size: 16px !important;
     padding: 12px 20px !important;
     min-height: 40px !important;
     font-weight: 700 !important;
   }
 }
+
 
 /* Removed English-specific override for mobile appointment button */
 

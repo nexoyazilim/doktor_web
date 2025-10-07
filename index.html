@@ -30,6 +30,18 @@
     <link rel="stylesheet" href="assets/css/vendor/custom-icons.css">
     <link rel="stylesheet" href="assets/css/vendor/themify.css">
     <link rel="stylesheet" href="assets/css/custom.css">
+    <script>
+      // GH Pages SPA redirect fix: if 404.html stored intended URL, restore it
+      (function() {
+        try {
+          var redirect = sessionStorage.redirect;
+          if (redirect && redirect !== location.href) {
+            delete sessionStorage.redirect;
+            history.replaceState(null, null, redirect);
+          }
+        } catch (e) { /* no-op */ }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
