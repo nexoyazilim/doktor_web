@@ -154,8 +154,8 @@ export default function Header() {
                       <li><Link to={getTreatmentUrl('vucut-konturu', i18n.language)}>{t('nav.treatments.bodyContouring')}</Link></li>
                     </ul>
                   </li>
-                  <li className="mega-menu-item"><Link to={getLocalizedUrl('academic', i18n.language)}>{t('nav.academic')}</Link></li>
-                  <li className="mega-menu-item"><Link to={getLocalizedUrl('blog', i18n.language)}>{t('nav.blog')}</Link></li>
+                  <li className="mega-menu-item desktop-only"><Link to={getLocalizedUrl('academic', i18n.language)}>{t('nav.academic')}</Link></li>
+                  <li className="mega-menu-item desktop-only"><Link to={getLocalizedUrl('blog', i18n.language)}>{t('nav.blog')}</Link></li>
                   <li className={"mega-menu-item gallery-menu" + (isGalleryOpen ? " open" : " ")}>
                     <a href="#" className="mega-menu-link" aria-expanded={isGalleryOpen}
                       onClick={(e) => {
