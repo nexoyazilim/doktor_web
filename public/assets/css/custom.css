@@ -251,13 +251,8 @@ img {
 }
 
 .cmt-btn {
-  display: inline-block;
-  padding: 8px 16px;
   background: var(--primary);
-  color: #fff;
   text-decoration: none;
-  border-radius: 6px;
-  font-size: 14px;
   font-weight: 600;
   transition: all 0.3s ease;
   border: none;
@@ -611,6 +606,9 @@ h3 { font-weight: 700; text-align: center; font-size: 20px; }
 
 /* Mobile appointment button styling */
 @media (max-width: 899px) {
+  html[lang="en"] .site-menubar .cmt-btn.d-block.d-sm-none {
+    font-size: 14px !important;
+  }
   html:not([lang="en"]) .site-menubar .cmt-btn.d-block.d-sm-none {
     font-size: 16px !important;
     padding: 12px 20px !important;
@@ -827,6 +825,17 @@ h3 { font-weight: 700; text-align: center; font-size: 20px; }
 
 @media (min-width: 900px) { .nav { display: flex; } }
 
+/* Desktop: navbar horizontal scroll when overflow */
+@media (min-width: 900px) {
+  .nav {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  .nav ul { flex-wrap: nowrap; }
+}
+
 /* Navbar hover color override */
 .main-menu .menu > li > a,
 .main-menu .mega-menu-link {
@@ -853,7 +862,7 @@ h3 { font-weight: 700; text-align: center; font-size: 20px; }
 .main-menu .mega-submenu { background: #fff !important; }
 .main-menu .mega-submenu a { color: #0f172a !important; }
 .main-menu .mega-menu-link { color: #0f172a !important; }
-.main-menu .mega-menu-link .menu-subtitle { color: #475569 !important; }
+/* removed: .menu-subtitle not used */
 /* Dark theme overrides */
 html.dark .main-menu .mega-submenu { background: #0b1020 !important; }
 html.dark .main-menu .mega-submenu a { color: #e2e8f0 !important; }
@@ -862,12 +871,12 @@ html.dark .main-menu .mega-menu-link .menu-subtitle { color: #b6c2cf !important;
 
 /* High-specificity overrides inside header context to ensure readable menu text */
 #masthead .site-header-menu .site-header-menu-inner .container .row .col .site-navigation nav.main-menu ul.menu > li > a.mega-menu-link,
-#masthead .site-header-menu .site-header-menu-inner .container .row .col .site-navigation nav.main-menu ul.menu > li > a.mega-menu-link .menu-subtitle,
+/* removed: subtitle color override */
 #masthead .site-header-menu .site-header-menu-inner .container .row .col .site-navigation nav.main-menu ul.menu li ul.mega-submenu li a {
   color: #0f172a !important;
 }
 html.dark #masthead .site-header-menu .site-header-menu-inner .container .row .col .site-navigation nav.main-menu ul.menu > li > a.mega-menu-link,
-html.dark #masthead .site-header-menu .site-header-menu-inner .container .row .col .site-navigation nav.main-menu ul.menu > li > a.mega-menu-link .menu-subtitle,
+/* removed: subtitle color override (dark) */
 html.dark #masthead .site-header-menu .site-header-menu-inner .container .row .col .site-navigation nav.main-menu ul.menu li ul.mega-submenu li a {
   color: #e2e8f0 !important;
 }
@@ -2484,11 +2493,5 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--p
 }
 
 @media (max-width: 991px) {
-  .main-menu .mega-menu-link .menu-subtitle {
-    display: block;
-    font-size: 12px;
-    line-height: 1.2;
-    color: var(--muted);
-    margin-top: 4px;
-  }
+  /* removed: subtitle responsive styles */
 }

@@ -433,23 +433,14 @@
     8.Buttons
 ------------------------*/
 .cmt-btn{ 
-    display: inline-block;
     vertical-align: middle;
-    font-size: 15px;
     line-height: 1;
-    padding: 11px 32px 11px 31px;
-    background: transparent;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #eaeff5;
     position: relative;
     text-transform: uppercase;
-    font-weight: 600;
     overflow: hidden;
     z-index: 1;
     text-align: center;
     font-family: var(--base-headingfont);
-    transition: all 0.5s ease 0s;
 }
 
 /** btn-color **/
@@ -484,9 +475,7 @@ a.cmt-btn-color-skincolor:hover{
     background-color: var(--base-white);
     color: var(--base-dark);
 }
-.cmt-btn.cmt-btn-color-dark {
-    color: var(--base-dark);
-}
+
 .cmt-btn.cmt-btn-style-fill.cmt-btn-color-dark {
     background-color: var(--base-dark);
     border-color: var(--base-dark);

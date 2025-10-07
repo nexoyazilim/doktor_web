@@ -154,9 +154,6 @@ export default function Header() {
                     >
                       {t('nav.specialties')}
                       <span className={"menu-arrow" + (isTreatmentsOpen ? " rotate" : "")}></span>
-                      {isTreatmentsOpen && typeof window !== 'undefined' && window.innerWidth < 992 ? (
-                        <span className="menu-subtitle">{t('nav.specialtiesSubtitle')}</span>
-                      ) : null}
                     </a>
                     <ul className="mega-submenu">
                       <li><Link to={getTreatmentUrl('burun-estetigi-rinoplasti', i18n.language)}>{t('nav.treatments.rhinoplasty')}</Link></li>
