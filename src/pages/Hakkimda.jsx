@@ -3,7 +3,8 @@ import WhatsAppButton from '../components/WhatsAppButton'
 import LanguageSwitcher from '../components/LanguageSwitcher'
 
 export default function Hakkimda() {
-  const { t } = useTranslation()
+  const { t, i18n, ready } = useTranslation()
+  if (!ready) return null
   return (
     <div className="site-main">
       <main id="main">
@@ -15,12 +16,12 @@ export default function Hakkimda() {
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-12 mb-4 order-lg-1 order-2">
                 <div className="info-content">
-                  <h3>{t('about.approach.title')}</h3>
+                  <h3>{t('about.approach.title') || ''}</h3>
                   <p>
-                    {t('about.approach.p1')}
+                    {t('about.approach.p1') || ''}
                   </p>
                   <p>
-                    {t('about.approach.p2')}
+                    {t('about.approach.p2') || ''}
                   </p>
                 </div>
               </div>
@@ -47,18 +48,18 @@ export default function Hakkimda() {
               </div>
               <div className="col-lg-6 col-md-12 mb-4">
                 <div className="info-content">
-                  <h3>{t('about.patientFirst.title')}</h3>
+                  <h3>{t('about.patientFirst.title') || ''}</h3>
                   <p>
-                    {t('about.patientFirst.p1')}
+                    {t('about.patientFirst.p1') || ''}
                   </p>
                   <p>
-                    {t('about.patientFirst.p2')}
+                    {t('about.patientFirst.p2') || ''}
                   </p>
                   <p>
-                    {t('about.patientFirst.p3')}
+                    {t('about.patientFirst.p3') || ''}
                   </p>
                   <p>
-                    {t('about.patientFirst.p4')}
+                    {t('about.patientFirst.p4') || ''}
                   </p>
                 </div>
               </div>
