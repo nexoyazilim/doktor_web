@@ -860,6 +860,18 @@ html.dark .main-menu .mega-submenu a { color: #e2e8f0 !important; }
 html.dark .main-menu .mega-menu-link { color: #e2e8f0 !important; }
 html.dark .main-menu .mega-menu-link .menu-subtitle { color: #b6c2cf !important; }
 
+/* High-specificity overrides inside header context to ensure readable menu text */
+#masthead .site-header-menu .site-header-menu-inner .container .row .col .site-navigation nav.main-menu ul.menu > li > a.mega-menu-link,
+#masthead .site-header-menu .site-header-menu-inner .container .row .col .site-navigation nav.main-menu ul.menu > li > a.mega-menu-link .menu-subtitle,
+#masthead .site-header-menu .site-header-menu-inner .container .row .col .site-navigation nav.main-menu ul.menu li ul.mega-submenu li a {
+  color: #0f172a !important;
+}
+html.dark #masthead .site-header-menu .site-header-menu-inner .container .row .col .site-navigation nav.main-menu ul.menu > li > a.mega-menu-link,
+html.dark #masthead .site-header-menu .site-header-menu-inner .container .row .col .site-navigation nav.main-menu ul.menu > li > a.mega-menu-link .menu-subtitle,
+html.dark #masthead .site-header-menu .site-header-menu-inner .container .row .col .site-navigation nav.main-menu ul.menu li ul.mega-submenu li a {
+  color: #e2e8f0 !important;
+}
+
 /* Hero */
 .hero { position: relative; padding: 88px 0 72px; background: radial-gradient(1200px 500px at 10% -10%, rgba(37,99,235,.12), transparent), radial-gradient(800px 400px at 90% -20%, rgba(20,184,166,.12), transparent), linear-gradient(180deg, #f8fbff, #ffffff); overflow: hidden; }
 .hero:before { content: ""; position: absolute; right: -80px; top: -80px; width: 360px; height: 360px; background: conic-gradient(from 180deg at 50% 50%, rgba(37,99,235,.25), rgba(20,184,166,.25)); filter: blur(40px); border-radius: 50%; opacity: .6; animation: float 12s ease-in-out infinite alternate; }
