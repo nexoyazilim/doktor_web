@@ -8,6 +8,7 @@
 	"nav": {
 		"about": "About",
 		"specialties": "Specialties",
+		"specialtiesSubtitle": "Treatment categories",
 		"diagnosis": "Diagnosis/Treatment",
 		"blog": "Blog",
 		"latest": "Latest Articles",

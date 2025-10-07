@@ -496,7 +496,7 @@ img {
 /* Typography scale */
 h1 { font-weight: 800; letter-spacing: -0.02em; }
 h2 { font-weight: 700; letter-spacing: -0.01em; }
-h3 { font-weight: 700; }
+h3 { font-weight: 700; text-align: center; font-size: 20px; }
 .hero h1 { font-size: clamp(40px, 6vw, 56px); }
 .hero p { font-size: clamp(16px, 2.4vw, 20px); }
 .section h2 { font-size: clamp(24px, 3.2vw, 32px); }
@@ -850,10 +850,15 @@ h3 { font-weight: 700; }
 }
 
 /* Ensure submenu text is readable (light background) */
-.main-menu .mega-submenu { background: #fff; }
-.main-menu .mega-submenu a { color: #111 !important; }
-.main-menu .mega-menu-link { color: var(--fg) !important; }
+.main-menu .mega-submenu { background: #fff !important; }
+.main-menu .mega-submenu a { color: #0f172a !important; }
+.main-menu .mega-menu-link { color: #0f172a !important; }
 .main-menu .mega-menu-link .menu-subtitle { color: #475569 !important; }
+/* Dark theme overrides */
+html.dark .main-menu .mega-submenu { background: #0b1020 !important; }
+html.dark .main-menu .mega-submenu a { color: #e2e8f0 !important; }
+html.dark .main-menu .mega-menu-link { color: #e2e8f0 !important; }
+html.dark .main-menu .mega-menu-link .menu-subtitle { color: #b6c2cf !important; }
 
 /* Hero */
 .hero { position: relative; padding: 88px 0 72px; background: radial-gradient(1200px 500px at 10% -10%, rgba(37,99,235,.12), transparent), radial-gradient(800px 400px at 90% -20%, rgba(20,184,166,.12), transparent), linear-gradient(180deg, #f8fbff, #ffffff); overflow: hidden; }
