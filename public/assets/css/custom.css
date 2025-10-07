@@ -656,36 +656,12 @@ h3 { font-weight: 700; }
   .menu-arrow { display: none; }
 }
 
-/* Mobile menu improvements: arrow to the far right and submenu visibility */
-@media (max-width: 991px) {
-  .main-menu.nav.open .menu > li > a.mega-menu-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .main-menu.nav.open .menu > li > a.mega-menu-link .menu-arrow {
-    margin-left: auto;
-  }
-  .main-menu.nav.open .menu > li > .mega-submenu {
-    display: none;
-    position: static;
-    box-shadow: none;
-    border: 0;
-    padding: 6px 0;
-  }
-  .main-menu.nav.open .menu > li.open > .mega-submenu {
-    display: block;
-  }
-  .main-menu.nav.open .menu > li.open > .mega-submenu li a {
-    display: block;
-    padding: 12px 20px;
-    color: var(--fg);
+/* Footer alignment tweaks */
+@media (min-width: 1200px) {
+  .second-footer .row.g-0 > .col-sm-12.col-md-12.col-lg-5 .row > .col-sm-12.col-md-12.col-lg-12.widget-area {
+    padding-right: 0;
   }
 }
-
-/* Stronger rule to force visibility when parent has .open (override vendor) */
-.site-navigation .nav .mega-menu-item.open > .mega-submenu { display: block !important; opacity: 1; transform: none; pointer-events: auto; }
 
 @media (max-width: 899px) {
 	.nav ul { flex-direction: column; align-items: stretch; }
@@ -832,7 +808,14 @@ h3 { font-weight: 700; }
 @keyframes float { 0% { transform: translateY(0); } 100% { transform: translateY(16px); } }
 
 /* Sections */
-.section { padding: 30px 0; }
+.section { padding: 10px 0; }
+/* Gallery section: override default section padding */
+.section.gallery-section { padding: 48px 0 !important; }
+.section.gallery-section .gallery { row-gap: 24px; }
+.section.gallery-section .gallery-item { background: #fff; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+.section.gallery-section .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; }
+.section.gallery-section .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.section.gallery-section .gallery-caption { padding: 12px 14px; font-size: 14px; color: var(--muted); }
 .section-alt { background: #fff; }
 /* Force white background for content containers */
 .site-main .container,
@@ -859,6 +842,18 @@ h3 { font-weight: 700; }
 .appointment-map { position: sticky; top: 24px; }
 @media (max-width: 991px) {
   .appointment-map { position: static; margin-top: 18px; }
+}
+
+/* Treatment content redesign */
+.treatment-content { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+.treatment-header .lead { color: var(--muted); margin: 0; }
+.treatment-overview { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; margin-top: 16px; }
+.overview-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.bulleted { padding-left: 18px; margin: 8px 0 0; }
+.split { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; margin-top: 16px; }
+@media (max-width: 899px) {
+  .treatment-overview { grid-template-columns: 1fr; }
+  .split { grid-template-columns: 1fr; }
 }
 .strip-left .muted { color: var(--muted); font-size: 14px; }
 .strip-right { display: flex; gap: 10px; flex-wrap: wrap; }

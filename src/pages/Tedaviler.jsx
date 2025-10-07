@@ -213,13 +213,36 @@ export default function Tedaviler() {
                               />
                             </div>
                           </div>
-                          <div className="icerik mt-25">
-                            <h3 className="fs-24 mb-10" id="toc_0_H3">{t(`treatments.categories.${treatment.key}.title`)}</h3>
+                          <section className="icerik mt-25 treatment-content">
+                            <header className="treatment-header">
+                              <h3 className="fs-24 mb-10" id="toc_0_H3">{t(`treatments.categories.${treatment.key}.title`)}</h3>
+                              <p className="lead">{t('treatments.generalDescription')}</p>
+                            </header>
+                            <div className="treatment-overview">
+                              <div className="overview-card">
+                                <h4 id="toc_1_H2">{t('treatments.whatIs')}</h4>
+                                <p><strong>{t(`treatments.categories.${treatment.key}.title`)}</strong> {t('treatments.generalDescription')}</p>
+                              </div>
+                              <div className="overview-card">
+                                <h4 id="toc_2_H2">{t('treatments.symptoms')}</h4>
+                                <ul className="bulleted">
+                                  <li>{t('treatments.symptomsList.pain')}</li>
+                                  <li>{t('treatments.symptomsList.numbness')}</li>
+                                  <li>{t('treatments.symptomsList.posture')}</li>
+                                </ul>
+                              </div>
+                              <div className="overview-card">
+                                <h4 id="toc_3_H3">{t('treatments.trackedDiseases')}</h4>
+                                <ul className="bulleted">
+                                  {treatment.conditions.slice(0, 6).map((c, i) => (<li key={i}>{c}</li>))}
+                                </ul>
+                              </div>
+                            </div>
                             <div className="table-of-content mt-30" style={{ position: 'static' }}>
                               <div className="wrap-toc">
                                 <ul className="toc-box">
                                   <li className="toc-item toc-H3"><a className="toc-item-link" href="#toc_0_H3">{t(`treatments.categories.${treatment.key}.title`)}</a></li>
-                                  <li className="toc-item toc-H2"><a className="toc-item-link" href="#toc_1_H2">{t(`treatments.categories.${treatment.key}.title`)} {t('treatments.whatIs')}</a></li>
+                                  <li className="toc-item toc-H2"><a className="toc-item-link" href="#toc_1_H2">{t('treatments.whatIs')}</a></li>
                                   <li className="toc-item toc-H2"><a className="toc-item-link" href="#toc_2_H2">{t('treatments.symptoms')}</a></li>
                                   <li className="toc-item toc-H3"><a className="toc-item-link" href="#toc_3_H3">{t('treatments.trackedDiseases')}</a></li>
                                   <li className="toc-item toc-H3"><a className="toc-item-link" href="#toc_4_H3">{t('treatments.commonDiseases')}</a></li>
@@ -228,31 +251,25 @@ export default function Tedaviler() {
                                 </ul>
                               </div>
                             </div>
-                            <h2 id="toc_1_H2">{t(`treatments.categories.${treatment.key}.title`)} {t('treatments.whatIs')}</h2>
-                            <p><strong>{t(`treatments.categories.${treatment.key}.title`)}</strong> {t('treatments.generalDescription')}</p>
-                            <h2 id="toc_2_H2">{t('treatments.symptoms')}</h2>
-                            <ul>
-                              <li>{t('treatments.symptomsList.pain')}</li>
-                              <li>{t('treatments.symptomsList.numbness')}</li>
-                              <li>{t('treatments.symptomsList.posture')}</li>
-                            </ul>
-                            <h3 id="toc_3_H3">{t('treatments.trackedDiseases')}</h3>
-                            <ul>
-                              {treatment.conditions.slice(0, 6).map((c, i) => (<li key={i}>{c}</li>))}
-                            </ul>
-                            <h3 id="toc_4_H3">{t('treatments.commonDiseases')}</h3>
+                            <h3 id="toc_4_H3" className="mt-25">{t('treatments.commonDiseases')}</h3>
                             <p>{t('treatments.commonDiseasesDescription')}</p>
-                            <h3 id="toc_5_H3">{t('treatments.emergency')}</h3>
-                            <ul>
-                              <li>{t('treatments.emergencyList.severePain')}</li>
-                              <li>{t('treatments.emergencyList.incontinence')}</li>
-                              <li>{t('treatments.emergencyList.trauma')}</li>
-                            </ul>
-                            <h3 id="toc_6_H3">{t('treatments.methods')}</h3>
-                            <ul>
-                              {treatment.procedures.map((p, i) => (<li key={i}>{p}</li>))}
-                            </ul>
-                          </div>
+                            <div className="split">
+                              <div>
+                                <h3 id="toc_5_H3">{t('treatments.emergency')}</h3>
+                                <ul className="bulleted">
+                                  <li>{t('treatments.emergencyList.severePain')}</li>
+                                  <li>{t('treatments.emergencyList.incontinence')}</li>
+                                  <li>{t('treatments.emergencyList.trauma')}</li>
+                                </ul>
+                              </div>
+                              <div>
+                                <h3 id="toc_6_H3">{t('treatments.methods')}</h3>
+                                <ul className="bulleted">
+                                  {treatment.procedures.map((p, i) => (<li key={i}>{p}</li>))}
+                                </ul>
+                              </div>
+                            </div>
+                          </section>
                         </div>
                       </div>
                     </div>
