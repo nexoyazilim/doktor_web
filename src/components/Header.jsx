@@ -10,6 +10,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isHeaderVisible, setIsHeaderVisible] = useState(true)
   const [isGalleryOpen, setIsGalleryOpen] = useState(false)
+  const [isTreatmentsOpen, setIsTreatmentsOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 992 : false)
   
   useEffect(() => {
@@ -142,7 +143,21 @@ export default function Header() {
               <nav className={"main-menu nav" + (isMenuOpen ? " open" : "")} id="menu">
                 <ul className="menu">
                   <li className="mega-menu-item "><Link to={getLocalizedUrl('about', i18n.language)}>{t('nav.about')}</Link></li>
-                  <li className="mega-menu-item  "><Link to={getLocalizedUrl('treatments', i18n.language)} className="mega-menu-link">{t('nav.specialties')}</Link>
+                  <li className={"mega-menu-item" + (isTreatmentsOpen ? " open" : " ")}>
+                    <a href="#" className="mega-menu-link" aria-expanded={isTreatmentsOpen}
+                      onClick={(e) => {
+                        if (window.innerWidth < 992) {
+                          e.preventDefault()
+                          setIsTreatmentsOpen(v => !v)
+                        }
+                      }}
+                    >
+                      {t('nav.specialties')}
+                      <span className={"menu-arrow" + (isTreatmentsOpen ? " rotate" : "")}></span>
+                      {isTreatmentsOpen && typeof window !== 'undefined' && window.innerWidth < 992 ? (
+                        <span className="menu-subtitle">{t('nav.specialtiesSubtitle') || (i18n.language === 'tr' ? 'Tedavi kategorileri' : 'Treatment categories')}</span>
+                      ) : null}
+                    </a>
                     <ul className="mega-submenu">
                       <li><Link to={getTreatmentUrl('burun-estetigi-rinoplasti', i18n.language)}>{t('nav.treatments.rhinoplasty')}</Link></li>
                       <li><Link to={getTreatmentUrl('meme-buyutme', i18n.language)}>{t('nav.treatments.breastAugmentation')}</Link></li>

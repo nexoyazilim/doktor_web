@@ -2459,3 +2459,13 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--p
 .photo-gallery-section {
   padding: 50px 0 !important;
 }
+
+@media (max-width: 991px) {
+  .main-menu .mega-menu-link .menu-subtitle {
+    display: block;
+    font-size: 12px;
+    line-height: 1.2;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+}
