@@ -1,6 +1,7 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import HttpBackend from 'i18next-http-backend'
+import { getAssetPath } from './utils/assetHelper'
 
 i18n
   .use(HttpBackend)
@@ -9,7 +10,7 @@ i18n
     lng: localStorage.getItem('lang') || 'tr',
     fallbackLng: 'tr',
     backend: {
-      loadPath: '/doktor_web/assets/i18n/{{lng}}.json',
+      loadPath: getAssetPath('assets/i18n/{{lng}}.json'),
     },
     interpolation: { escapeValue: false },
   })

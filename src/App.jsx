@@ -20,7 +20,7 @@ export default function App({ routes }) {
   const basename = process.env.NODE_ENV === 'production' ? '/doktor_web' : ''
 
   return (
-    <BrowserRouter basename={basename}>
+    <BrowserRouter basename={import.meta.env.PROD ? '/doktor_web' : '/'}>
       <div className="site-shell">
         {isLoading && <Loading />}
         <Header />
