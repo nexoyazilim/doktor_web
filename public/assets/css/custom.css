@@ -836,6 +836,12 @@ h3 { font-weight: 700; text-align: center; font-size: 20px; }
   .nav ul { flex-wrap: nowrap; }
 }
 
+/* Remove right-side caret arrows injected via :after on menu links */
+#masthead nav.main-menu ul.menu > li > a:after,
+#masthead nav.main-menu li.mega-menu-item > a.mega-menu-link:after {
+  content: none !important;
+}
+
 /* Prevent background bounce/scroll when nav is scrollable on mobile */
 @media (max-width: 899px) {
   /* Mobil menü paneli kendi içinde kayabilsin, sayfa kaymasın */

@@ -9,6 +9,13 @@ export default function Tedaviler() {
   const [selectedTreatment, setSelectedTreatment] = useState(null)
   const location = useLocation()
   const titleToSlug = useRef({})
+  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 900 : false)
+
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth < 900)
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
 
   // Tedavi kategorilerini çeviri anahtarlarıyla eşleştir
   const treatmentKeys = {
@@ -175,29 +182,34 @@ export default function Tedaviler() {
 
   if (selectedTreatment) {
     const treatment = treatments[selectedTreatment]
+    const NavWidget = (
+      <aside className="widget widget-nav-menu with-title">
+        <h3 className="widget-title">{t('treatments.subtitle')}</h3>
+        <ul>
+          {Object.keys(treatments).map((title) => {
+            const slug = titleToSlug.current[title] || encodeURIComponent(title.toLowerCase().replace(/\s+/g, '-'))
+            const isActive = title === selectedTreatment
+            const treatmentKey = treatments[title].key
+            return (
+              <li key={title} className={isActive ? 'active' : undefined}>
+                <Link to={`/tedaviler?sec=${slug}`}>{t(`treatments.categories.${treatmentKey}.title`)}</Link>
+              </li>
+            )
+          })}
+        </ul>
+      </aside>
+    )
     return (
       <div className="site-main">
         <main id="main">
           <section className="section section-alt">
             <div className="container">
               <div className="treatment-layout">
-                <aside className="widget-area sidebar-left">
-                  <aside className="widget widget-nav-menu with-title">
-                    <h3 className="widget-title">{t('treatments.subtitle')}</h3>
-                    <ul>
-                      {Object.keys(treatments).map((title) => {
-                        const slug = titleToSlug.current[title] || encodeURIComponent(title.toLowerCase().replace(/\s+/g, '-'))
-                        const isActive = title === selectedTreatment
-                        const treatmentKey = treatments[title].key
-                        return (
-                          <li key={title} className={isActive ? 'active' : undefined}>
-                            <Link to={`/tedaviler?sec=${slug}`}>{t(`treatments.categories.${treatmentKey}.title`)}</Link>
-                          </li>
-                        )
-                      })}
-                    </ul>
+                {!isMobile && (
+                  <aside className="widget-area sidebar-left">
+                    {NavWidget}
                   </aside>
-                </aside>
+                )}
 
                 <div className="treatment-detail">
                   <div className="content-area">
@@ -260,6 +272,11 @@ export default function Tedaviler() {
                     </div>
                   </div>
                 </div>
+                {isMobile && (
+                  <aside className="widget-area sidebar-left" style={{ marginTop: 16 }}>
+                    {NavWidget}
+                  </aside>
+                )}
               </div>
             </div>
           </section>
