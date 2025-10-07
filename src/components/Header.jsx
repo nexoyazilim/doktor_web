@@ -181,7 +181,6 @@ export default function Header() {
                       }}
                     >
                       {t('nav.specialties')}
-                      <span className={"menu-arrow" + (isTreatmentsOpen ? " rotate" : "")}></span>
                     </a>
                     <ul className="mega-submenu">
                       <li><Link to={getTreatmentUrl('burun-estetigi-rinoplasti', i18n.language)}>{t('nav.treatments.rhinoplasty')}</Link></li>
@@ -212,8 +211,7 @@ export default function Header() {
                         e.preventDefault()
                         setIsGalleryOpen(v => !v)
                       }}>
-                        {t('nav.gallery')}
-                        <span className={"menu-arrow" + (isGalleryOpen ? " rotate" : "")}></span>
+                      {t('nav.gallery')}
                       </a>
                       <ul className={"mega-submenu" + (isGalleryOpen ? " open" : "") } aria-hidden={!isGalleryOpen}>
                         <li><Link to={getLocalizedUrl('photoGallery', i18n.language)} className="submenu-link">{t('gallery.photo.title')}</Link></li>

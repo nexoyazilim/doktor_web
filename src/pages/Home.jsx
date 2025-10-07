@@ -8,6 +8,41 @@ import { getLocalizedUrl, getBlogDetailUrl } from '../utils/urlHelper'
 export default function Home() {
   const { t, i18n, ready } = useTranslation()
   const blogRef = useScrollReveal()
+  const [isMobile, setIsMobile] = React.useState(typeof window !== 'undefined' ? window.innerWidth < 900 : false)
+  React.useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth < 900)
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+
+  const BlogSection = (
+    <section id="blog" className="section section-alt reveal" ref={blogRef}>
+      <div className="container">
+        <h2 style={{ textAlign: 'center' }}>{t('blog.title')}</h2>
+        <p className="section-subtitle" style={{ textAlign: 'center' }}>{t('blog.subtitle')}</p>
+        <div className="grid cols-3 cards">
+          <article className="card">
+            <img className="blog-img" src="/doktor_web/assets/images/hizmetlerimiz_image/frksynellazer.jpg" alt="Burun Estetiği" />
+            <h3>{t('blog.posts.rhinoplasty.title')}</h3>
+            <p>{t('blog.posts.rhinoplasty.description')}</p>
+            <Link className="btn btn-outline" to={getBlogDetailUrl('burun-estetigi-dogal-gorunum', i18n.language)}>{t('blog.readMore')}</Link>
+          </article>
+          <article className="card">
+            <img className="blog-img" src="/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="Meme Estetiği" />
+            <h3>{t('blog.posts.breastSurgery.title')}</h3>
+            <p>{t('blog.posts.breastSurgery.description')}</p>
+            <Link className="btn btn-outline" to={getBlogDetailUrl('meme-estetigi-guvenli-yontemler', i18n.language)}>{t('blog.readMore')}</Link>
+          </article>
+          <article className="card">
+            <img className="blog-img" src="/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Yaşlanma Karşıtı Estetik" />
+            <h3>{t('blog.posts.antiAging.title')}</h3>
+            <p>{t('blog.posts.antiAging.description')}</p>
+            <Link className="btn btn-outline" to={getBlogDetailUrl('yaslanma-karsiti-estetik', i18n.language)}>{t('blog.readMore')}</Link>
+          </article>
+        </div>
+      </div>
+    </section>
+  )
   
   // Çeviri dosyaları yüklenene kadar bekle; global Loading mevcut, burada ekstra çıktı verme
   if (!ready) {
@@ -116,34 +151,10 @@ export default function Home() {
 
 
 
-        <section id="blog" className="section section-alt reveal" ref={blogRef}>
-          <div className="container">
-            <h2 style={{ textAlign: 'center' }}>{t('blog.title')}</h2>
-            <p className="section-subtitle" style={{ textAlign: 'center' }}>{t('blog.subtitle')}</p>
-            <div className="grid cols-3 cards">
-              <article className="card">
-                <img className="blog-img" src="/doktor_web/assets/images/hizmetlerimiz_image/frksynellazer.jpg" alt="Burun Estetiği" />
-                <h3>{t('blog.posts.rhinoplasty.title')}</h3>
-                <p>{t('blog.posts.rhinoplasty.description')}</p>
-                <Link className="btn btn-outline" to={getBlogDetailUrl('burun-estetigi-dogal-gorunum', i18n.language)}>{t('blog.readMore')}</Link>
-              </article>
-              <article className="card">
-                <img className="blog-img" src="/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="Meme Estetiği" />
-                <h3>{t('blog.posts.breastSurgery.title')}</h3>
-                <p>{t('blog.posts.breastSurgery.description')}</p>
-                <Link className="btn btn-outline" to={getBlogDetailUrl('meme-estetigi-guvenli-yontemler', i18n.language)}>{t('blog.readMore')}</Link>
-              </article>
-              <article className="card">
-                <img className="blog-img" src="/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Yaşlanma Karşıtı Estetik" />
-                <h3>{t('blog.posts.antiAging.title')}</h3>
-                <p>{t('blog.posts.antiAging.description')}</p>
-                <Link className="btn btn-outline" to={getBlogDetailUrl('yaslanma-karsiti-estetik', i18n.language)}>{t('blog.readMore')}</Link>
-              </article>
-            </div>
-          </div>
-        </section>
+        {!isMobile && BlogSection}
         <WhatsAppButton />
         <LanguageSwitcher />
+        {isMobile && BlogSection}
       </main>
     </div>
   )
