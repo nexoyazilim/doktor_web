@@ -84,7 +84,7 @@ export default function Header() {
       <div id="site-header-menu" className="site-header-menu cmt-bgcolor-white">
         <div className={`site-header-menu-inner ${!isHeaderVisible ? 'header-hidden' : ''}`} style={{
           height: !isHeaderVisible ? '0' : 'auto',
-          overflow: 'hidden',
+          overflow: !isHeaderVisible ? 'hidden' : 'visible',
           transition: 'height 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.2s ease-out',
           opacity: !isHeaderVisible ? 0 : 1,
           pointerEvents: !isHeaderVisible ? 'none' : 'auto'
