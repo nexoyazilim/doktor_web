@@ -88,7 +88,7 @@ export default function Header() {
                 <div className="site-navigation d-flex flex-row align-items-center justify-content-between" style={{ flexWrap: 'nowrap' }}>
                   <div className="site-branding" style={{ flexShrink: 0, maxWidth: '60%' }}>
                     <Link className="home-link" to={getLocalizedUrl('home', i18n.language)} title={t('site.brand')} rel="home" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                      <img src="/doktor_web/assets/images/doktor_logo.png" alt={t('site.brand')} className="logo-img" style={{ height: '100px', width: 'auto', maxHeight: 'none', display: 'inline-block' }} />
+                      <img src={`${import.meta.env.BASE_URL}assets/images/doktor_logo.png`} alt={t('site.brand')} className="logo-img" style={{ height: '100px', width: 'auto', maxHeight: 'none', display: 'inline-block' }} />
                       <span className="brand-name" style={{fontSize: '20px', fontWeight: '600'}}>{t('site.brand')}</span>
                     </Link>
                   </div>

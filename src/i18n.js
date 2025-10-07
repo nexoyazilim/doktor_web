@@ -9,7 +9,7 @@ i18n
     lng: localStorage.getItem('lang') || 'tr',
     fallbackLng: 'tr',
     backend: {
-      loadPath: '/doktor_web/assets/i18n/{{lng}}.json',
+      loadPath: `${import.meta.env.BASE_URL}assets/i18n/{{lng}}.json`,
     },
     interpolation: { escapeValue: false },
   })
