@@ -4,6 +4,33 @@ body {
   font-family: inherit;
 }
 
+/* Mobile: reduce page section title size */
+@media (max-width: 899px) {
+  .title-header h2 {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+}
+
+/* Mobile: ensure gallery submenu links are visible */
+@media (max-width: 991px) {
+  .main-menu.nav.open .menu > li.open > .mega-submenu {
+    position: static;
+    box-shadow: none;
+    border: 0;
+    padding: 6px 0;
+    display: block;
+  }
+  .main-menu.nav.open .menu > li.open > .mega-submenu li a {
+    display: block !important;
+    color: var(--fg, #111) !important;
+    font-size: 16px;
+    line-height: 1.35;
+    padding: 12px 20px;
+    text-align: center;
+  }
+}
+
 * {
   box-sizing: border-box;
 }

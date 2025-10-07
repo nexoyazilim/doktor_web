@@ -6,14 +6,21 @@ import { getLocalizedUrl, getTreatmentUrl } from '../utils/urlHelper'
 export default function Header() {
   const { t, i18n } = useTranslation()
   const location = useLocation()
-  function changeLang(e) { const lng = e.target.value; i18n.changeLanguage(lng); localStorage.setItem('lang', lng); }
+  function changeLang(e) { const lng = e.target.value; i18n.changeLanguage(lng); localStorage.setItem('lang', lng); document.documentElement.setAttribute('lang', lng) }
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isHeaderVisible, setIsHeaderVisible] = useState(true)
   const [isGalleryOpen, setIsGalleryOpen] = useState(false)
   
   useEffect(() => {
     document.documentElement.classList.toggle('dark', localStorage.getItem('theme') === 'dark')
+    // Başlangıçta html lang özniteliğini aktif dile ayarla
+    document.documentElement.setAttribute('lang', i18n.language)
   }, [])
+
+  // Dil değiştiğinde html lang özniteliğini güncelle
+  useEffect(() => {
+    document.documentElement.setAttribute('lang', i18n.language)
+  }, [i18n.language])
 
   // Sayfa değiştiğinde scroll pozisyonunu sıfırla ve menüyü kapat
   useEffect(() => {

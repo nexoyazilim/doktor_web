@@ -46,7 +46,7 @@ export default function VideoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <div className="video-container">
-                    <iframe loading="lazy" src="https://www.youtube.com/embed/oHg5SJYRHA0" title={t('gallery.video.items.liposuction')} allowFullScreen></iframe>
+                    <iframe loading="lazy" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title={t('gallery.video.items.liposuction')} allowFullScreen></iframe>
                   </div>
                   <figcaption className="gallery-caption">{t('gallery.video.items.liposuction')}</figcaption>
                 </figure>
