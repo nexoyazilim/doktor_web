@@ -1196,6 +1196,15 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--p
 /* Specific tweak for toc_3_H3 */
 #toc_3_H3 { font-size: 30px; font-weight: 300; }
 
+/* Mobile: smaller TOC section headings */
+@media (max-width: 899px) {
+  #toc_5_H3,
+  #toc_6_H3 {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+  }
+}
+
 /* Specialty pills */
 .specialties { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
 .specialties li { padding: 10px 12px; border: 1px solid #e2e8f0; background: #fff; border-radius: 999px; display: inline-block; box-shadow: var(--shadow); }

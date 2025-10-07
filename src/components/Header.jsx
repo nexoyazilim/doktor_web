@@ -10,11 +10,15 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isHeaderVisible, setIsHeaderVisible] = useState(true)
   const [isGalleryOpen, setIsGalleryOpen] = useState(false)
+  const [isMobile, setIsMobile] = useState(typeof window !== 'undefined' ? window.innerWidth < 992 : false)
   
   useEffect(() => {
     document.documentElement.classList.toggle('dark', localStorage.getItem('theme') === 'dark')
     // Başlangıçta html lang özniteliğini aktif dile ayarla
     document.documentElement.setAttribute('lang', i18n.language)
+    const onResize = () => setIsMobile(window.innerWidth < 992)
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
   }, [])
 
   // Dil değiştiğinde html lang özniteliğini güncelle
@@ -154,26 +158,29 @@ export default function Header() {
                       <li><Link to={getTreatmentUrl('vucut-konturu', i18n.language)}>{t('nav.treatments.bodyContouring')}</Link></li>
                     </ul>
                   </li>
-                  <li className="mega-menu-item desktop-only"><Link to={getLocalizedUrl('academic', i18n.language)}>{t('nav.academic')}</Link></li>
-                  <li className="mega-menu-item desktop-only"><Link to={getLocalizedUrl('blog', i18n.language)}>{t('nav.blog')}</Link></li>
-                  <li className={"mega-menu-item gallery-menu" + (isGalleryOpen ? " open" : " ")}>
-                    <a href="#" className="mega-menu-link" aria-expanded={isGalleryOpen}
-                      onClick={(e) => {
-                      // Mobilde alt menüyü aç/kapa
-                      if (window.innerWidth < 992) {
+                  <li className="mega-menu-item"><Link to={getLocalizedUrl('academic', i18n.language)}>{t('nav.academic')}</Link></li>
+                  <li className="mega-menu-item"><Link to={getLocalizedUrl('blog', i18n.language)}>{t('nav.blog')}</Link></li>
+                  {isMobile ? (
+                    <>
+                      <li className="mega-menu-item"><Link to={getLocalizedUrl('photoGallery', i18n.language)}>{t('gallery.photo.title')}</Link></li>
+                      <li className="mega-menu-item"><Link to={getLocalizedUrl('videoGallery', i18n.language)}>{t('gallery.video.title')}</Link></li>
+                    </>
+                  ) : (
+                    <li className={"mega-menu-item" + (isGalleryOpen ? " open" : " ")}>
+                      <a href="#" className="mega-menu-link" aria-expanded={isGalleryOpen}
+                        onClick={(e) => {
                         e.preventDefault()
                         setIsGalleryOpen(v => !v)
-                      }
-                    }}>
-                      {t('nav.gallery')}
-                      <span className={"menu-arrow" + (isGalleryOpen ? " rotate" : "")}></span>
-                    </a>
-                    <ul className={"mega-submenu" + (isGalleryOpen ? " open" : "") } aria-hidden={!isGalleryOpen}
-                    >
-                      <li><Link to={getLocalizedUrl('photoGallery', i18n.language)} className="submenu-link">{t('gallery.photo.title')}</Link></li>
-                      <li><Link to={getLocalizedUrl('videoGallery', i18n.language)} className="submenu-link">{t('gallery.video.title')}</Link></li>
-                    </ul>
-                  </li>
+                      }}>
+                        {t('nav.gallery')}
+                        <span className={"menu-arrow" + (isGalleryOpen ? " rotate" : "")}></span>
+                      </a>
+                      <ul className={"mega-submenu" + (isGalleryOpen ? " open" : "") } aria-hidden={!isGalleryOpen}>
+                        <li><Link to={getLocalizedUrl('photoGallery', i18n.language)} className="submenu-link">{t('gallery.photo.title')}</Link></li>
+                        <li><Link to={getLocalizedUrl('videoGallery', i18n.language)} className="submenu-link">{t('gallery.video.title')}</Link></li>
+                      </ul>
+                    </li>
+                  )}
                   <li className="mega-menu-item "><Link to={getLocalizedUrl('contact', i18n.language)}>{t('nav.contact')}</Link></li>
                 </ul>
               </nav>
