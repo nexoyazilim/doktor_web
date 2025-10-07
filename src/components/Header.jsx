@@ -78,6 +78,34 @@ export default function Header() {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [isHeaderVisible])
+
+  // Mobil menü açıkken arka plan kaymasını kilitle
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const body = document.body
+    if (isMenuOpen && window.innerWidth < 900) {
+      const scrollY = window.scrollY
+      body.style.position = 'fixed'
+      body.style.top = `-${scrollY}px`
+      body.style.left = '0'
+      body.style.right = '0'
+      body.style.width = '100%'
+      body.style.overflow = 'hidden'
+    } else {
+      // eski konuma dön
+      const top = body.style.top
+      body.style.position = ''
+      body.style.top = ''
+      body.style.left = ''
+      body.style.right = ''
+      body.style.width = ''
+      body.style.overflow = ''
+      if (top) {
+        const y = parseInt(top || '0', 10) * -1
+        window.scrollTo(0, y)
+      }
+    }
+  }, [isMenuOpen])
   
   function toggleTheme() {
     const root = document.documentElement
