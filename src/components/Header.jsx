@@ -174,8 +174,8 @@ export default function Header() {
                   <li className={"mega-menu-item specialties-menu" + (isTreatmentsOpen ? " open" : " ")}>
                     <a href="#" className="mega-menu-link" aria-expanded={isTreatmentsOpen}
                       onClick={(e) => {
+                        e.preventDefault()
                         if (window.innerWidth < 992) {
-                          e.preventDefault()
                           setIsTreatmentsOpen(v => !v)
                         }
                       }}

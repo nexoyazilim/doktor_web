@@ -41,9 +41,9 @@
       (function() {
         try {
           var redirect = sessionStorage.redirect;
-          if (redirect && redirect !== location.href) {
+          if (redirect && redirect !== location.pathname + location.search + location.hash) {
             delete sessionStorage.redirect;
-            history.replaceState(null, null, redirect);
+            // Don't use history.replaceState here, let React Router handle it
           }
         } catch (e) { /* no-op */ }
       })();

@@ -3,6 +3,23 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './i18n'
 
+// CSS imports
+import '../public/assets/css/vendor/framework.css'
+import '../public/assets/css/vendor/layout.css'
+import '../public/assets/css/vendor/components.css'
+import '../public/assets/css/vendor/navigation.css'
+import '../public/assets/css/vendor/icons.css'
+import '../public/assets/css/vendor/animations.css'
+import '../public/assets/css/vendor/slider.css'
+import '../public/assets/css/vendor/gallery.css'
+import '../public/assets/css/vendor/lightbox.css'
+import '../public/assets/css/vendor/mobile.css'
+import '../public/assets/css/vendor/chat.css'
+import '../public/assets/css/vendor/comparison.css'
+import '../public/assets/css/vendor/custom-icons.css'
+import '../public/assets/css/vendor/themify.css'
+import '../public/assets/css/custom.css'
+
 
 // Rota tanımları
 const routes = [
