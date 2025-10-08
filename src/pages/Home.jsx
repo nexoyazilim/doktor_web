@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useScrollReveal } from '../hooks/useScrollReveal'
@@ -69,9 +70,37 @@ export default function Home() {
     </section>
   )
   
-  // Çeviri dosyaları yüklenene kadar bekle; global Loading mevcut, burada ekstra çıktı verme
+  // Çeviri hazır değilken iskelet içerik göster (Lighthouse Speed Index için)
   if (!ready) {
-    return null
+    return (
+      <div className="site-main">
+        <main id="main">
+          <section className="cmt-row about-section-2 clearfix">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-6">
+                  <div className="section-title">
+                    <div className="title-header">
+                      <div style={{height: 28, width: '70%', background: '#eee', borderRadius: 6, marginBottom: 8}}></div>
+                      <div style={{height: 22, width: '55%', background: '#f1f1f1', borderRadius: 6}}></div>
+                    </div>
+                    <div className="title-desc">
+                      <div style={{height: 12, width: '100%', background: '#f5f5f5', borderRadius: 6, margin: '12px 0'}}></div>
+                      <div style={{height: 12, width: '85%', background: '#f5f5f5', borderRadius: 6}}></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-6 res-991-pt-30">
+                  <div className="cmt_single_image-wrapper">
+                    <div style={{height: 240, width: '100%', background: '#eaeaea', borderRadius: 8}}></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    )
   }
   return (
     <div className="site-main">
