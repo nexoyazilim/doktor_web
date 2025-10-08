@@ -1522,7 +1522,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--p
 
 /* Page Title Styles */
 .cmt-page-title-row-inner {
-  background-image: url('../images/alt_resim.png');
+ /* background-image: url('../images/alt_resim.png'); */
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
