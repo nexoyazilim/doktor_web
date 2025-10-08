@@ -1,9 +1,25 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
 import { Suspense, useState, useEffect } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Loading from './components/Loading'
 import useJSONLD from './hooks/useJSONLD'
+
+// GitHub Pages SPA redirect handler component
+function RedirectHandler() {
+  const navigate = useNavigate()
+  
+  useEffect(() => {
+    // Check if we have a stored redirect from 404.html
+    const redirect = sessionStorage.redirect
+    if (redirect) {
+      sessionStorage.removeItem('redirect')
+      navigate(redirect, { replace: true })
+    }
+  }, [navigate])
+  
+  return null
+}
 
 export default function App({ routes }) {
   const [isLoading, setIsLoading] = useState(true)
@@ -46,6 +62,7 @@ export default function App({ routes }) {
     <BrowserRouter basename={basename}>
       <div className="site-shell">
         {isLoading && <Loading />}
+        <RedirectHandler />
         <Header />
         <main className="site-content">
           <Suspense fallback={<div className="page-fallback" aria-hidden="true" /> }>
