@@ -4,6 +4,8 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 import WhatsAppButton from '../components/WhatsAppButton'
 import LanguageSwitcher from '../components/LanguageSwitcher'
 import { getLocalizedUrl, getBlogDetailUrl } from '../utils/urlHelper'
+import useSEO from '../hooks/useSEO'
+import useJSONLD from '../hooks/useJSONLD'
 
 export default function Home() {
   const { t, i18n, ready } = useTranslation()
@@ -15,6 +17,29 @@ export default function Home() {
     return () => window.removeEventListener('resize', onResize)
   }, [])
 
+  useSEO({
+    title: 'Dr. Elif YAMAN | Estetik ve Plastik Cerrahi Uzmanı',
+    description: 'Burun estetiği, meme estetiği, liposuction, botoks ve dolgu uygulamaları. İstanbul Ataşehir’de uzman hekim ile kişiye özel çözümler.',
+    og: {
+      type: 'website',
+      image: `${typeof window !== 'undefined' ? window.location.origin : ''}${import.meta.env.BASE_URL}assets/images/doktor_1.png`,
+      siteName: 'Dr. Elif YAMAN',
+      locale: 'tr_TR'
+    },
+    twitter: {
+      card: 'summary_large_image'
+    }
+  })
+
+  // Ana sayfa BreadcrumbList JSON-LD
+  useJSONLD('breadcrumb-home', {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": typeof window !== 'undefined' ? `${window.location.origin}${import.meta.env.BASE_URL}` : undefined }
+    ]
+  })
+
   const BlogSection = (
     <section id="blog" className="section section-alt reveal" ref={blogRef}>
       <div className="container">
@@ -22,19 +47,19 @@ export default function Home() {
         <p className="section-subtitle" style={{ textAlign: 'center' }}>{t('blog.subtitle')}</p>
         <div className="grid cols-3 cards">
           <article className="card">
-            <img className="blog-img" src="/doktor_web/assets/images/hizmetlerimiz_image/frksynellazer.jpg" alt="Burun Estetiği" />
+            <img className="blog-img" src="/doktor_web/assets/images/hizmetlerimiz_image/frksynellazer.jpg" alt="Burun Estetiği" loading="lazy" decoding="async" />
             <h3>{t('blog.posts.rhinoplasty.title')}</h3>
             <p>{t('blog.posts.rhinoplasty.description')}</p>
             <Link className="btn btn-outline" to={getBlogDetailUrl('burun-estetigi-dogal-gorunum', i18n.language)}>{t('blog.readMore')}</Link>
           </article>
           <article className="card">
-            <img className="blog-img" src="/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="Meme Estetiği" />
+            <img className="blog-img" src="/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="Meme Estetiği" loading="lazy" decoding="async" />
             <h3>{t('blog.posts.breastSurgery.title')}</h3>
             <p>{t('blog.posts.breastSurgery.description')}</p>
             <Link className="btn btn-outline" to={getBlogDetailUrl('meme-estetigi-guvenli-yontemler', i18n.language)}>{t('blog.readMore')}</Link>
           </article>
           <article className="card">
-            <img className="blog-img" src="/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Yaşlanma Karşıtı Estetik" />
+            <img className="blog-img" src="/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Yaşlanma Karşıtı Estetik" loading="lazy" decoding="async" />
             <h3>{t('blog.posts.antiAging.title')}</h3>
             <p>{t('blog.posts.antiAging.description')}</p>
             <Link className="btn btn-outline" to={getBlogDetailUrl('yaslanma-karsiti-estetik', i18n.language)}>{t('blog.readMore')}</Link>
@@ -59,8 +84,8 @@ export default function Home() {
                   <div className="col-lg-12">
                     <div className="section-title">
                       <div className="title-header">
-                        <h3>{t('hero.title')}</h3>
-                        <h2 className="title">{t('hero.subtitle')}</h2>
+                        <h1 className="title">{t('hero.title')}</h1>
+                        <h2>{t('hero.subtitle')}</h2>
                       </div>
                       <div className="title-desc">
                         <p className="text-justify">{t('hero.description')}</p>
@@ -73,7 +98,7 @@ export default function Home() {
               </div>
               <div className="col-lg-6 res-991-pt-30">
                 <div className="cmt_single_image-wrapper">
-                  <img className="profile-img" src="/doktor_web/assets/images/doktor_1.png" alt="Dr. Elif YAMAN" />
+                  <img className="profile-img" src="/doktor_web/assets/images/doktor_1.png" alt="Dr. Elif YAMAN" fetchpriority="high" decoding="async" />
                 </div>
               </div>
             </div>
@@ -98,7 +123,7 @@ export default function Home() {
                 <div className="featured-imagebox featured-imagebox-portfolio style1">
                   <div className="featured-thumbnail">
                     <div className="featured-thumbnail-inner">
-                      <img className="portfolio-img" src="/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="Yüz Estetiği" />
+                      <img className="portfolio-img" src="/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="Yüz Estetiği" loading="lazy" decoding="async" />
                     </div>
                   </div>
                   <div className="featured-content">
@@ -115,7 +140,7 @@ export default function Home() {
                 <div className="featured-imagebox featured-imagebox-portfolio style1">
                   <div className="featured-thumbnail">
                     <div className="featured-thumbnail-inner">
-                      <img className="portfolio-img" src="/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Meme Estetiği" />
+                      <img className="portfolio-img" src="/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Meme Estetiği" loading="lazy" decoding="async" />
                     </div>
                   </div>
                   <div className="featured-content">
@@ -132,7 +157,7 @@ export default function Home() {
                 <div className="featured-imagebox featured-imagebox-portfolio style1">
                   <div className="featured-thumbnail">
                     <div className="featured-thumbnail-inner">
-                      <img className="portfolio-img" src="/doktor_web/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="Vücut Kontürü" />
+                      <img className="portfolio-img" src="/doktor_web/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="Vücut Kontürü" loading="lazy" decoding="async" />
                     </div>
                   </div>
                   <div className="featured-content">

@@ -27,7 +27,7 @@ export default function Hakkimda() {
               </div>
               <div className="col-lg-6 col-md-12 mb-4 order-lg-2 order-1">
                 <div className="info-image" style={{ display: 'flex', justifyContent: 'center' }}>
-                <img alt="Estetik Cerrahi Yaklaşımı" className="img-fluid rounded" src={`${import.meta.env.BASE_URL}assets/images/doktor_resim_2.png`} style={{ maxWidth: '75%', height: 'auto', paddingTop: '20px' }}/>
+                <img alt="Estetik Cerrahi Yaklaşımı" className="img-fluid rounded" src={`${import.meta.env.BASE_URL}assets/images/doktor_resim_2.png`} style={{ maxWidth: '75%', height: 'auto', paddingTop: '20px' }} loading="lazy" decoding="async"/>
                 </div>
               </div>
             </div>
@@ -43,6 +43,8 @@ export default function Hakkimda() {
                     src={`${import.meta.env.BASE_URL}assets/images/doktor_1.png`} 
                     alt="Hasta Odaklı Yaklaşım" 
                     className="img-fluid rounded"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>

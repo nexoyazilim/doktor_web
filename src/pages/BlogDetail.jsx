@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next'
 import WhatsAppButton from '../components/WhatsAppButton'
 import LanguageSwitcher from '../components/LanguageSwitcher'
 import { getLocalizedUrl } from '../utils/urlHelper'
+import useSEO from '../hooks/useSEO'
+import useJSONLD from '../hooks/useJSONLD'
 
 export default function BlogDetail() {
   const { t, i18n } = useTranslation()
@@ -67,6 +69,30 @@ export default function BlogDetail() {
 
   const post = posts[slug] || posts['burun-estetigi-dogal-gorunum']
 
+  useSEO({
+    title: `${post.title} | Blog | Dr. Elif YAMAN`,
+    description: post.subtitle,
+    og: {
+      type: 'article',
+      image: `${typeof window !== 'undefined' ? window.location.origin : ''}${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/${post.imageSeed}.jpg`,
+      siteName: 'Dr. Elif YAMAN',
+      locale: 'tr_TR'
+    },
+    twitter: { card: 'summary_large_image' }
+  })
+
+  // BlogPosting JSON-LD
+  useJSONLD(`blog-${slug}`, {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.subtitle,
+    "image": `${typeof window !== 'undefined' ? window.location.origin : ''}${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/${post.imageSeed}.jpg`,
+    "author": { "@type": "Person", "name": "Dr. Elif YAMAN" },
+    "inLanguage": "tr-TR",
+    "mainEntityOfPage": typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}` : undefined
+  })
+
   return (
     <div className="site-main">
           {/* Hero Section */}
@@ -105,7 +131,7 @@ export default function BlogDetail() {
                 <div className="article-content">
                   {/* Featured Image */}
                   <div className="featured-image">
-                    <img src={`/doktor_web/assets/images/hizmetlerimiz_image/${post.imageSeed}.jpg`} alt={post.imageAlt} />
+                    <img src={`/doktor_web/assets/images/hizmetlerimiz_image/${post.imageSeed}.jpg`} alt={post.imageAlt} loading="lazy" decoding="async" />
                     <div className="image-caption">
                       {post.subtitle}
                     </div>
@@ -248,7 +274,7 @@ export default function BlogDetail() {
                   <div className="sidebar-widget">
                     <h3>{t('blogDetail.sidebar.aboutAuthor')}</h3>
                     <div className="author-card">
-                      <img src="/doktor_web/assets/images/doktor_1.png" alt="Dr. Elif YAMAN" />
+                      <img src="/doktor_web/assets/images/doktor_1.png" alt="Dr. Elif YAMAN" loading="lazy" decoding="async" />
                       <h4>{t('blogDetail.author.name')}</h4>
                       <p>{t('blogDetail.author.title')}</p>
                       <p>{t('blogDetail.author.description')}</p>
@@ -259,23 +285,23 @@ export default function BlogDetail() {
                     <h3>{t('blogDetail.sidebar.relatedPosts')}</h3>
                     <div className="related-posts">
                       <div className="related-post">
-                        <img src="/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="İlgili makale" />
+                        <img src="/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="İlgili makale" loading="lazy" decoding="async" />
                         <div className="related-content">
-                          <h4><Link to={getLocalizedUrl('blog', i18n.language)}>{t('blogDetail.relatedPosts.rhinoplasty')}</Link></h4>
+                          <h4><Link to={getBlogDetailUrl('burun-estetigi-dogal-gorunum', i18n.language)}>{t('blogDetail.relatedPosts.rhinoplasty')}</Link></h4>
                           <span className="related-date">10 Aralık 2024</span>
                         </div>
                       </div>
                       <div className="related-post">
-                        <img src="/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="İlgili makale" />
+                        <img src="/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="İlgili makale" loading="lazy" decoding="async" />
                         <div className="related-content">
-                          <h4><Link to={getLocalizedUrl('blog', i18n.language)}>{t('blogDetail.relatedPosts.breastSurgery')}</Link></h4>
+                          <h4><Link to={getBlogDetailUrl('meme-estetigi-guvenli-yontemler', i18n.language)}>{t('blogDetail.relatedPosts.breastSurgery')}</Link></h4>
                           <span className="related-date">5 Aralık 2024</span>
                         </div>
                       </div>
                       <div className="related-post">
-                        <img src="/doktor_web/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="İlgili makale" />
+                        <img src="/doktor_web/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="İlgili makale" loading="lazy" decoding="async" />
                         <div className="related-content">
-                          <h4><Link to={getLocalizedUrl('blog', i18n.language)}>{t('blogDetail.relatedPosts.physiotherapy')}</Link></h4>
+                          <h4><Link to={getBlogDetailUrl('liposuction-vucut-sekillendirme', i18n.language)}>{t('blogDetail.relatedPosts.physiotherapy')}</Link></h4>
                           <span className="related-date">1 Aralık 2024</span>
                         </div>
                       </div>
@@ -285,11 +311,11 @@ export default function BlogDetail() {
                   <div className="sidebar-widget">
                     <h3>{t('blogDetail.sidebar.specialties')}</h3>
                     <div className="specialties-list">
-                      <Link to="/tedaviler">{t('treatments.categories.rhinoplasty.title')}</Link>
-                      <Link to="/tedaviler">{t('treatments.categories.breastAugmentation.title')}</Link>
-                      <Link to="/tedaviler">{t('treatments.categories.liposuction.title')}</Link>
-                      <Link to="/tedaviler">{t('treatments.categories.botox.title')}</Link>
-                      <Link to="/tedaviler">{t('treatments.categories.hairTransplant.title')}</Link>
+                      <Link to={getLocalizedUrl('treatments', i18n.language)}>{t('treatments.categories.rhinoplasty.title')}</Link>
+                      <Link to={getLocalizedUrl('treatments', i18n.language)}>{t('treatments.categories.breastAugmentation.title')}</Link>
+                      <Link to={getLocalizedUrl('treatments', i18n.language)}>{t('treatments.categories.liposuction.title')}</Link>
+                      <Link to={getLocalizedUrl('treatments', i18n.language)}>{t('treatments.categories.botox.title')}</Link>
+                      <Link to={getLocalizedUrl('treatments', i18n.language)}>{t('treatments.categories.hairTransplant.title')}</Link>
                     </div>
                   </div>
                 </aside>

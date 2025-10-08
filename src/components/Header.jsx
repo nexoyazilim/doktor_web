@@ -128,12 +128,12 @@ export default function Header() {
                 <div className="site-navigation d-flex flex-row align-items-center justify-content-between" style={{ flexWrap: 'nowrap' }}>
                   <div className="site-branding" style={{ flexShrink: 0, maxWidth: '60%' }}>
                     <Link className="home-link" to={getLocalizedUrl('home', i18n.language)} title={t('site.brand')} rel="home" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-                      <img src={`${import.meta.env.BASE_URL}assets/images/doktor_logo.png`} alt={t('site.brand')} className="logo-img" style={{ height: '100px', width: 'auto', maxHeight: 'none', display: 'inline-block' }} />
+                      <img src={`${import.meta.env.BASE_URL}assets/images/doktor_logo.png`} alt={t('site.brand')} className="logo-img" style={{ height: '100px', width: 'auto', maxHeight: 'none', display: 'inline-block' }} fetchpriority="high" decoding="async" />
                       <span className="brand-name" style={{fontSize: '20px', fontWeight: '600'}}>{t('site.brand')}</span>
                     </Link>
                   </div>
                   <div className="site-menubar" style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>
-                    <Link className="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-btn-color-dark d-block d-sm-none" style={{marginRight: '40px'}} to={`${getLocalizedUrl('contact', i18n.language)}#appointment`} rel="noopener" aria-label="icon">{t('nav.appointment')}</Link>
+                    <Link className="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-btn-color-dark d-block d-sm-none" style={{marginRight: '40px'}} to={`${getLocalizedUrl('contact', i18n.language)}#appointment`} rel="noopener" aria-label="Randevu Al">{t('nav.appointment')}</Link>
                     <div className={"btn-show-menu-mobile menubar menubar--squeeze" + (isMenuOpen ? " is-active" : "")} onClick={() => setIsMenuOpen(v => !v)}>
                       <span className="menubar-box">
                         <span className="menubar-inner"></span>
@@ -142,18 +142,18 @@ export default function Header() {
                     <div className="header_extra d-flex flex-row align-items-center justify-content-end">
                       <div className="widget_info">
                         <div className="widget_content">
-                          <a href="tel:+90535 308 44 66">0535 308 44 66</a>
+                          <a href="tel:+905353084466" aria-label="Telefon ara: 0535 308 44 66" onClick={() => window.gtag && window.gtag('event', 'click', { event_category: 'contact', event_label: 'phone' })}>0535 308 44 66</a>
                           <p className="widget_desc">{t('contact.phone')}</p>
                         </div>
                       </div>
                       <div className="widget_info">
                         <div className="widget_content">
-                          <a href="mailto:info@demo.com">info@demo.com</a>
+                          <a href="mailto:info@demo.com" aria-label="E-posta gönder: info@demo.com" onClick={() => window.gtag && window.gtag('event', 'click', { event_category: 'contact', event_label: 'email' })}>info@demo.com</a>
                           <p className="widget_desc">{t('contact.email')}</p>
                         </div>
                       </div>
                       <div className="header_btn">
-                        <Link className="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-btn-color-dark" to={`${getLocalizedUrl('contact', i18n.language)}#appointment`} rel="noopener" aria-label="icon">{t('nav.appointment')}</Link>
+                        <Link className="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-btn-color-dark" to={`${getLocalizedUrl('contact', i18n.language)}#appointment`} rel="noopener" aria-label="Randevu Al">{t('nav.appointment')}</Link>
                       </div>
                     </div>
                   </div>
@@ -168,7 +168,7 @@ export default function Header() {
         <div className="container"><div className="row"><div className="col">
           <div className="site-navigation d-flex justify-content-between align-items-center">
             <div className="align-self-center">
-              <nav className={"main-menu nav" + (isMenuOpen ? " open" : "")} id="menu">
+              <nav className={"main-menu nav" + (isMenuOpen ? " open" : " ")} id="menu">
                 <ul className="menu">
                   <li className="mega-menu-item "><Link to={getLocalizedUrl('about', i18n.language)}>{t('nav.about')}</Link></li>
                   <li className={"mega-menu-item specialties-menu" + (isTreatmentsOpen ? " open" : " ")}>

@@ -23,6 +23,28 @@ const routes = [
   { path: '/contact', element: lazy(() => import('./pages/Iletisim')) }
 ]
 
+// GA4 + Consent Mode v2
+if (typeof window !== 'undefined') {
+  const gaId = import.meta.env.VITE_GA_ID
+  if (gaId && !window.dataLayer) {
+    window.dataLayer = window.dataLayer || []
+    function gtag(){ window.dataLayer.push(arguments) }
+    window.gtag = gtag
+    gtag('consent', 'default', {
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'ad_storage': 'denied',
+      'analytics_storage': 'granted'
+    })
+    gtag('js', new Date())
+    gtag('config', gaId)
+    const s = document.createElement('script')
+    s.async = true
+    s.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`
+    document.head.appendChild(s)
+  }
+}
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App routes={routes} />

@@ -2,9 +2,32 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import WhatsAppButton from '../components/WhatsAppButton'
 import LanguageSwitcher from '../components/LanguageSwitcher'
+import useSEO from '../hooks/useSEO'
+import useJSONLD from '../hooks/useJSONLD'
 
 export default function Iletisim() {
   const { t } = useTranslation()
+  useSEO({
+    title: 'İletişim ve Randevu | Dr. Elif YAMAN',
+    description: 'Randevu ve iletişim için formu doldurun veya WhatsApp üzerinden yazın. İstanbul Ataşehir.',
+    og: {
+      type: 'website',
+      image: `${typeof window !== 'undefined' ? window.location.origin : ''}${import.meta.env.BASE_URL}assets/images/doktor_1.png`,
+      siteName: 'Dr. Elif YAMAN',
+      locale: 'tr_TR'
+    },
+    twitter: { card: 'summary_large_image' }
+  })
+
+  // İletişim sayfası Breadcrumb
+  useJSONLD('breadcrumb-contact', {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": typeof window !== 'undefined' ? `${window.location.origin}${import.meta.env.BASE_URL}` : undefined },
+      { "@type": "ListItem", "position": 2, "name": "İletişim", "item": typeof window !== 'undefined' ? `${window.location.origin}${import.meta.env.BASE_URL}iletisim` : undefined }
+    ]
+  })
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -42,6 +65,7 @@ export default function Iletisim() {
                   </span>
                   <span>{t('contactPage.title')}</span>
                 </div>
+                <h1 className="page-title" style={{marginTop: '12px'}}>{t('contactPage.title')}</h1>
               </div>
             </div>
           </div>

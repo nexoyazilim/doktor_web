@@ -3,9 +3,40 @@ import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import WhatsAppButton from '../components/WhatsAppButton'
 import LanguageSwitcher from '../components/LanguageSwitcher'
+import useSEO from '../hooks/useSEO'
+import useJSONLD from '../hooks/useJSONLD'
 
 export default function Tedaviler() {
   const { t } = useTranslation()
+  useSEO({
+    title: 'Tedaviler | Dr. Elif YAMAN',
+    description: 'Burun estetiği, meme estetiği, liposuction, botoks ve dolgu dahil tüm estetik tedaviler hakkında bilgiler.',
+    og: {
+      type: 'website',
+      image: `${typeof window !== 'undefined' ? window.location.origin : ''}${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/alnskllndrme.jpg`,
+      siteName: 'Dr. Elif YAMAN',
+      locale: 'tr_TR'
+    },
+    twitter: { card: 'summary_large_image' }
+  })
+
+  // FAQPage JSON-LD (genel SSS örneği)
+  useJSONLD('faq-treatments', {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Burun estetiği sonrası iyileşme ne kadar sürer?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Genellikle 1-2 hafta içinde şişlik azalır, 3-6 ayda sonuç netleşir." }
+      },
+      {
+        "@type": "Question",
+        "name": "Botoksun etkisi ne kadar sürer?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Ortalama 3-6 ay arası kalıcılık beklenir." }
+      }
+    ]
+  })
   const [selectedTreatment, setSelectedTreatment] = useState(null)
   const location = useLocation()
   const titleToSlug = useRef({})
@@ -222,6 +253,8 @@ export default function Tedaviler() {
                                 className="hero-banner" 
                                 src={getTreatmentImage(treatment.key)} 
                                 alt={selectedTreatment} 
+                                fetchpriority="high"
+                                decoding="async"
                               />
                             </div>
                           </div>
@@ -298,7 +331,7 @@ export default function Tedaviler() {
               <div className="col-lg-12">
                 <div className="section-title title-style-center_text">
                   <div className="title-header">
-                    <h2 className="title">{t('treatments.title')}</h2>
+                    <h1 className="title">{t('treatments.title')}</h1>
                   </div>
                   <div className="title-desc">
                     <p>{t('treatments.description')}</p>
@@ -317,6 +350,8 @@ export default function Tedaviler() {
                           className="portfolio-img" 
                           src={getTreatmentImage(treatments[treatment].key)} 
                           alt={treatment} 
+                          loading="lazy"
+                          decoding="async"
                         />
                         <div className="featured-thumbnail-overlay">
                           <div className="featured-thumbnail-overlay-inner">

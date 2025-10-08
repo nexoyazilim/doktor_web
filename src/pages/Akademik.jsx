@@ -2,10 +2,34 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import WhatsAppButton from '../components/WhatsAppButton'
 import LanguageSwitcher from '../components/LanguageSwitcher'
+import useSEO from '../hooks/useSEO'
+import useJSONLD from '../hooks/useJSONLD'
 
 export default function Akademik() {
   const { t } = useTranslation()
   const [activeFilter, setActiveFilter] = useState('all')
+
+  useSEO({
+    title: 'Akademik Yayınlar | Dr. Elif YAMAN',
+    description: 'Estetik ve plastik cerrahi alanında yayınlar, bildiriler ve kitap bölümleri.',
+    og: {
+      type: 'website',
+      image: `${typeof window !== 'undefined' ? window.location.origin : ''}${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/alnskllndrme.jpg`,
+      siteName: 'Dr. Elif YAMAN',
+      locale: 'tr_TR'
+    },
+    twitter: { card: 'summary_large_image' }
+  })
+
+  // Akademik sayfa Breadcrumb
+  useJSONLD('breadcrumb-academic', {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": typeof window !== 'undefined' ? `${window.location.origin}${import.meta.env.BASE_URL}` : undefined },
+      { "@type": "ListItem", "position": 2, "name": "Akademik", "item": typeof window !== 'undefined' ? `${window.location.origin}${import.meta.env.BASE_URL}akademik` : undefined }
+    ]
+  })
 
   const publications = [
     { type: 'makale', key: 'rhinoplasty', title: 'Burun Estetiğinde Doğal Görünüm Teknikleri', journal: 'Plastik ve Rekonstrüktif Cerrahi Dergisi, 2023', link: null, linkText: 'PDF' },
@@ -29,6 +53,7 @@ export default function Akademik() {
                   </span>
                   <span>{t('academic.title')}</span>
                 </div>
+                <h1 className="page-title" style={{marginTop: '12px'}}>{t('academic.title')}</h1>
               </div>
             </div>
           </div>
