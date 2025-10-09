@@ -34,50 +34,7 @@ export default function Header() {
     setIsMenuOpen(false) // Mobil menüyü kapat
   }, [location.pathname])
   
-  useEffect(() => {
-    let lastScrollY = window.scrollY
-    let ticking = false
-    
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const currentScrollY = window.scrollY
-          const scrollDifference = Math.abs(currentScrollY - lastScrollY)
-          
-          // Minimum scroll mesafesi (3px) - daha hassas
-          if (scrollDifference < 3) {
-            ticking = false
-            return
-          }
-          
-          // Scroll yönü ve threshold kontrolü - büyük atlama ile
-          if (currentScrollY > lastScrollY && currentScrollY > 120) {
-            // Aşağıya kaydırma - header'ı gizle
-            if (isHeaderVisible) {
-              console.log('Hiding header')
-              setIsHeaderVisible(false)
-            }
-          } else if (currentScrollY <= 5) {
-            // Sadece sayfanın en üstünde - header'ı göster
-            if (!isHeaderVisible) {
-              console.log('Showing header - at top')
-              setIsHeaderVisible(true)
-            }
-          }
-          
-          lastScrollY = currentScrollY
-          ticking = false
-        })
-        ticking = true
-      }
-    }
-    
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [isHeaderVisible])
+  // Scroll'a bağlı header gizleme devre dışı
 
   // Mobil menü açıkken arka plan kaymasını kilitle
   useEffect(() => {
