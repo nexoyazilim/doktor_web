@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import WhatsAppButton from '../components/WhatsAppButton'
 import LanguageSwitcher from '../components/LanguageSwitcher'
-import { getLocalizedUrl } from '../utils/urlHelper'
+import { getLocalizedUrl, getBlogDetailUrl } from '../utils/urlHelper'
 import useSEO from '../hooks/useSEO'
 import useJSONLD from '../hooks/useJSONLD'
 
