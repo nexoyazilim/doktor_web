@@ -76,7 +76,7 @@ export default function Akademik() {
             <div className="grid cols-3 cards">
               {filteredPublications.map((pub, index) => (
                 <article key={index} className="card" data-type={pub.type}>
-                  <img loading="lazy" src={`/doktor_web/assets/images/hizmetlerimiz_image/${pub.key === 'rhinoplasty' ? 'alnskllndrme' : pub.key === 'breastSurgery' ? 'bntdvsi' : 'cltbkm'}.jpg`} alt="Makale görseli" />
+                  <img loading="lazy" src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/${pub.key === 'rhinoplasty' ? 'alnskllndrme' : pub.key === 'breastSurgery' ? 'bntdvsi' : 'cltbkm'}.jpg`} alt="Makale görseli" />
                   <h3>{t(`academic.publications.items.${pub.key}.title`)}</h3>
                   <p>{t(`academic.publications.items.${pub.key}.journal`)}</p>
                   {pub.link ? (
