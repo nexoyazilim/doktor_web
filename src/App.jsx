@@ -59,7 +59,7 @@ export default function App({ routes }) {
   })
 
   return (
-    <BrowserRouter basename={basename}>
+    <BrowserRouter basename={import.meta.env.PROD ? '/doktor_web' : '/'}>
       <div className="site-shell">
         {isLoading && <Loading />}
         <RedirectHandler />

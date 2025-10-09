@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import WhatsAppButton from '../components/WhatsAppButton'
 import LanguageSwitcher from '../components/LanguageSwitcher'
+import { getImagePath } from '../utils/assetHelper'
 
 export default function FotoGaleri() {
   const { t } = useTranslation()
@@ -8,7 +9,7 @@ export default function FotoGaleri() {
     <div className="site-main">
       <main id="main">
         {/* Page Header - Full Width */}
-        <div className="cmt-page-title-row-inner">
+        <div className="cmt-page-title-row-inner" style={{ paddingTop: '80px' }}>
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
@@ -31,7 +32,7 @@ export default function FotoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <a href="#" aria-label="Galeri 1">
-                    <img loading="lazy" src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/alnskllndrme.jpg`} alt={t('gallery.photo.items.clinic')} />
+                    <img loading="lazy" src={getImagePath('doktor_1.png')} alt={t('gallery.photo.items.clinic')} />
                   </a>
                   <figcaption className="gallery-caption">{t('gallery.photo.items.clinic')}</figcaption>
                 </figure>
@@ -39,7 +40,7 @@ export default function FotoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <a href="#" aria-label="Galeri 2">
-                    <img loading="lazy" src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/bntdvsi.jpg`} alt={t('gallery.photo.items.teamwork')} />
+                    <img loading="lazy" src={getImagePath('doktor_logo.png')} alt={t('gallery.photo.items.teamwork')} />
                   </a>
                   <figcaption className="gallery-caption">{t('gallery.photo.items.teamwork')}</figcaption>
                 </figure>
@@ -47,7 +48,7 @@ export default function FotoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <a href="#" aria-label="Galeri 3">
-                    <img loading="lazy" src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/cltbkm.jpg`} alt={t('gallery.photo.items.event')} />
+                    <img loading="lazy" src={getImagePath('doktor_1.png')} alt={t('gallery.photo.items.event')} />
                   </a>
                   <figcaption className="gallery-caption">{t('gallery.photo.items.event')}</figcaption>
                 </figure>
@@ -55,7 +56,7 @@ export default function FotoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <a href="#" aria-label="Galeri 4">
-                    <img loading="lazy" src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/frksynellazer.jpg`} alt={t('gallery.photo.items.conference')} />
+                    <img loading="lazy" src={getImagePath('hizmetlerimiz_image/alnskllndrme.jpg')} alt={t('gallery.photo.items.conference')} />
                   </a>
                   <figcaption className="gallery-caption">{t('gallery.photo.items.conference')}</figcaption>
                 </figure>
@@ -63,7 +64,7 @@ export default function FotoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <a href="#" aria-label="Galeri 5">
-                    <img loading="lazy" src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/alnskllndrme.jpg`} alt={t('gallery.photo.items.preparation')} />
+                    <img loading="lazy" src={getImagePath('hizmetlerimiz_image/bntdvsi.jpg')} alt={t('gallery.photo.items.preparation')} />
                   </a>
                   <figcaption className="gallery-caption">{t('gallery.photo.items.preparation')}</figcaption>
                 </figure>
@@ -71,7 +72,7 @@ export default function FotoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <a href="#" aria-label="Galeri 6">
-                    <img loading="lazy" src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/bntdvsi.jpg`} alt={t('gallery.photo.items.consultation')} />
+                    <img loading="lazy" src={getImagePath('hizmetlerimiz_image/cltbkm.jpg')} alt={t('gallery.photo.items.consultation')} />
                   </a>
                   <figcaption className="gallery-caption">{t('gallery.photo.items.consultation')}</figcaption>
                 </figure>

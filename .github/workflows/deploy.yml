@@ -39,6 +39,7 @@ jobs:
         
       - name: Copy public assets
         run: |
+
           # Public klasöründeki statik dosyaları dist'e kopyala
           cp -r public/assets dist/ 2>/dev/null || true
           # SPA refresh icin 404'u build index ile ayni yap (GH Pages SPA fix)
@@ -46,6 +47,7 @@ jobs:
           cp robots.txt dist/robots.txt 2>/dev/null || true
           cp sitemap.xml dist/sitemap.xml 2>/dev/null || true
           # Jekyll'i devre dışı bırak
+
           echo "" > dist/.nojekyll
           # CSS dosyalarının varlığını kontrol et
           ls -la dist/assets/css/vendor/ || echo "CSS vendor klasörü bulunamadı"
