@@ -54,6 +54,23 @@ export default function Iletisim() {
   return (
     <div className="site-main">
       <main id="main">
+        {/* Page Header */}
+        <div className="cmt-page-title-row-inner">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="breadcrumb-wrapper-inner">
+                  <span>
+                    <a title={t('blogDetail.breadcrumb.home')} href="/">{t('blogDetail.breadcrumb.home')}</a>
+                  </span>
+                  <span>{t('contactPage.title')}</span>
+                </div>
+                <h1 className="page-title" style={{marginTop: '12px'}}>{t('contactPage.title')}</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Contact / Appointment Section */}
         <section id="appointment" className="section contact-form-section appointment-section">
           <div className="container">

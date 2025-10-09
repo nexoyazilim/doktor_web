@@ -34,7 +34,50 @@ export default function Header() {
     setIsMenuOpen(false) // Mobil menüyü kapat
   }, [location.pathname])
   
-  // Scroll'a bağlı header gizleme devre dışı
+  useEffect(() => {
+    let lastScrollY = window.scrollY
+    let ticking = false
+    
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY
+          const scrollDifference = Math.abs(currentScrollY - lastScrollY)
+          
+          // Minimum scroll mesafesi (3px) - daha hassas
+          if (scrollDifference < 3) {
+            ticking = false
+            return
+          }
+          
+          // Scroll yönü ve threshold kontrolü - büyük atlama ile
+          if (currentScrollY > lastScrollY && currentScrollY > 120) {
+            // Aşağıya kaydırma - header'ı gizle
+            if (isHeaderVisible) {
+              console.log('Hiding header')
+              setIsHeaderVisible(false)
+            }
+          } else if (currentScrollY <= 5) {
+            // Sadece sayfanın en üstünde - header'ı göster
+            if (!isHeaderVisible) {
+              console.log('Showing header - at top')
+              setIsHeaderVisible(true)
+            }
+          }
+          
+          lastScrollY = currentScrollY
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+    
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [isHeaderVisible])
 
   // Mobil menü açıkken arka plan kaymasını kilitle
   useEffect(() => {
@@ -132,17 +175,17 @@ export default function Header() {
                     onMouseEnter={() => { if (window.innerWidth >= 992) setIsTreatmentsOpen(true) }}
                     onMouseLeave={() => { if (window.innerWidth >= 992) setIsTreatmentsOpen(false) }}
                   >
-                    <Link to={getLocalizedUrl('treatments', i18n.language)} className="mega-menu-link" aria-expanded={isTreatmentsOpen}
+                    <a href="#" className="mega-menu-link" aria-expanded={isTreatmentsOpen}
                       onClick={(e) => {
+                        e.preventDefault()
                         if (window.innerWidth < 992) {
-                          e.preventDefault()
                           setIsTreatmentsOpen(v => !v)
                         }
                       }}
                     >
                       {t('nav.specialties')}
-                    </Link>
-                    <ul className={"mega-submenu" + (isTreatmentsOpen ? " open" : "")}>
+                    </a>
+                    <ul className="mega-submenu">
                       <li><Link to={getTreatmentUrl('burun-estetigi-rinoplasti', i18n.language)}>{t('nav.treatments.rhinoplasty')}</Link></li>
                       <li><Link to={getTreatmentUrl('meme-buyutme', i18n.language)}>{t('nav.treatments.breastAugmentation')}</Link></li>
                       <li><Link to={getTreatmentUrl('meme-kucultme', i18n.language)}>{t('nav.treatments.breastReduction')}</Link></li>
