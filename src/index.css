@@ -112,12 +112,7 @@ body {
     max-width: 60% !important;
   }
   
-  .site-menubar {
-    flex-shrink: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-  }
+
   
   .cmt-btn {
     font-size: 12px !important;

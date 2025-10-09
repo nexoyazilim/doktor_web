@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import WhatsAppButton from '../components/WhatsAppButton'
 import LanguageSwitcher from '../components/LanguageSwitcher'
-import { getLocalizedUrl, getBlogDetailUrl } from '../utils/urlHelper'
+import { getLocalizedUrl, getBlogDetailUrl, getTreatmentUrl } from '../utils/urlHelper'
 import useSEO from '../hooks/useSEO'
 import useJSONLD from '../hooks/useJSONLD'
 
@@ -30,7 +30,7 @@ export default function BlogDetail() {
       imageSeed: 'bntdvsi',
     },
     'liposuction-vucut-sekillendirme': {
-      title: 'Liposuction: Vücut Şekillendirme Yöntemleri',
+      title: 'Vücut Şekillendirme Yöntemleri',
       subtitle: 'Modern teknikler ve güvenli uygulama yöntemleri',
       category: 'Vücut Estetiği',
       date: '10 Aralık 2024',
@@ -311,11 +311,11 @@ export default function BlogDetail() {
                   <div className="sidebar-widget">
                     <h3>{t('blogDetail.sidebar.specialties')}</h3>
                     <div className="specialties-list">
-                      <Link to={getLocalizedUrl('treatments', i18n.language)}>{t('treatments.categories.rhinoplasty.title')}</Link>
-                      <Link to={getLocalizedUrl('treatments', i18n.language)}>{t('treatments.categories.breastAugmentation.title')}</Link>
-                      <Link to={getLocalizedUrl('treatments', i18n.language)}>{t('treatments.categories.liposuction.title')}</Link>
-                      <Link to={getLocalizedUrl('treatments', i18n.language)}>{t('treatments.categories.botox.title')}</Link>
-                      <Link to={getLocalizedUrl('treatments', i18n.language)}>{t('treatments.categories.hairTransplant.title')}</Link>
+                      <Link to={getTreatmentUrl('burun-estetigi-rinoplasti', i18n.language)}>{t('treatments.categories.rhinoplasty.title')}</Link>
+                      <Link to={getTreatmentUrl('meme-buyutme', i18n.language)}>{t('treatments.categories.breastAugmentation.title')}</Link>
+                      <Link to={getTreatmentUrl('liposuction-yag-aldirma', i18n.language)}>{t('treatments.categories.liposuction.title')}</Link>
+                      <Link to={getTreatmentUrl('botoks-uygulamasi', i18n.language)}>{t('treatments.categories.botox.title')}</Link>
+                      <Link to={getTreatmentUrl('sac-ekimi', i18n.language)}>{t('treatments.categories.hairTransplant.title')}</Link>
                     </div>
                   </div>
                 </aside>

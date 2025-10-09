@@ -223,7 +223,7 @@ export default function Tedaviler() {
             const treatmentKey = treatments[title].key
             return (
               <li key={title} className={isActive ? 'active' : undefined}>
-                <Link to={`/tedaviler?sec=${slug}`}>{t(`treatments.categories.${treatmentKey}.title`)}</Link>
+                <Link to={`/tedaviler?sec=${slug}`} onClick={() => window.scrollTo(0, 0)}>{t(`treatments.categories.${treatmentKey}.title`)}</Link>
               </li>
             )
           })}
@@ -253,16 +253,13 @@ export default function Tedaviler() {
                                 className="hero-banner" 
                                 src={getTreatmentImage(treatment.key)} 
                                 alt={selectedTreatment} 
-                                fetchpriority="high"
+                                fetchPriority="high"
                                 decoding="async"
                               />
                             </div>
                           </div>
                           <section className="icerik mt-25 treatment-content">
-                            <header className="treatment-header">
-                              <h3 className="fs-24 mb-10" id="toc_0_H3">{t(`treatments.categories.${treatment.key}.title`)}</h3>
-                              <p className="lead">{t('treatments.generalDescription')}</p>
-                            </header>
+                            <h3 className="treatment-header fs-24 mb-10" id="toc_0_H3">{t(`treatments.categories.${treatment.key}.title`)}</h3>
                             <div className="treatment-overview">
                               <div className="overview-card">
                                 <h4 id="toc_1_H2">{t('treatments.whatIs')}</h4>
@@ -280,22 +277,6 @@ export default function Tedaviler() {
                                 <h4 id="toc_3_H3">{t('treatments.trackedDiseases')}</h4>
                                 <ul className="bulleted">
                                   {treatment.conditions.slice(0, 6).map((c, i) => (<li key={i}>{c}</li>))}
-                                </ul>
-                              </div>
-                            </div>
-                            <div className="split">
-                              <div>
-                                <h3 id="toc_5_H3">{t('treatments.emergency')}</h3>
-                                <ul className="bulleted">
-                                  <li>{t('treatments.emergencyList.severePain')}</li>
-                                  <li>{t('treatments.emergencyList.incontinence')}</li>
-                                  <li>{t('treatments.emergencyList.trauma')}</li>
-                                </ul>
-                              </div>
-                              <div>
-                                <h3 id="toc_6_H3">{t('treatments.methods')}</h3>
-                                <ul className="bulleted">
-                                  {treatment.procedures.map((p, i) => (<li key={i}>{p}</li>))}
                                 </ul>
                               </div>
                             </div>

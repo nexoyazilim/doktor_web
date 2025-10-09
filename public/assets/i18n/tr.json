@@ -5,6 +5,9 @@
 		"rights": "Tüm hakları saklıdır.",
 		"specialty": "Estetik ve Plastik Cerrahi Uzmanı"
 	},
+  "common": {
+    "viewAll": "Tümünü Gör"
+  },
 	"nav": {
 		"about": "Hakkımda",
 		"specialties": "Uzmanlık Alanlarım",
@@ -72,7 +75,10 @@
 			"body": "Vücut Kontürü",
 			"noninvasive": "Non-İnvaziv Estetik",
 			"reconstructive": "Rekonstrüktif Cerrahi",
-			"hair": "Saç Ekimi"
+			"hair": "Saç Ekimi",
+			"liposuction": "Liposuction (Yağ Aldırma)",
+			"nose": "Burun Estetiği",
+			"botox": "Botoks ve Dolgu"
 		},
 		"philosophy": {
 			"title": "Hekimlik Felsefem",
@@ -218,6 +224,10 @@
 			"antiAging": {
 				"title": "Yaşlanma Karşıtı Estetik Uygulamalar",
 				"description": "Botoks, dolgu ve cerrahi yöntemlerle genç görünüm kazanma."
+			},
+			"liposuction": {
+				"title": "Liposuction: Vücut Kontürü ve Yağ Aldırma",
+				"description": "Modern liposuction teknikleri ile vücut şekillendirme ve yağ aldırma işlemleri."
 			}
 		}
 	},
@@ -321,6 +331,21 @@
 					"title": "Liposuction: Modern Teknikler ve Sonuçlar",
 					"journal": "Plastik Cerrahi El Kitabı, 2021",
 					"linkText": "Detay"
+				},
+				"facialRejuvenation": {
+					"title": "Yüz Gençleştirme Cerrahisinde Minimal İnvaziv Yaklaşımlar",
+					"journal": "Aesthetic Surgery Journal, 2023",
+					"linkText": "PDF"
+				},
+				"botoxTechniques": {
+					"title": "Botoks Uygulamalarında Yeni Teknikler ve Sonuçlar",
+					"journal": "Türk Plastik Cerrahi Derneği Kongresi, 2022",
+					"linkText": "Özet"
+				},
+				"hairTransplant": {
+					"title": "Saç Ekimi: FUE Tekniği ve Komplikasyon Yönetimi",
+					"journal": "Dermatoloji ve Estetik Cerrahi Atlası, 2020",
+					"linkText": "Detay"
 				}
 			}
 		}
@@ -351,7 +376,7 @@
 				"readMore": "Devamını Oku"
 			},
 			"liposuction": {
-				"title": "Liposuction: Vücut Şekillendirme Yöntemleri",
+				"title": "Vücut Şekillendirme Yöntemleri",
 				"description": "Liposuction ile vücut kontürünüzü iyileştirin. Modern teknikler ve güvenli uygulama yöntemleri hakkında bilgi alın.",
 				"readMore": "Devamını Oku"
 			},
@@ -401,7 +426,8 @@
 		"relatedPosts": {
 			"rhinoplasty": "Burun Estetiği Sonrası İyileşme",
 			"breastSurgery": "Meme Estetiğinde Yeni Yaklaşımlar",
-			"liposuction": "Liposuction Sonrası Bakım"
+			"liposuction": "Liposuction Sonrası Bakım",
+			"physiotherapy": "Fizyoterapi ve Rehabilitasyon"
 		}
 	},
 	"form": {

@@ -30,7 +30,17 @@ export default function VideoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <div className="video-container">
-                    <iframe loading="lazy" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title={t('gallery.video.items.rhinoplasty')} allowFullScreen></iframe>
+                    <iframe 
+                      loading="lazy" 
+                      src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                      title={t('gallery.video.items.rhinoplasty')} 
+                      allowFullScreen
+                      sandbox="allow-scripts allow-same-origin allow-presentation"
+                      onError={(e) => {
+                        console.warn('Video yüklenemedi:', e.target.src);
+                        e.target.style.display = 'none';
+                      }}
+                    ></iframe>
                   </div>
                   <figcaption className="gallery-caption">{t('gallery.video.items.rhinoplasty')}</figcaption>
                 </figure>
@@ -38,7 +48,17 @@ export default function VideoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <div className="video-container">
-                    <iframe loading="lazy" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title={t('gallery.video.items.breastSurgery')} allowFullScreen></iframe>
+                    <iframe 
+                      loading="lazy" 
+                      src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                      title={t('gallery.video.items.breastSurgery')} 
+                      allowFullScreen
+                      sandbox="allow-scripts allow-same-origin allow-presentation"
+                      onError={(e) => {
+                        console.warn('Video yüklenemedi:', e.target.src);
+                        e.target.style.display = 'none';
+                      }}
+                    ></iframe>
                   </div>
                   <figcaption className="gallery-caption">{t('gallery.video.items.breastSurgery')}</figcaption>
                 </figure>
@@ -46,7 +66,17 @@ export default function VideoGaleri() {
               <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <figure className="gallery-item">
                   <div className="video-container">
-                    <iframe loading="lazy" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title={t('gallery.video.items.liposuction')} allowFullScreen></iframe>
+                    <iframe 
+                      loading="lazy" 
+                      src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                      title={t('gallery.video.items.liposuction')} 
+                      allowFullScreen
+                      sandbox="allow-scripts allow-same-origin allow-presentation"
+                      onError={(e) => {
+                        console.warn('Video yüklenemedi:', e.target.src);
+                        e.target.style.display = 'none';
+                      }}
+                    ></iframe>
                   </div>
                   <figcaption className="gallery-caption">{t('gallery.video.items.liposuction')}</figcaption>
                 </figure>

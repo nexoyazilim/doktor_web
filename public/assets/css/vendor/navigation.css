@@ -45,33 +45,6 @@ nav.main-menu{
     border: none;
     z-index: 2;
 }
-nav.main-menu li ul.mega-submenu {
-    text-align: left;
-    position: absolute;
-    visibility: hidden;
-    display: block;
-    opacity: 0;
-    width: 350px;
-    line-height: 8px;
-    margin: 0;
-    list-style: none;
-    padding: 0;
-    background-color: #fff;
-    background-clip: padding-box;
-    z-index: 99;
-    transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -webkit-box-shadow: 0px 4px 4px 1px rgb(0 0 0 / 20%);
-    box-shadow: 0px 4px 4px 1px rgb(0 0 0 / 20%);
-    -webkit-transform: rotateX(-90deg);
-    transform: rotateX(-90deg);
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;    
-    -webkit-box-shadow: 0 3px 25px 0px rgb(43 52 59 / 10%), 0 0 0 rgb(43 52 59 / 10%) inset;
-    box-shadow: 0 3px 25px 0px rgb(43 52 59 / 10%), 0 0 0 rgb(43 52 59 / 10%) inset;
-    background-clip: padding-box;
-}
 nav.main-menu ul.menu > li{
     position: relative;
     display: inline-block;

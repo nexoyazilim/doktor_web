@@ -5,6 +5,9 @@
 		"rights": "All rights reserved.",
 		"specialty": "Aesthetic and Plastic Surgery Specialist"
 	},
+  "common": {
+    "viewAll": "View All"
+  },
 	"nav": {
 		"about": "About",
 		"specialties": "Specialties",
@@ -72,7 +75,10 @@
 			"body": "Body Contouring",
 			"noninvasive": "Non-Invasive Aesthetics",
 			"reconstructive": "Reconstructive Surgery",
-			"hair": "Hair Transplant"
+			"hair": "Hair Transplant",
+			"liposuction": "Liposuction (Fat Removal)",
+			"nose": "Nose Surgery",
+			"botox": "Botox and Fillers"
 		},
 		"philosophy": {
 			"title": "My Medical Philosophy",
@@ -218,6 +224,10 @@
 			"antiAging": {
 				"title": "Anti-Aging Aesthetic Applications",
 				"description": "Achieving a youthful appearance with botox, fillers and surgical methods."
+			},
+			"liposuction": {
+				"title": "Liposuction: Body Contouring and Fat Removal",
+				"description": "Body shaping and fat removal procedures with modern liposuction techniques."
 			}
 		}
 	},
@@ -321,6 +331,21 @@
 					"title": "Cervical Myelopathy: From Diagnosis to Treatment",
 					"journal": "Spine Surgery Handbook, 2021",
 					"linkText": "Details"
+				},
+				"facialRejuvenation": {
+					"title": "Minimally Invasive Approaches in Facial Rejuvenation Surgery",
+					"journal": "Aesthetic Surgery Journal, 2023",
+					"linkText": "PDF"
+				},
+				"botoxTechniques": {
+					"title": "New Techniques and Results in Botox Applications",
+					"journal": "Turkish Plastic Surgery Association Congress, 2022",
+					"linkText": "Abstract"
+				},
+				"hairTransplant": {
+					"title": "Hair Transplant: FUE Technique and Complication Management",
+					"journal": "Dermatology and Aesthetic Surgery Atlas, 2020",
+					"linkText": "Details"
 				}
 			}
 		}
@@ -394,7 +419,8 @@
 		"relatedPosts": {
 			"hernia": "Recovery After Herniated Disc Surgery",
 			"scoliosis": "New Approaches in Scoliosis Treatment",
-			"physiotherapy": "Physical Therapy for Spine Pain"
+			"physiotherapy": "Physical Therapy for Spine Pain",
+			"liposuction": "Post-Liposuction Care"
 		}
 	},
 	"form": {

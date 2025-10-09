@@ -65,6 +65,35 @@ export default function Home() {
             <p>{t('blog.posts.antiAging.description')}</p>
             <Link className="btn btn-outline" to={getBlogDetailUrl('yaslanma-karsiti-estetik', i18n.language)}>{t('blog.readMore')}</Link>
           </article>
+          <article className="card">
+            <img className="blog-img" src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/cltbkm.jpg`} alt="Liposuction" loading="lazy" decoding="async" />
+            <h3>{t('blog.posts.liposuction.title')}</h3>
+            <p>{t('blog.posts.liposuction.description')}</p>
+            <Link className="btn btn-outline" to={getBlogDetailUrl('liposuction-yag-aldirma', i18n.language)}>{t('blog.readMore')}</Link>
+          </article>
+          <article className="card">
+            <img className="blog-img" src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/frksynellazer.jpg`} alt="Göz Kapağı Estetiği" loading="lazy" decoding="async" />
+            <h3>{t('blog.posts.eyelid.title')}</h3>
+            <p>{t('blog.posts.eyelid.description')}</p>
+            <Link className="btn btn-outline" to={getBlogDetailUrl('goz-kapagi-estetigi', i18n.language)}>{t('blog.readMore')}</Link>
+          </article>
+          <article className="card">
+            <img className="blog-img" src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/alnskllndrme.jpg`} alt="Saç Ekimi" loading="lazy" decoding="async" />
+            <h3>{t('blog.posts.hairTransplant.title')}</h3>
+            <p>{t('blog.posts.hairTransplant.description')}</p>
+            <Link className="btn btn-outline" to={getBlogDetailUrl('sac-ekimi', i18n.language)}>{t('blog.readMore')}</Link>
+          </article>
+        </div>
+        <div className="row view-all-row">
+          <div className="col-12">
+            <Link className="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-btn-color-dark"
+              to={getLocalizedUrl('blog', i18n.language)}
+              rel="noopener"
+              aria-label={t('common.viewAll') || 'Tümünü Gör'}
+            >
+              {t('common.viewAll')}
+            </Link>
+          </div>
         </div>
       </div>
     </section>
@@ -127,7 +156,7 @@ export default function Home() {
               </div>
               <div className="col-lg-6 res-991-pt-30">
                 <div className="cmt_single_image-wrapper">
-                  <img className="profile-img" src={`${import.meta.env.BASE_URL}assets/images/doktor_1.png`} alt="Dr. Elif YAMAN" fetchpriority="high" decoding="async" />
+                  <img className="profile-img" src={`${import.meta.env.BASE_URL}assets/images/doktor_1.png`} alt="Dr. Elif YAMAN" fetchPriority="high" decoding="async" />
                 </div>
               </div>
             </div>
@@ -147,6 +176,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+           
             <div className="row pt-30">
               <div className="col-lg-4 col-md-6 diabetes-endorinology">
                 <div className="featured-imagebox featured-imagebox-portfolio style1">
@@ -198,6 +229,74 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+              </div>
+              <div className="col-lg-4 col-md-6 diabetes-endorinology">
+                <div className="featured-imagebox featured-imagebox-portfolio style1">
+                  <div className="featured-thumbnail">
+                    <div className="featured-thumbnail-inner">
+                      <img className="portfolio-img" src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/frksynellazer.jpg`} alt="Burun Estetiği" loading="lazy" decoding="async" />
+                    </div>
+                  </div>
+                  <div className="featured-content">
+                    <div className="featured-title">
+                      <Link to={`${getLocalizedUrl('treatments', i18n.language)}/burun-estetigi`}>{t('about.specializations.nose')}</Link>
+                    </div>
+                    <div className="featured-desc">
+                      <span className="portfolio_category d-none">Dr. Elif YAMAN</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 diabetes-endorinology">
+                <div className="featured-imagebox featured-imagebox-portfolio style1">
+                  <div className="featured-thumbnail">
+                    <div className="featured-thumbnail-inner">
+                      <img className="portfolio-img" src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/alnskllndrme.jpg`} alt="Liposuction" loading="lazy" decoding="async" />
+                    </div>
+                  </div>
+                  <div className="featured-content">
+                    <div className="featured-title">
+                      <Link to={`${getLocalizedUrl('treatments', i18n.language)}/liposuction`}>{t('about.specializations.liposuction')}</Link>
+                    </div>
+                    <div className="featured-desc">
+                      <span className="portfolio_category d-none">Dr. Elif YAMAN</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-6 diabetes-endorinology">
+                <div className="featured-imagebox featured-imagebox-portfolio style1">
+                  <div className="featured-thumbnail">
+                    <div className="featured-thumbnail-inner">
+                      <img className="portfolio-img" src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/bntdvsi.jpg`} alt="Botoks ve Dolgu" loading="lazy" decoding="async" />
+                    </div>
+                  </div>
+                  <div className="featured-content">
+                    <div className="featured-title">
+                      <Link to={`${getLocalizedUrl('treatments', i18n.language)}/botoks-dolgu`}>{t('about.specializations.botox')}</Link>
+                    </div>
+                    <div className="featured-desc">
+                      <span className="portfolio_category d-none">Dr. Elif YAMAN</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+         
+         </div>
+        </section>
+
+        <section className="cmt-row view-all-section clearfix">
+          <div className="container">
+            <div className="row view-all-row">
+              <div className="col-12">
+                <Link className="cmt-btn cmt-btn-size-md cmt-btn-shape-square cmt-btn-style-fill cmt-btn-color-dark"
+                  to={getLocalizedUrl('treatments', i18n.language)}
+                  rel="noopener"
+                  aria-label={t('common.viewAll') || 'Tümünü Gör'}
+                >
+                  {t('common.viewAll')}
+                </Link>
               </div>
             </div>
           </div>

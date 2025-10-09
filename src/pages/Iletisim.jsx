@@ -65,7 +65,6 @@ export default function Iletisim() {
                   </span>
                   <span>{t('contactPage.title')}</span>
                 </div>
-                <h1 className="page-title" style={{marginTop: '12px'}}>{t('contactPage.title')}</h1>
               </div>
             </div>
           </div>

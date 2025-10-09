@@ -1669,7 +1669,6 @@ nav.main-menu ul {
 
 .cmt-header-style-03 .site-header-menu { background-color: rgba(255, 255, 255, 1) !important; z-index: 3; }
 .cmt-header-style-03 .site-header-menu .site-header-menu-inner { padding: 0 ; }
-.cmt-header-style-03 .site-navigation .site-menubar { display: flex; justify-content: flex-end; }
 .cmt-header-style-03 .site-navigation nav.main-menu { padding-right: 0; }
 .cmt-header-style-03 .site-navigation nav.main-menu ul.menu > li > a:before ,
 .cmt-header-style-03 .site-navigation nav.main-menu ul.menu > li.active > a:before { 

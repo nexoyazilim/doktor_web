@@ -425,12 +425,12 @@
 	.cmt-row.partner-section { padding: 0px 0 50px; }
 	.cmt-row.sidebar { padding: 50px 0; }
 
-	h1 { font-size: 50px; line-height: 60px; }
-	h2 { font-size: 36px; line-height: 46px; }
+	h1 { font-size: 30px; line-height: 60px; }
+	h2 { font-size: 26px; line-height: 46px; }
 	h3 { font-size: 18px; line-height: 28px; }
-	h4 { font-size: 24px; line-height: 34px; }
-	h5 { font-size: 19px; line-height: 22px; }
-	h6 { font-size: 17px; line-height: 20px; }
+	h4 { font-size: 14px; line-height: 34px; }
+	h5 { font-size: 13px; line-height: 22px; }
+	h6 { font-size: 11px; line-height: 20px; }
 
 	.heading-section .section-title.bg-base-skin { padding: 54px 15px 40px 15px; }
 	.section-title h2.title { font-size: 36px; line-height: 46px; }
@@ -598,7 +598,6 @@
 	/* footer */
 	.second-footer>div>.row .widget-area .widget:not(:first-child) { margin-top: 0; margin-bottom: 10px;}
 	.second-footer { padding: 40px 0 0;}
-	.second-footer .widget-area .widget { padding: 0 0 40px; margin-top: 0;}
 	.first-footer .footer-box {margin: 0px 0px 50px;}
 	.footer .widget .footer-subscribebox { margin-bottom: 0; margin-top: 24px; }
 	.second-footer.bg-base-dark .cmt-horizontal_sep { margin-top: 0; margin-bottom: 40px; }
@@ -805,7 +804,6 @@
 	.res-575-pr-5 { padding-right: 5px !important; }
 	.res-575-pt-10 { padding-top: 10px !important; }
 
-	.second-footer .widget-area .widget { padding: 0 0 30px; }
 	.second-footer.bg-base-dark .cmt-horizontal_sep { margin-bottom: 30px; }
 
 	.cmt-vertical_sep > [class*='col-sm-6']:not(:last-child):before { content: unset; }

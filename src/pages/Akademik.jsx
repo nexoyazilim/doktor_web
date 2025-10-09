@@ -34,7 +34,10 @@ export default function Akademik() {
   const publications = [
     { type: 'makale', key: 'rhinoplasty', title: 'Burun Estetiğinde Doğal Görünüm Teknikleri', journal: 'Plastik ve Rekonstrüktif Cerrahi Dergisi, 2023', link: null, linkText: 'PDF' },
     { type: 'bildiri', key: 'breastSurgery', title: 'Meme Estetiğinde Komplikasyon Yönetimi: Çok Merkezli Deneyim', journal: 'Uluslararası Estetik Cerrahi Kongresi, 2022', link: null, linkText: 'Özet' },
-    { type: 'kitap', key: 'liposuction', title: 'Liposuction: Modern Teknikler ve Uygulamalar', journal: 'Estetik Cerrahi El Kitabı, 2021', link: null, linkText: 'Detay' }
+    { type: 'kitap', key: 'liposuction', title: 'Liposuction: Modern Teknikler ve Uygulamalar', journal: 'Estetik Cerrahi El Kitabı, 2021', link: null, linkText: 'Detay' },
+    { type: 'makale', key: 'facialRejuvenation', title: 'Yüz Gençleştirme Cerrahisinde Minimal İnvaziv Yaklaşımlar', journal: 'Aesthetic Surgery Journal, 2023', link: null, linkText: 'PDF' },
+    { type: 'bildiri', key: 'botoxTechniques', title: 'Botoks Uygulamalarında Yeni Teknikler ve Sonuçlar', journal: 'Türk Plastik Cerrahi Derneği Kongresi, 2022', link: null, linkText: 'Özet' },
+    { type: 'kitap', key: 'hairTransplant', title: 'Saç Ekimi: FUE Tekniği ve Komplikasyon Yönetimi', journal: 'Dermatoloji ve Estetik Cerrahi Atlası, 2020', link: null, linkText: 'Detay' }
   ]
 
   const filteredPublications = activeFilter === 'all' ? publications : publications.filter(pub => pub.type === activeFilter)
@@ -53,7 +56,6 @@ export default function Akademik() {
                   </span>
                   <span>{t('academic.title')}</span>
                 </div>
-                <h1 className="page-title" style={{marginTop: '12px'}}>{t('academic.title')}</h1>
               </div>
             </div>
           </div>

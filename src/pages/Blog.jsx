@@ -42,7 +42,6 @@ export default function Blog() {
                 </span>
                 <span>{t('blogPage.title')}</span>
               </div>
-              <h1 className="page-title" style={{marginTop: '12px'}}>{t('blogPage.title')}</h1>
             </div>
           </div>
         </div>

@@ -19,8 +19,13 @@ export default function useJSONLD(id, data) {
     }
     return () => {
       // Sayfa değişince kaldır (dinamik sayfalarda yinelenmeyi önlemek için)
-      if (el && el.parentNode) {
-        el.parentNode.removeChild(el)
+      try {
+        if (el && el.parentNode && el.parentNode.contains(el)) {
+          el.parentNode.removeChild(el)
+        }
+      } catch (error) {
+        // DOM silme hatasını sessizce geç
+        console.warn('JSON-LD cleanup error:', error)
       }
     }
   }, [id, data])

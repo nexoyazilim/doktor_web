@@ -48,7 +48,7 @@
 /* ===============================================
     1.cmt-row
 ------------------------*/
-.cmt-row{ padding: 50px 0;}
+.cmt-row{ padding: 20px 0;}
 .cmt-row.padding_bottom_zero-section { padding: 30px 0 0; }
 .cmt-row.padding_top_zero-section { padding: 0 0 100px; }
 .cmt-row.padding_zero-section { padding: 0 0; }
@@ -432,16 +432,7 @@
 /* ===============================================
     8.Buttons
 ------------------------*/
-.cmt-btn{ 
-    vertical-align: middle;
-    line-height: 1;
-    position: relative;
-    text-transform: uppercase;
-    overflow: hidden;
-    z-index: 1;
-    text-align: center;
-    font-family: var(--base-headingfont);
-}
+
 
 /** btn-color **/
 .cmt-btn-color-skincolor {
@@ -476,20 +467,7 @@ a.cmt-btn-color-skincolor:hover{
     color: var(--base-dark);
 }
 
-.cmt-btn.cmt-btn-style-fill.cmt-btn-color-dark {
-    background-color: var(--base-dark);
-    border-color: var(--base-dark);
-    color: var(--base-white);
-}
-.cmt-btn.cmt-btn-style-fill.cmt-btn-color-dark:hover,
-.cmt-btn.cmt-btn-style-border.cmt-btn-color-skincolor:hover {
-    background-color: var(--base-skin);
-    border-color: var(--base-skin);
-    color: var(--base-white);
-}
-.cmt-btn.cmt-btn-color-white {
-    color: var(--base-white);
-}
+
 .cmt-btn.cmt-btn-style-fill.cmt-btn-color-white {
     background-color: var(--base-white);
     color: var(--base-dark);
@@ -514,9 +492,6 @@ a.cmt-btn-color-skincolor:hover{
 .cmt-btn.cmt-btn-size-sm { font-size: 13px; padding: 11px 20px; }
 .cmt-btn.cmt-btn-size-sm i { font-size: 12px; line-height: 12px;}
 
-/** btn-size-md **/
-.cmt-btn.cmt-btn-size-md { font-size: 15px; padding: 13px 20px 14px;}
-.cmt-btn.cmt-btn-size-md i { font-size: 15px; line-height: 1; }
 
 /** btn-size-lg **/
 .cmt-btn.cmt-btn-size-lg { font-size: 18px; line-height: 18px; padding: 11px 35px;}
@@ -525,7 +500,6 @@ a.cmt-btn-color-skincolor:hover{
 /** btn-shape **/
 .cmt-btn.cmt-btn-shape-round { border-radius: 2em; }
 .cmt-btn.cmt-btn-shape-rounded { border-radius: 5px; }
-.cmt-btn.cmt-btn-shape-square { border-radius: 0; }
 
 /** btn-style-border **/
 .cmt-btn.cmt-btn-style-border{ background-color: transparent; border: 2px solid currentColor; }
@@ -534,7 +508,6 @@ a.cmt-btn-color-skincolor:hover{
     border-color: #fff;
     background-color: transparent;
 }
-.cmt-btn.cmt-btn-size-md.cmt-btn-style-border { padding: 11px 17px 12px; }
 /** cmt-icon-shap**/
 .cmt-btn.cmt-icon-shap {
     padding: 15px 48px 15px 29px;
