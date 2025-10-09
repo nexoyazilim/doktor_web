@@ -171,7 +171,10 @@ export default function Header() {
               <nav className={"main-menu nav" + (isMenuOpen ? " open" : " ")} id="menu">
                 <ul className="menu">
                   <li className="mega-menu-item "><Link to={getLocalizedUrl('about', i18n.language)}>{t('nav.about')}</Link></li>
-                  <li className={"mega-menu-item specialties-menu" + (isTreatmentsOpen ? " open" : " ")}>
+                  <li className={"mega-menu-item specialties-menu" + (isTreatmentsOpen ? " open" : " ")}
+                    onMouseEnter={() => { if (window.innerWidth >= 992) setIsTreatmentsOpen(true) }}
+                    onMouseLeave={() => { if (window.innerWidth >= 992) setIsTreatmentsOpen(false) }}
+                  >
                     <a href="#" className="mega-menu-link" aria-expanded={isTreatmentsOpen}
                       onClick={(e) => {
                         e.preventDefault()
