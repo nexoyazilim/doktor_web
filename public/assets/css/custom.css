@@ -648,6 +648,19 @@ h3 { font-weight: 700; text-align: center; font-size: 20px; }
   }
 }
 
+/* Desktop: .open durumunda (hover yerine JS ile açıldığında) menüyü aynı konumda göster */
+@media (min-width: 992px) {
+  .cmt-header-style-03 nav.main-menu li.mega-menu-item.open > ul.mega-submenu {
+    top: 60px; /* hover ile aynı hizalama */
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: grid !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+    z-index: 1000;
+  }
+}
+
 /* Mobile explicit open state */
 .nav .submenu.open, .nav .mega-submenu.open { display: grid; opacity: 1; transform: translateY(0); pointer-events: auto; }
 
