@@ -67,20 +67,20 @@ export default function Tedaviler() {
   // Görsel eşleştirme sistemi
   const getTreatmentImage = (treatmentKey) => {
     const imageMap = {
-      'rhinoplasty': '/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg',
-      'breastAugmentation': '/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg',
-      'breastReduction': '/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg',
-      'liposuction': '/doktor_web/assets/images/hizmetlerimiz_image/cltbkm.jpg',
-      'tummyTuck': '/doktor_web/assets/images/hizmetlerimiz_image/cltbkm.jpg',
-      'facelift': '/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg',
-      'eyelidSurgery': '/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg',
-      'botox': '/doktor_web/assets/images/hizmetlerimiz_image/frksynellazer.jpg',
-      'filler': '/doktor_web/assets/images/hizmetlerimiz_image/frksynellazer.jpg',
-      'hairTransplant': '/doktor_web/assets/images/hizmetlerimiz_image/frksynellazer.jpg',
-      'breastLift': '/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg',
-      'bodyContouring': '/doktor_web/assets/images/hizmetlerimiz_image/cltbkm.jpg'
+      'rhinoplasty': `${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/alnskllndrme.jpg`,
+      'breastAugmentation': `${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/bntdvsi.jpg`,
+      'breastReduction': `${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/bntdvsi.jpg`,
+      'liposuction': `${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/cltbkm.jpg`,
+      'tummyTuck': `${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/cltbkm.jpg`,
+      'facelift': `${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/alnskllndrme.jpg`,
+      'eyelidSurgery': `${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/alnskllndrme.jpg`,
+      'botox': `${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/frksynellazer.jpg`,
+      'filler': `${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/frksynellazer.jpg`,
+      'hairTransplant': `${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/frksynellazer.jpg`,
+      'breastLift': `${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/bntdvsi.jpg`,
+      'bodyContouring': `${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/cltbkm.jpg`
     }
-    return imageMap[treatmentKey] || '/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg'
+    return imageMap[treatmentKey] || `${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/alnskllndrme.jpg`
   }
 
   const treatments = {

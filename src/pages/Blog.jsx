@@ -57,7 +57,7 @@ export default function Blog() {
                 <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="featured-imagebox-blog style2">
                     <div className="featured-thumbnail">
-                      <img src="/doktor_web/assets/images/hizmetlerimiz_image/alnskllndrme.jpg" alt="Burun Estetiği" loading="lazy" decoding="async" />
+                      <img src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/alnskllndrme.jpg`} alt="Burun Estetiği" loading="lazy" decoding="async" />
                     </div>
                     <div className="featured-content">
                       <div className="ser_category">{t('blogPage.categories.facial')}</div>
@@ -77,7 +77,7 @@ export default function Blog() {
                 <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="featured-imagebox-blog style2">
                     <div className="featured-thumbnail">
-                      <img src="/doktor_web/assets/images/hizmetlerimiz_image/cltbkm.jpg" alt="Liposuction" loading="lazy" decoding="async" />
+                      <img src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/cltbkm.jpg`} alt="Liposuction" loading="lazy" decoding="async" />
                     </div>
                     <div className="featured-content">
                       <div className="ser_category">{t('blogPage.categories.body')}</div>
@@ -97,7 +97,7 @@ export default function Blog() {
                 <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="featured-imagebox-blog style2">
                     <div className="featured-thumbnail">
-                      <img src="/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Estetik Cerrahi Riskleri" loading="lazy" decoding="async" />
+                      <img src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/bntdvsi.jpg`} alt="Estetik Cerrahi Riskleri" loading="lazy" decoding="async" />
                     </div>
                     <div className="featured-content">
                       <div className="ser_category">{t('blogPage.categories.surgery')}</div>
@@ -117,7 +117,7 @@ export default function Blog() {
                 <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="featured-imagebox-blog style2">
                     <div className="featured-thumbnail">
-                      <img src="/doktor_web/assets/images/hizmetlerimiz_image/frksynellazer.jpg" alt="Saç Ekimi" loading="lazy" decoding="async" />
+                      <img src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/frksynellazer.jpg`} alt="Saç Ekimi" loading="lazy" decoding="async" />
                     </div>
                     <div className="featured-content">
                       <div className="ser_category">{t('blogPage.categories.hair')}</div>
@@ -137,7 +137,7 @@ export default function Blog() {
                 <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="featured-imagebox-blog style2">
                     <div className="featured-thumbnail">
-                      <img src="/doktor_web/assets/images/hizmetlerimiz_image/bntdvsi.jpg" alt="Estetik Cerrahi İyileşme" loading="lazy" decoding="async" />
+                      <img src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/bntdvsi.jpg`} alt="Estetik Cerrahi İyileşme" loading="lazy" decoding="async" />
                     </div>
                     <div className="featured-content">
                       <div className="ser_category">{t('blogPage.categories.brain')}</div>
@@ -157,7 +157,7 @@ export default function Blog() {
                 <div className="col-lg-4 col-md-6 col-sm-12">
                   <div className="featured-imagebox-blog style2">
                     <div className="featured-thumbnail">
-                      <img src="/doktor_web/assets/images/hizmetlerimiz_image/frksynellazer.jpg" alt="Yaşlanma Karşıtı Estetik" loading="lazy" decoding="async" />
+                      <img src={`${import.meta.env.BASE_URL}assets/images/hizmetlerimiz_image/frksynellazer.jpg`} alt="Yaşlanma Karşıtı Estetik" loading="lazy" decoding="async" />
                     </div>
                     <div className="featured-content">
                       <div className="ser_category">{t('blogPage.categories.noninvasive')}</div>
