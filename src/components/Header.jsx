@@ -132,16 +132,16 @@ export default function Header() {
                     onMouseEnter={() => { if (window.innerWidth >= 992) setIsTreatmentsOpen(true) }}
                     onMouseLeave={() => { if (window.innerWidth >= 992) setIsTreatmentsOpen(false) }}
                   >
-                    <a href="#" className="mega-menu-link" aria-expanded={isTreatmentsOpen}
+                    <Link to={getLocalizedUrl('treatments', i18n.language)} className="mega-menu-link" aria-expanded={isTreatmentsOpen}
                       onClick={(e) => {
-                        e.preventDefault()
                         if (window.innerWidth < 992) {
+                          e.preventDefault()
                           setIsTreatmentsOpen(v => !v)
                         }
                       }}
                     >
                       {t('nav.specialties')}
-                    </a>
+                    </Link>
                     <ul className={"mega-submenu" + (isTreatmentsOpen ? " open" : "")}>
                       <li><Link to={getTreatmentUrl('burun-estetigi-rinoplasti', i18n.language)}>{t('nav.treatments.rhinoplasty')}</Link></li>
                       <li><Link to={getTreatmentUrl('meme-buyutme', i18n.language)}>{t('nav.treatments.breastAugmentation')}</Link></li>
