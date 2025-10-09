@@ -184,6 +184,7 @@ export default function Header() {
                       to={getLocalizedUrl('treatments', i18n.language)}
                       className="mega-menu-link"
                       aria-expanded={isTreatmentsOpen}
+                      data-discover="true"
                       onClick={(e) => {
                         // Mobilde tıklama: navigasyonu engelle, menüyü aç/kapat
                         if (window.innerWidth < 992) {
@@ -200,6 +201,7 @@ export default function Header() {
                       }}
                     >
                       {t('nav.specialties')}
+                      <span className="mobile-arrow">▼</span>
                     </Link>
                     <ul className={"mega-submenu" + (isTreatmentsOpen ? " open" : "") } aria-hidden={!isTreatmentsOpen}
                       onClick={() => { setIsTreatmentsOpen(false); setIsGalleryOpen(false); setIsMenuOpen(false) }}

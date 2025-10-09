@@ -948,7 +948,7 @@ h3 { font-weight: 700; text-align: center; font-size: 20px; }
 
 /* Remove right-side caret arrows injected via :after on menu links */
 #masthead nav.main-menu ul.menu > li > a:after,
-#masthead nav.main-menu li.mega-menu-item > a.mega-menu-link:after {
+#masthead nav.main-menu li.mega-menu-item > a.mega-menu-link:not([data-discover="true"]):after {
   content: none !important;
 }
 
@@ -2760,5 +2760,54 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--p
     width: 100%;
     padding: 8px 12px;
     font-size: 14px;
+  }
+}
+
+
+/* Mobile menu item flex layout */
+@media (max-width: 991px) {
+  .site-navigation {
+    padding-right: 10px;
+  }
+  
+  .mega-menu-item.specialties-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .mega-menu-item.specialties-menu .mega-menu-link {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Mobil görünümde mega-menu-link flexbox düzeni */
+  .site-navigation .nav ul.menu li .mega-menu-link,
+  nav.main-menu ul.menu li .mega-menu-link,
+  .nav ul.menu li .mega-menu-link {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    position: relative !important;
+  }
+  
+  /* Mobil görünümde mega-menu-link içindeki ok işareti */
+  .site-navigation .nav ul.menu li .mega-menu-link .mobile-arrow,
+  nav.main-menu ul.menu li .mega-menu-link .mobile-arrow,
+  .nav ul.menu li .mega-menu-link .mobile-arrow {
+    position: absolute !important;
+    right: 30px !important;
+    font-size: 16px !important;
+    transition: transform 0.3s ease !important;
+    display: inline-block !important;
+  }
+  
+  /* Açık durumda ok işaretini yukarı çevir */
+  .site-navigation .nav ul.menu li .mega-menu-link[aria-expanded="true"] .mobile-arrow,
+  nav.main-menu ul.menu li .mega-menu-link[aria-expanded="true"] .mobile-arrow,
+  .nav ul.menu li .mega-menu-link[aria-expanded="true"] .mobile-arrow {
+    transform: rotate(180deg) !important;
   }
 }
