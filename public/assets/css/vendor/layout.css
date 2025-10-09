@@ -1529,16 +1529,7 @@ nav.main-menu ul {
     position: relative;
     margin: 0;
 }
-.site-navigation ul.menu > li > a {
-    text-decoration: none;
-    z-index: 1;
-    font-family: var(--base-headingfont);
-    color: var(--base-dark);
-    text-transform: uppercase;
-    font-size: 15px;
-    line-height: 25px;
-    /*font-weight: 500;*/
-}
+
 
 #site-header-menu .cmt-stickable-header .site-navigation ul.menu > li.active >a {
     color: var(--base-skin);

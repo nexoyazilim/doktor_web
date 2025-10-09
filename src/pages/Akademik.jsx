@@ -42,23 +42,6 @@ export default function Akademik() {
   return (
     <div className="site-main">
       <main id="main">
-        {/* Page Header */}
-        <div className="cmt-page-title-row-inner">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="breadcrumb-wrapper-inner">
-                  <span>
-                    <a title={t('blogDetail.breadcrumb.home')} href="/">{t('blogDetail.breadcrumb.home')}</a>
-                  </span>
-                  <span>{t('academic.title')}</span>
-                </div>
-                <h1 className="page-title" style={{marginTop: '12px'}}>{t('academic.title')}</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Publications Section */}
         <section className="section">
           <div className="container">
