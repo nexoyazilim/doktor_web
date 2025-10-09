@@ -114,7 +114,7 @@ export default function Home() {
                     <div className="section-title">
                       <div className="title-header">
                         <h1 className="title">{t('hero.title')}</h1>
-                        <h2>{t('hero.subtitle')}</h2>
+                        <h1>{t('hero.subtitle')}</h1>
                       </div>
                       <div className="title-desc">
                         <p className="text-justify">{t('hero.description')}</p>
@@ -140,7 +140,7 @@ export default function Home() {
               <div className="col-lg-12">
                 <div className="section-title title-style-center_text">
                   <div className="title-header">
-                    <h3 className="d-none">{t('site.brand')}</h3>
+                    <h1 className="d-none">{t('site.brand')}</h1>
                     <span></span>
                     <h2 className="title" style={{ textAlign: 'center' }}>{t('treatments.title')}</h2>
                   </div>

@@ -185,7 +185,7 @@ export default function Header() {
                     >
                       {t('nav.specialties')}
                     </a>
-                    <ul className="mega-submenu">
+                    <ul className={"mega-submenu" + (isTreatmentsOpen ? " open" : "")}>
                       <li><Link to={getTreatmentUrl('burun-estetigi-rinoplasti', i18n.language)}>{t('nav.treatments.rhinoplasty')}</Link></li>
                       <li><Link to={getTreatmentUrl('meme-buyutme', i18n.language)}>{t('nav.treatments.breastAugmentation')}</Link></li>
                       <li><Link to={getTreatmentUrl('meme-kucultme', i18n.language)}>{t('nav.treatments.breastReduction')}</Link></li>

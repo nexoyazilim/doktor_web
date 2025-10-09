@@ -6,8 +6,8 @@ body {
 
 /* Mobile: reduce page section title size */
 @media (max-width: 899px) {
-  .title-header h2 {
-    font-size: 22px;
+  .title-header h1 {
+    font-size: 18px;
     line-height: 1.25;
   }
 }

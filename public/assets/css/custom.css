@@ -983,7 +983,7 @@ html.dark #masthead .site-header-menu .site-header-menu-inner .container .row .c
 }
 .section h2 { margin: 40px 0 16px; font-size: 44px; }
 @media (max-width: 899px) {
-  .title-header h2 { font-size: 18px !important; line-height: 1.25 !important; }
+  .title-header h1 { font-size: 18px !important; line-height: 1.25 !important; }
 }
 
 /* Mobile: academic filters layout improvements */

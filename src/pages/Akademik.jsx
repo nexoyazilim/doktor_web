@@ -63,7 +63,7 @@ export default function Akademik() {
         <section className="section">
           <div className="container">
             <div className="title-header" style={{ textAlign: 'center' }}>
-              <h2>{t('academic.publications.title')}</h2>
+              <h1>{t('academic.publications.title')}</h1>
             </div>
             
             <div className="filters" style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap', margin: '12px 0 20px' }}>
